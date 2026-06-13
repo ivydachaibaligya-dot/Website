@@ -62,10 +62,10 @@ export default function ServicesOverview() {
     <section className="py-20 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-black mb-4">
             Our Services
           </h2>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+          <p className="text-lg text-gray-700 max-w-3xl mx-auto">
             Comprehensive virtual assistant services tailored to your business needs. Let us handle the details while you focus on growth.
           </p>
         </div>
@@ -76,13 +76,13 @@ export default function ServicesOverview() {
               key={index}
               className="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow duration-300"
             >
-              <div className="w-14 h-14 bg-blue-100 rounded-lg flex items-center justify-center text-blue-600 mb-4">
+              <div className="w-14 h-14 bg-gray-100 rounded-lg flex items-center justify-center text-black mb-4">
                 {service.icon}
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">
+              <h3 className="text-xl font-semibold text-black mb-2">
                 {service.title}
               </h3>
-              <p className="text-gray-600 leading-relaxed">
+              <p className="text-gray-700 leading-relaxed">
                 {service.description}
               </p>
             </div>
@@ -92,7 +92,7 @@ export default function ServicesOverview() {
         <div className="text-center mt-12">
           <Link
             href="/services"
-            className="inline-block bg-blue-600 text-white px-8 py-4 rounded-full font-semibold hover:bg-blue-700 transition-colors"
+            className="inline-block bg-black text-white px-8 py-4 rounded-full font-semibold hover:bg-gray-800 transition-colors"
           >
             View All Services
           </Link>

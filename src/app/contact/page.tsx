@@ -62,13 +62,13 @@ export default function ContactPage() {
       <Navigation />
       <main className="pt-20">
         {/* Hero Section */}
-        <section className="py-20 bg-gradient-to-br from-blue-50 to-white">
+        <section className="py-20 bg-gradient-to-br from-gray-100 to-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
-              <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+              <h1 className="text-4xl md:text-5xl font-bold text-black mb-4">
                 Get in Touch
               </h1>
-              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+              <p className="text-lg text-gray-700 max-w-3xl mx-auto">
                 Ready to transform your business with professional virtual assistant services? Contact us today to schedule your free discovery call.
               </p>
             </div>
@@ -81,30 +81,30 @@ export default function ContactPage() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
               {/* Contact Information */}
               <div>
-                <h2 className="text-3xl font-bold text-gray-900 mb-6">
+                <h2 className="text-3xl font-bold text-black mb-6">
                   Contact Information
                 </h2>
-                <p className="text-lg text-gray-600 mb-8">
+                <p className="text-lg text-gray-700 mb-8">
                   Have questions? We'd love to hear from you. Send us a message and we'll respond as soon as possible.
                 </p>
                 
                 <div className="space-y-6">
                   {contactInfo.map((info, index) => (
                     <div key={index} className="flex items-start">
-                      <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center text-blue-600 mr-4 flex-shrink-0">
+                      <div className="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center text-black mr-4 flex-shrink-0">
                         {info.icon}
                       </div>
                       <div>
-                        <h3 className="font-semibold text-gray-900 mb-1">{info.title}</h3>
+                        <h3 className="font-semibold text-black mb-1">{info.title}</h3>
                         {info.link ? (
                           <a
                             href={info.link}
-                            className="text-gray-600 hover:text-blue-600 transition-colors"
+                            className="text-gray-700 hover:text-black transition-colors"
                           >
                             {info.value}
                           </a>
                         ) : (
-                          <p className="text-gray-600">{info.value}</p>
+                          <p className="text-gray-700">{info.value}</p>
                         )}
                       </div>
                     </div>
@@ -113,10 +113,10 @@ export default function ContactPage() {
 
                 {/* Additional Info */}
                 <div className="mt-12 p-6 bg-gray-50 rounded-xl">
-                  <h3 className="font-semibold text-gray-900 mb-3">
+                  <h3 className="font-semibold text-black mb-3">
                     Response Time
                   </h3>
-                  <p className="text-gray-600 leading-relaxed">
+                  <p className="text-gray-700 leading-relaxed">
                     We typically respond to all inquiries within 24 hours during business days. For urgent matters, please give us a call.
                   </p>
                 </div>
@@ -125,7 +125,7 @@ export default function ContactPage() {
               {/* Contact Form */}
               <div>
                 <div className="bg-gray-50 rounded-xl p-8">
-                  <h2 className="text-2xl font-bold text-gray-900 mb-6">
+                  <h2 className="text-2xl font-bold text-black mb-6">
                     Send Us a Message
                   </h2>
                   <ContactForm />
@@ -136,18 +136,18 @@ export default function ContactPage() {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-br from-blue-600 to-blue-800">
+        <section className="py-20 bg-black">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 Prefer to Talk Directly?
               </h2>
-              <p className="text-lg text-blue-100 mb-8 max-w-3xl mx-auto">
+              <p className="text-lg text-gray-300 mb-8 max-w-3xl mx-auto">
                 Schedule a free 30-minute discovery call with our team to discuss your specific needs and how we can help your business grow.
               </p>
               <a
                 href="tel:+15551234567"
-                className="inline-block bg-white text-blue-600 px-8 py-4 rounded-full font-semibold hover:bg-blue-50 transition-colors text-lg"
+                className="inline-block bg-white text-black px-8 py-4 rounded-full font-semibold hover:bg-gray-200 transition-colors text-lg"
               >
                 Call Us Now
               </a>

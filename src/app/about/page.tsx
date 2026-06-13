@@ -81,13 +81,13 @@ export default function AboutPage() {
       <Navigation />
       <main className="pt-20">
         {/* Hero Section */}
-        <section className="py-20 bg-gradient-to-br from-blue-50 to-white">
+        <section className="py-20 bg-gradient-to-br from-gray-100 to-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
-              <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+              <h1 className="text-4xl md:text-5xl font-bold text-black mb-4">
                 About BrightSide Solutions
               </h1>
-              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+              <p className="text-lg text-gray-700 max-w-3xl mx-auto">
                 Empowering businesses with professional virtual assistant services since 2018. We're committed to helping you achieve operational excellence.
               </p>
             </div>
@@ -99,10 +99,10 @@ export default function AboutPage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div>
-                <h2 className="text-3xl font-bold text-gray-900 mb-6">
+                <h2 className="text-3xl font-bold text-black mb-6">
                   Our Story
                 </h2>
-                <div className="space-y-4 text-gray-600 leading-relaxed">
+                <div className="space-y-4 text-gray-700 leading-relaxed">
                   <p>
                     BrightSide Solutions was founded in 2018 with a simple mission: to help businesses focus on what they do best by taking care of the rest. We noticed that many business owners, entrepreneurs, and professionals were spending countless hours on administrative tasks that prevented them from growing their businesses.
                   </p>
@@ -114,13 +114,13 @@ export default function AboutPage() {
                   </p>
                 </div>
               </div>
-              <div className="bg-gradient-to-br from-blue-100 to-blue-200 rounded-2xl p-8 relative overflow-hidden">
-                <div className="absolute top-0 right-0 w-32 h-32 bg-blue-300 rounded-full opacity-20 -translate-y-1/2 translate-x-1/2" />
-                <div className="absolute bottom-0 left-0 w-24 h-24 bg-blue-400 rounded-full opacity-20 translate-y-1/2 -translate-x-1/2" />
+              <div className="bg-gradient-to-br from-gray-200 to-gray-300 rounded-2xl p-8 relative overflow-hidden">
+                <div className="absolute top-0 right-0 w-32 h-32 bg-gray-400 rounded-full opacity-20 -translate-y-1/2 translate-x-1/2" />
+                <div className="absolute bottom-0 left-0 w-24 h-24 bg-gray-500 rounded-full opacity-20 translate-y-1/2 -translate-x-1/2" />
                 <div className="relative bg-white rounded-xl p-8 shadow-lg">
-                  <div className="text-5xl font-bold text-blue-600 mb-4">6+</div>
-                  <div className="text-xl font-semibold text-gray-900 mb-2">Years of Excellence</div>
-                  <p className="text-gray-600">Serving businesses with dedication and expertise since 2018</p>
+                  <div className="text-5xl font-bold text-black mb-4">6+</div>
+                  <div className="text-xl font-semibold text-black mb-2">Years of Excellence</div>
+                  <p className="text-gray-700">Serving businesses with dedication and expertise since 2018</p>
                 </div>
               </div>
             </div>
@@ -132,29 +132,29 @@ export default function AboutPage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div className="bg-white rounded-xl p-8 shadow-sm">
-                <div className="w-14 h-14 bg-blue-100 rounded-lg flex items-center justify-center text-blue-600 mb-6">
+                <div className="w-14 h-14 bg-gray-100 rounded-lg flex items-center justify-center text-black mb-6">
                   <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                   </svg>
                 </div>
-                <h3 className="text-2xl font-semibold text-gray-900 mb-4">
+                <h3 className="text-2xl font-semibold text-black mb-4">
                   Our Mission
                 </h3>
-                <p className="text-gray-600 leading-relaxed">
+                <p className="text-gray-700 leading-relaxed">
                   To provide exceptional virtual assistant services that empower businesses to operate more efficiently, scale effectively, and achieve their full potential. We're committed to being the trusted partner that enables our clients to focus on what matters most.
                 </p>
               </div>
               <div className="bg-white rounded-xl p-8 shadow-sm">
-                <div className="w-14 h-14 bg-blue-100 rounded-lg flex items-center justify-center text-blue-600 mb-6">
+                <div className="w-14 h-14 bg-gray-100 rounded-lg flex items-center justify-center text-black mb-6">
                   <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
                   </svg>
                 </div>
-                <h3 className="text-2xl font-semibold text-gray-900 mb-4">
+                <h3 className="text-2xl font-semibold text-black mb-4">
                   Our Vision
                 </h3>
-                <p className="text-gray-600 leading-relaxed">
+                <p className="text-gray-700 leading-relaxed">
                   To be the leading virtual assistant service provider known for reliability, excellence, and transformative business impact. We envision a future where every business has access to professional support that enables growth and success.
                 </p>
               </div>
@@ -166,10 +166,10 @@ export default function AboutPage() {
         <section className="py-20 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              <h2 className="text-3xl md:text-4xl font-bold text-black mb-4">
                 Our Core Values
               </h2>
-              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+              <p className="text-lg text-gray-700 max-w-3xl mx-auto">
                 The principles that guide everything we do and how we serve our clients.
               </p>
             </div>
@@ -179,13 +179,13 @@ export default function AboutPage() {
                   key={index}
                   className="text-center"
                 >
-                  <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 mx-auto mb-4">
+                  <div className="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center text-black mx-auto mb-4">
                     {value.icon}
                   </div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                  <h3 className="text-xl font-semibold text-black mb-2">
                     {value.title}
                   </h3>
-                  <p className="text-gray-600 leading-relaxed">
+                  <p className="text-gray-700 leading-relaxed">
                     {value.description}
                   </p>
                 </div>
@@ -198,10 +198,10 @@ export default function AboutPage() {
         <section className="py-20 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              <h2 className="text-3xl md:text-4xl font-bold text-black mb-4">
                 Meet Our Team
               </h2>
-              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+              <p className="text-lg text-gray-700 max-w-3xl mx-auto">
                 The dedicated professionals behind BrightSide Solutions who work tirelessly to support your success.
               </p>
             </div>
@@ -211,16 +211,16 @@ export default function AboutPage() {
                   key={index}
                   className="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow duration-300"
                 >
-                  <div className="w-20 h-20 bg-gradient-to-br from-blue-400 to-blue-600 rounded-full flex items-center justify-center text-white text-2xl font-bold mx-auto mb-4">
+                  <div className="w-20 h-20 bg-gradient-to-br from-gray-400 to-gray-600 rounded-full flex items-center justify-center text-white text-2xl font-bold mx-auto mb-4">
                     {member.name.charAt(0)}
                   </div>
-                  <h3 className="text-lg font-semibold text-gray-900 text-center mb-1">
+                  <h3 className="text-lg font-semibold text-black text-center mb-1">
                     {member.name}
                   </h3>
-                  <p className="text-blue-600 text-center mb-4 font-medium">
+                  <p className="text-gray-600 text-center mb-4 font-medium">
                     {member.role}
                   </p>
-                  <p className="text-gray-600 text-sm leading-relaxed text-center">
+                  <p className="text-gray-700 text-sm leading-relaxed text-center">
                     {member.bio}
                   </p>
                 </div>

@@ -36,10 +36,10 @@ export default function FAQ() {
     <section className="py-20 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-black mb-4">
             Frequently Asked Questions
           </h2>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+          <p className="text-lg text-gray-700 max-w-3xl mx-auto">
             Have questions? We're here to help. Here are some common questions about our services.
           </p>
         </div>
@@ -52,7 +52,7 @@ export default function FAQ() {
                 onClick={() => setOpenIndex(openIndex === index ? null : index)}
               >
                 <div className="flex justify-between items-center">
-                  <h3 className="text-lg font-semibold text-gray-900">
+                  <h3 className="text-lg font-semibold text-black">
                     {faq.question}
                   </h3>
                   <svg
@@ -72,7 +72,7 @@ export default function FAQ() {
                   </svg>
                 </div>
                 {openIndex === index && (
-                  <p className="mt-4 text-gray-600 leading-relaxed">
+                  <p className="mt-4 text-gray-700 leading-relaxed">
                     {faq.answer}
                   </p>
                 )}
@@ -84,7 +84,7 @@ export default function FAQ() {
         <div className="text-center mt-12">
           <a
             href="/contact"
-            className="inline-block bg-blue-600 text-white px-8 py-4 rounded-full font-semibold hover:bg-blue-700 transition-colors"
+            className="inline-block bg-black text-white px-8 py-4 rounded-full font-semibold hover:bg-gray-800 transition-colors"
           >
             Still Have Questions? Contact Us
           </a>

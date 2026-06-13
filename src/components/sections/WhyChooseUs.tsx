@@ -39,7 +39,7 @@ export default function WhyChooseUs() {
     {
       icon: (
         <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z" />
         </svg>
       ),
       title: 'Cost Effective',
@@ -60,10 +60,10 @@ export default function WhyChooseUs() {
     <section className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-black mb-4">
             Why Choose BrightSide Solutions?
           </h2>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+          <p className="text-lg text-gray-700 max-w-3xl mx-auto">
             We're not just virtual assistants – we're your strategic partners in business growth, combining expertise with dedication to deliver exceptional results.
           </p>
         </div>
@@ -74,13 +74,13 @@ export default function WhyChooseUs() {
               key={index}
               className="bg-gray-50 rounded-xl p-6 hover:shadow-lg transition-shadow duration-300"
             >
-              <div className="w-14 h-14 bg-blue-100 rounded-lg flex items-center justify-center text-blue-600 mb-4">
+              <div className="w-14 h-14 bg-gray-100 rounded-lg flex items-center justify-center text-black mb-4">
                 {benefit.icon}
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">
+              <h3 className="text-xl font-semibold text-black mb-2">
                 {benefit.title}
               </h3>
-              <p className="text-gray-600 leading-relaxed">
+              <p className="text-gray-700 leading-relaxed">
                 {benefit.description}
               </p>
             </div>

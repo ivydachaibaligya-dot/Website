@@ -48,7 +48,7 @@ export default function ContactForm() {
             required
             value={formData.name}
             onChange={handleChange}
-            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition"
+            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-black focus:border-transparent outline-none transition"
             placeholder="John Doe"
           />
         </div>
@@ -63,7 +63,7 @@ export default function ContactForm() {
             required
             value={formData.email}
             onChange={handleChange}
-            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition"
+            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-black focus:border-transparent outline-none transition"
             placeholder="john@example.com"
           />
         </div>
@@ -80,7 +80,7 @@ export default function ContactForm() {
             name="phone"
             value={formData.phone}
             onChange={handleChange}
-            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition"
+            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-black focus:border-transparent outline-none transition"
             placeholder="+1 (555) 000-0000"
           />
         </div>
@@ -94,7 +94,7 @@ export default function ContactForm() {
             name="company"
             value={formData.company}
             onChange={handleChange}
-            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition"
+            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-black focus:border-transparent outline-none transition"
             placeholder="Your Company"
           />
         </div>
@@ -109,7 +109,7 @@ export default function ContactForm() {
           name="service"
           value={formData.service}
           onChange={handleChange}
-          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition"
+          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-black focus:border-transparent outline-none transition"
         >
           <option value="">Select a service</option>
           <option value="administrative">Administrative Support</option>
@@ -136,14 +136,14 @@ export default function ContactForm() {
           rows={5}
           value={formData.message}
           onChange={handleChange}
-          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition resize-none"
+          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-black focus:border-transparent outline-none transition resize-none"
           placeholder="Tell us about your needs and how we can help your business..."
         />
       </div>
 
       <button
         type="submit"
-        className="w-full bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors text-lg"
+        className="w-full bg-black text-white px-8 py-4 rounded-lg font-semibold hover:bg-gray-800 transition-colors text-lg"
       >
         Send Message
       </button>

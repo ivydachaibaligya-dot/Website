@@ -182,13 +182,13 @@ export default function ServicesPage() {
       <Navigation />
       <main className="pt-20">
         {/* Hero Section */}
-        <section className="py-20 bg-gradient-to-br from-blue-50 to-white">
+        <section className="py-20 bg-gradient-to-br from-gray-100 to-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
-              <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+              <h1 className="text-4xl md:text-5xl font-bold text-black mb-4">
                 Our Services
               </h1>
-              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+              <p className="text-lg text-gray-700 max-w-3xl mx-auto">
                 Comprehensive virtual assistant solutions designed to help your business operate more efficiently and grow faster.
               </p>
             </div>
@@ -204,20 +204,20 @@ export default function ServicesPage() {
                   key={index}
                   className="bg-gray-50 rounded-xl p-8 hover:shadow-lg transition-shadow duration-300"
                 >
-                  <div className="w-14 h-14 bg-blue-100 rounded-lg flex items-center justify-center text-blue-600 mb-6">
+                  <div className="w-14 h-14 bg-gray-100 rounded-lg flex items-center justify-center text-black mb-6">
                     {service.icon}
                   </div>
-                  <h3 className="text-2xl font-semibold text-gray-900 mb-4">
+                  <h3 className="text-2xl font-semibold text-black mb-4">
                     {service.title}
                   </h3>
-                  <p className="text-gray-600 leading-relaxed mb-6">
+                  <p className="text-gray-700 leading-relaxed mb-6">
                     {service.description}
                   </p>
                   <ul className="space-y-2">
                     {service.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-start">
                         <svg
-                          className="w-5 h-5 text-green-600 mr-2 mt-0.5 flex-shrink-0"
+                          className="w-5 h-5 text-black mr-2 mt-0.5 flex-shrink-0"
                           fill="currentColor"
                           viewBox="0 0 20 20"
                         >
@@ -227,7 +227,7 @@ export default function ServicesPage() {
                             clipRule="evenodd"
                           />
                         </svg>
-                        <span className="text-gray-700">{feature}</span>
+                        <span className="text-gray-800">{feature}</span>
                       </li>
                     ))}
                   </ul>
@@ -241,16 +241,16 @@ export default function ServicesPage() {
         <section className="py-20 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              <h2 className="text-3xl md:text-4xl font-bold text-black mb-4">
                 Ready to Get Started?
               </h2>
-              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+              <p className="text-lg text-gray-700 max-w-3xl mx-auto">
                 Contact us today to discuss how our services can help your business thrive.
               </p>
             </div>
             <Link
               href="/contact"
-              className="inline-block bg-blue-600 text-white px-8 py-4 rounded-full font-semibold hover:bg-blue-700 transition-colors"
+              className="inline-block bg-black text-white px-8 py-4 rounded-full font-semibold hover:bg-gray-800 transition-colors"
             >
               Schedule a Consultation
             </Link>
@@ -262,33 +262,33 @@ export default function ServicesPage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
               <div>
-                <h2 className="text-3xl font-bold text-gray-900 mb-4">
+                <h2 className="text-3xl font-bold text-black mb-4">
                   Get in Touch
                 </h2>
-                <p className="text-lg text-gray-600 mb-8">
+                <p className="text-lg text-gray-700 mb-8">
                   Fill out the form and we'll get back to you within 24 hours to discuss how we can help your business.
                 </p>
                 <div className="space-y-6">
                   <div className="flex items-start">
-                    <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center text-blue-600 mr-4">
+                    <div className="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center text-black mr-4">
                       <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                       </svg>
                     </div>
                     <div>
-                      <h3 className="font-semibold text-gray-900">Email</h3>
-                      <p className="text-gray-600">info@brightsidesolutions.com</p>
+                      <h3 className="font-semibold text-black">Email</h3>
+                      <p className="text-gray-700">info@brightsidesolutions.com</p>
                     </div>
                   </div>
                   <div className="flex items-start">
-                    <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center text-blue-600 mr-4">
+                    <div className="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center text-black mr-4">
                       <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                       </svg>
                     </div>
                     <div>
-                      <h3 className="font-semibold text-gray-900">Phone</h3>
-                      <p className="text-gray-600">+1 (555) 123-4567</p>
+                      <h3 className="font-semibold text-black">Phone</h3>
+                      <p className="text-gray-700">+1 (555) 123-4567</p>
                     </div>
                   </div>
                 </div>
