@@ -1,40 +1,81 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #000000;
+  /* Brand Color Palette */
+  --coral-pink: #EB7777;
+  --warm-ivory: #F8F5F0;
+  --charcoal: #242424;
+  --soft-beige: #D9C8B8;
+
+  /* Semantic mappings */
+  --background: var(--warm-ivory);
+  --foreground: var(--charcoal);
+  --accent: var(--coral-pink);
+  --accent-light: var(--soft-beige);
+  --muted: #6B6B6B;
 }
 
-/* eslint-disable-next-line -- @theme is valid Tailwind CSS v4 syntax */
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  --color-accent: var(--accent);
+  --color-accent-light: var(--accent-light);
+  --color-muted: var(--muted);
+  --color-coral-pink: var(--coral-pink);
+  --color-warm-ivory: var(--warm-ivory);
+  --color-charcoal: var(--charcoal);
+  --color-soft-beige: var(--soft-beige);
+  --font-sans: var(--font-inter);
+  --font-serif: var(--font-playfair);
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #000000;
-    --foreground: #ffffff;
-  }
+  /* Custom theme colors for Tailwind */
+  --color-brand-coral: var(--coral-pink);
+  --color-brand-ivory: var(--warm-ivory);
+  --color-brand-charcoal: var(--charcoal);
+  --color-brand-beige: var(--soft-beige);
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-inter), -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 html {
   scroll-behavior: smooth;
 }
 
-/* Custom animations */
-@keyframes fadeIn {
+/* Premium typography */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-playfair), serif;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+  font-weight: 500;
+}
+
+h1 {
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+}
+
+h2 {
+  font-size: clamp(2rem, 4vw, 3.5rem);
+}
+
+h3 {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+}
+
+p, span, div {
+  font-family: var(--font-inter), sans-serif;
+}
+
+/* Smooth animations */
+@keyframes fadeInUp {
   from {
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(30px);
   }
   to {
     opacity: 1;
@@ -42,12 +83,181 @@ html {
   }
 }
 
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.8s ease-out;
+}
+
 .animate-fade-in {
   animation: fadeIn 0.6s ease-out;
 }
 
+.animate-slide-in {
+  animation: slideIn 0.6s ease-out;
+}
+
 /* Focus styles for accessibility */
 *:focus-visible {
-  outline: 2px solid #000000;
+  outline: 2px solid var(--coral-pink);
   outline-offset: 2px;
+}
+
+/* Premium button hover effects */
+.btn-premium {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.btn-premium::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: width 0.6s ease, height 0.6s ease;
+}
+
+.btn-premium:hover::after {
+  width: 300px;
+  height: 300px;
+}
+
+/* Card hover effects */
+.card-premium {
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.card-premium:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px rgba(235, 119, 119, 0.15);
+}
+
+/* Text selection */
+::selection {
+  background: var(--coral-pink);
+  color: var(--warm-ivory);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--soft-beige);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--coral-pink);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--charcoal);
+}
+
+/* Brand color utilities */
+.bg-coral-pink {
+  background-color: var(--coral-pink);
+}
+
+.bg-warm-ivory {
+  background-color: var(--warm-ivory);
+}
+
+.bg-soft-beige {
+  background-color: var(--soft-beige);
+}
+
+.bg-charcoal {
+  background-color: var(--charcoal);
+}
+
+.text-coral-pink {
+  color: var(--coral-pink);
+}
+
+.text-warm-ivory {
+  color: var(--warm-ivory);
+}
+
+.text-soft-beige {
+  color: var(--soft-beige);
+}
+
+.text-charcoal {
+  color: var(--charcoal);
+}
+
+.border-coral-pink {
+  border-color: var(--coral-pink);
+}
+
+.border-soft-beige {
+  border-color: var(--soft-beige);
+}
+
+/* Premium section transitions */
+.section-transition {
+  position: relative;
+}
+
+.section-transition::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--soft-beige), transparent);
+}
+
+/* Gradient overlays */
+.gradient-overlay {
+  background: linear-gradient(135deg, var(--warm-ivory) 0%, var(--soft-beige) 100%);
+}
+
+/* Link hover effects */
+.link-hover {
+  position: relative;
+  display: inline-block;
+}
+
+.link-hover::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -2px;
+  left: 0;
+  background-color: var(--coral-pink);
+  transition: width 0.3s ease;
+}
+
+.link-hover:hover::after {
+  width: 100%;
 }

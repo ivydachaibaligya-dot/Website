@@ -2,18 +2,19 @@ import { Metadata } from 'next';
 import Navigation from '@/components/layout/Navigation';
 import Footer from '@/components/layout/Footer';
 import Hero from '@/components/sections/Hero';
-import WhyChooseUs from '@/components/sections/WhyChooseUs';
-import ServicesOverview from '@/components/sections/ServicesOverview';
-import Testimonials from '@/components/sections/Testimonials';
-import FAQ from '@/components/sections/FAQ';
-import CallToAction from '@/components/sections/CallToAction';
+import About from '@/components/sections/About';
+import Services from '@/components/sections/ServicesOverview';
+import Tools from '@/components/sections/Tools';
+import Portfolio from '@/components/sections/Portfolio';
+import WhyWorkWithMe from '@/components/sections/WhyWorkWithMe';
+import Contact from '@/components/sections/Contact';
 
 export const metadata: Metadata = {
-  title: 'Home | BrightSide Solutions',
-  description: 'BrightSide Solutions - Professional virtual assistant services helping businesses scale with administrative support, email management, CRM management, and lead generation.',
+  title: 'Ivy | Roofing Operations Virtual Assistant',
+  description: 'Expert Virtual Assistant specializing in roofing operations, administrative support, and business management for US-based roofing companies.',
   openGraph: {
-    title: 'Home | BrightSide Solutions',
-    description: 'Professional virtual assistant services helping businesses scale.',
+    title: 'Ivy | Roofing Operations Virtual Assistant',
+    description: 'Expert Virtual Assistant specializing in roofing operations and administrative support.',
   },
 };
 
@@ -23,11 +24,12 @@ export default function Home() {
       <Navigation />
       <main>
         <Hero />
-        <WhyChooseUs />
-        <ServicesOverview />
-        <Testimonials />
-        <FAQ />
-        <CallToAction />
+        <About />
+        <Services />
+        <Tools />
+        <Portfolio />
+        <WhyWorkWithMe />
+        <Contact />
       </main>
       <Footer />
     </div>

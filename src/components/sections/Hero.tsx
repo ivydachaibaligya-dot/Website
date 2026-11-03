@@ -2,105 +2,104 @@ import Link from 'next/link';
 
 export default function Hero() {
   return (
-    <section className="pt-24 pb-16 md:pt-32 md:pb-24 bg-gradient-to-br from-gray-100 to-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+    <section className="min-h-screen pt-20 flex items-center bg-warm-ivory">
+      <div className="max-w-7xl mx-auto px-6 lg:px-8 py-20">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           {/* Left Content */}
-          <div className="text-center lg:text-left">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-black mb-6 leading-tight">
-              Scale Your Business with
-              <span className="text-gray-600 block">Expert Virtual Support</span>
+          <div className="animate-fade-in-up">
+            <div className="inline-block mb-6">
+              <span className="text-sm font-medium tracking-widest uppercase text-coral-pink">
+                Roofing Operations Virtual Assistant
+              </span>
+            </div>
+
+            <h1 className="text-5xl md:text-6xl lg:text-7xl text-charcoal mb-6 leading-[1.1]">
+              More Than a
+              <span className="block text-coral-pink">Virtual Assistant</span>
             </h1>
-            <p className="text-lg md:text-xl text-gray-700 mb-8 leading-relaxed">
-              Professional virtual assistant services for business owners, realtors, property managers, and contractors. Focus on growth while we handle the rest.
+
+            <p className="text-xl md:text-2xl text-charcoal/70 mb-8 leading-relaxed max-w-xl">
+              I understand roofing business operations—not just administrative tasks.
+              Let me handle the details so you can focus on growing your business.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+
+            <div className="flex flex-col sm:flex-row gap-4 mb-12">
               <Link
-                href="/contact"
-                className="bg-black text-white px-8 py-4 rounded-full font-semibold hover:bg-gray-800 transition-colors text-lg"
+                href="#contact"
+                className="btn-premium bg-coral-pink text-white px-8 py-4 text-base font-medium hover:bg-charcoal transition-colors text-center"
               >
-                Book a Discovery Call
+                Let's Work Together
               </Link>
               <Link
-                href="/services"
-                className="border-2 border-black text-black px-8 py-4 rounded-full font-semibold hover:bg-gray-100 transition-colors text-lg"
+                href="#about"
+                className="border-2 border-coral-pink text-coral-pink px-8 py-4 text-base font-medium hover:bg-coral-pink hover:text-white transition-colors text-center"
               >
-                Explore Services
+                Learn More
               </Link>
             </div>
 
             {/* Trust Indicators */}
-            <div className="mt-12 flex flex-wrap gap-8 justify-center lg:justify-start">
-              <div className="text-center">
-                <div className="text-3xl font-bold text-black">500+</div>
-                <div className="text-gray-600">Clients Served</div>
+            <div className="flex flex-wrap gap-8 border-t border-soft-beige pt-8">
+              <div>
+                <div className="text-3xl font-bold text-charcoal">4+</div>
+                <div className="text-sm text-charcoal/60 mt-1">Years Experience</div>
               </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-black">98%</div>
-                <div className="text-gray-600">Satisfaction Rate</div>
+              <div>
+                <div className="text-3xl font-bold text-charcoal">US</div>
+                <div className="text-sm text-charcoal/60 mt-1">Based Clients</div>
               </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-black">24/7</div>
-                <div className="text-gray-600">Support Available</div>
+              <div>
+                <div className="text-3xl font-bold text-charcoal">Roofing</div>
+                <div className="text-sm text-charcoal/60 mt-1">Industry Expert</div>
               </div>
             </div>
           </div>
 
-          {/* Right Content - Hero Image */}
-          <div className="relative">
-            <div className="bg-gradient-to-br from-gray-200 to-gray-300 rounded-2xl p-8 relative overflow-hidden">
-              <div className="absolute top-0 right-0 w-32 h-32 bg-gray-400 rounded-full opacity-20 -translate-y-1/2 translate-x-1/2" />
-              <div className="absolute bottom-0 left-0 w-24 h-24 bg-gray-500 rounded-full opacity-20 translate-y-1/2 -translate-x-1/2" />
-              
-              {/* Placeholder for hero image */}
-              <div className="relative bg-white rounded-xl p-8 shadow-lg">
-                <div className="flex items-center space-x-4 mb-6">
-                  <div className="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center">
-                    <svg className="w-6 h-6 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                    </svg>
-                  </div>
-                  <div>
-                    <div className="font-semibold text-black">Boost Productivity</div>
-                    <div className="text-sm text-gray-600">By 40% on average</div>
-                  </div>
-                </div>
-                
-                <div className="space-y-3">
-                  <div className="flex items-center space-x-3">
-                    <div className="w-5 h-5 bg-gray-100 rounded-full flex items-center justify-center">
-                      <svg className="w-3 h-3 text-black" fill="currentColor" viewBox="0 0 20 20">
-                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                      </svg>
+          {/* Right Content - Visual Element */}
+          <div className="relative animate-fade-in">
+            <div className="relative">
+              {/* Main card */}
+              <div className="bg-soft-beige/30 p-8 lg:p-12 relative">
+                <div className="bg-warm-ivory p-8 shadow-xl">
+                  <div className="flex items-start justify-between mb-6">
+                    <div>
+                      <div className="text-sm text-charcoal/60 mb-2">Current Role</div>
+                      <div className="text-xl font-semibold text-charcoal">
+                        Office Admin
+                      </div>
+                      <div className="text-charcoal/70">
+                        Texas Made Roofing and Renovations
+                      </div>
                     </div>
-                    <span className="text-gray-800">Email Management</span>
-                  </div>
-                  <div className="flex items-center space-x-3">
-                    <div className="w-5 h-5 bg-gray-100 rounded-full flex items-center justify-center">
-                      <svg className="w-3 h-3 text-black" fill="currentColor" viewBox="0 0 20 20">
-                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                      </svg>
+                    <div className="w-16 h-16 bg-coral-pink rounded-sm flex items-center justify-center">
+                      <span className="text-white font-bold text-2xl">I</span>
                     </div>
-                    <span className="text-gray-800">Calendar Management</span>
                   </div>
-                  <div className="flex items-center space-x-3">
-                    <div className="w-5 h-5 bg-gray-100 rounded-full flex items-center justify-center">
-                      <svg className="w-3 h-3 text-black" fill="currentColor" viewBox="0 0 20 20">
-                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                      </svg>
+
+                  <div className="space-y-4">
+                    <div className="flex items-center space-x-3">
+                      <div className="w-2 h-2 bg-coral-pink rounded-full"></div>
+                      <span className="text-charcoal/80">Lead Management & Follow-ups</span>
                     </div>
-                    <span className="text-gray-800">CRM Management</span>
-                  </div>
-                  <div className="flex items-center space-x-3">
-                    <div className="w-5 h-5 bg-gray-100 rounded-full flex items-center justify-center">
-                      <svg className="w-3 h-3 text-black" fill="currentColor" viewBox="0 0 20 20">
-                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                      </svg>
+                    <div className="flex items-center space-x-3">
+                      <div className="w-2 h-2 bg-coral-pink rounded-full"></div>
+                      <span className="text-charcoal/80">Customer Communication</span>
                     </div>
-                    <span className="text-gray-800">Lead Generation</span>
+                    <div className="flex items-center space-x-3">
+                      <div className="w-2 h-2 bg-coral-pink rounded-full"></div>
+                      <span className="text-charcoal/80">Scheduling & Crew Coordination</span>
+                    </div>
+                    <div className="flex items-center space-x-3">
+                      <div className="w-2 h-2 bg-coral-pink rounded-full"></div>
+                      <span className="text-charcoal/80">CRM & Job Documentation</span>
+                    </div>
                   </div>
                 </div>
               </div>
+
+              {/* Decorative elements */}
+              <div className="absolute -top-4 -right-4 w-24 h-24 bg-soft-beige rounded-sm"></div>
+              <div className="absolute -bottom-4 -left-4 w-16 h-16 bg-coral-pink/20 rounded-sm"></div>
             </div>
           </div>
         </div>

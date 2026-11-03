@@ -1,43 +1,42 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Playfair_Display, Inter } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const playfair = Playfair_Display({
+  variable: "--font-playfair",
   subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const inter = Inter({
+  variable: "--font-inter",
   subsets: ["latin"],
+  weight: ["300", "400", "500", "600"],
 });
 
 export const metadata: Metadata = {
-  title: "BrightSide Solutions - Professional Virtual Assistant Services",
-  description: "Scale your business with expert virtual assistant services. Administrative support, email management, CRM management, lead generation, and more for business owners, realtors, and contractors.",
-  keywords: "virtual assistant, administrative support, email management, CRM management, lead generation, business support, remote assistant",
-  authors: [{ name: "BrightSide Solutions" }],
-  creator: "BrightSide Solutions",
-  publisher: "BrightSide Solutions",
+  title: "Ivy | Roofing Operations Virtual Assistant",
+  description: "Expert Virtual Assistant specializing in roofing operations, administrative support, and business management for US-based roofing companies. Industry knowledge, reliability, and proven results.",
+  keywords: "virtual assistant, roofing operations, administrative support, CRM management, lead generation, appointment setting, roofing industry, business support",
+  authors: [{ name: "Ivy" }],
+  creator: "Ivy",
+  publisher: "Ivy",
   formatDetection: {
     email: false,
     address: false,
     telephone: false,
   },
-  metadataBase: new URL("https://brightsidesolutions.com"),
   openGraph: {
-    title: "BrightSide Solutions - Professional Virtual Assistant Services",
-    description: "Scale your business with expert virtual assistant services. Administrative support, email management, CRM management, lead generation, and more.",
-    url: "https://brightsidesolutions.com",
-    siteName: "BrightSide Solutions",
+    title: "Ivy | Roofing Operations Virtual Assistant",
+    description: "Expert Virtual Assistant specializing in roofing operations and administrative support for US-based roofing companies.",
+    siteName: "Ivy",
     locale: "en_US",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "BrightSide Solutions - Professional Virtual Assistant Services",
-    description: "Scale your business with expert virtual assistant services.",
-    creator: "@brightsidesolutions",
+    title: "Ivy | Roofing Operations Virtual Assistant",
+    description: "Expert Virtual Assistant specializing in roofing operations and administrative support.",
   },
   robots: {
     index: true,
@@ -65,7 +64,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased scroll-smooth`}
+      className={`${playfair.variable} ${inter.variable} h-full antialiased scroll-smooth`}
     >
       <head>
         <link rel="icon" href="/favicon.ico" />
