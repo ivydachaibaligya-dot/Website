@@ -1,0 +1,17 @@
+import type { MetadataRoute } from 'next';
+import { siteConfig } from '@/config/site';
+
+export const dynamic = 'force-static';
+
+export default function manifest(): MetadataRoute.Manifest {
+  return {
+    name: `${siteConfig.name} | ${siteConfig.descriptor}`,
+    short_name: siteConfig.name,
+    description: siteConfig.description,
+    start_url: '/',
+    display: 'standalone',
+    background_color: '#F8F5F0',
+    theme_color: '#F8F5F0',
+    icons: [{ src: '/icon.svg', sizes: 'any', type: 'image/svg+xml' }],
+  };
+}

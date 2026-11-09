@@ -6,7 +6,7 @@ export default function WhyAurevant() {
     },
     {
       title: 'Industry Understanding',
-      description: 'From executive offices to roofing and home services companies, we learn the workflows behind your business, not just the task list.',
+      description: 'From executive offices to creative studios and home services companies, we learn the workflows behind your business, not just the task list.',
     },
     {
       title: 'Discretion & Security',
@@ -29,7 +29,7 @@ export default function WhyAurevant() {
   return (
     <section className="py-24 lg:py-32 bg-warm-ivory section-transition">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
-        <div className="mb-16">
+        <div className="mb-16" data-reveal>
           <div className="inline-block mb-6">
             <span className="text-sm font-medium tracking-widest uppercase text-coral-pink">
               Why AUREVANT
@@ -45,9 +45,11 @@ export default function WhyAurevant() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {advantages.map((advantage) => (
+          {advantages.map((advantage, index) => (
             <div
               key={advantage.title}
+              data-reveal
+              style={{ ['--reveal-delay' as string]: `${(index % 3) * 100}ms` }}
               className="card-premium bg-soft-beige/20 p-8 hover:bg-warm-ivory transition-colors border border-soft-beige/30"
             >
               <div className="w-12 h-12 bg-coral-pink text-white rounded-sm flex items-center justify-center mb-6">

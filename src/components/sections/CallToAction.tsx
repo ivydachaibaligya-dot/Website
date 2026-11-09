@@ -1,10 +1,12 @@
 import Link from 'next/link';
+import AmbientBackground from '@/components/visuals/AmbientBackground';
 
 export default function CallToAction() {
   return (
-    <section className="py-24 lg:py-32 bg-charcoal text-warm-ivory">
-      <div className="max-w-7xl mx-auto px-6 lg:px-8">
-        <div className="text-center">
+    <section className="relative py-24 lg:py-32 bg-charcoal text-warm-ivory overflow-hidden">
+      <AmbientBackground variant="dark" />
+      <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
+        <div className="text-center" data-reveal>
           <div className="inline-block mb-6">
             <span className="text-sm font-medium tracking-widest uppercase text-coral-pink">
               Your Business. Our Commitment.
@@ -20,13 +22,13 @@ export default function CallToAction() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/contact"
-              className="btn-premium bg-coral-pink text-white px-8 py-4 text-base font-medium hover:bg-warm-ivory hover:text-charcoal transition-colors"
+              className="btn-premium btn-lift bg-coral-pink text-white px-8 py-4 text-base font-medium hover:bg-warm-ivory hover:text-charcoal"
             >
               Book a Consultation
             </Link>
             <Link
               href="/services"
-              className="border-2 border-warm-ivory/40 text-warm-ivory px-8 py-4 text-base font-medium hover:border-coral-pink hover:text-coral-pink transition-colors"
+              className="btn-lift border-2 border-warm-ivory/40 text-warm-ivory px-8 py-4 text-base font-medium hover:border-coral-pink hover:text-coral-pink"
             >
               Explore Our Services
             </Link>

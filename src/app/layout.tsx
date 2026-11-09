@@ -1,6 +1,10 @@
 import type { Metadata, Viewport } from "next";
 import { Playfair_Display, Inter } from "next/font/google";
 import "./globals.css";
+import "./animations.css";
+import RevealObserver from "@/components/motion/RevealObserver";
+import StructuredData from "@/components/seo/StructuredData";
+import { siteConfig } from "@/config/site";
 
 const playfair = Playfair_Display({
   variable: "--font-playfair",
@@ -14,29 +18,39 @@ const inter = Inter({
   weight: ["300", "400", "500", "600"],
 });
 
+const defaultTitle = `${siteConfig.name} | Virtual Assistant & Creative Digital Agency`;
+
 export const metadata: Metadata = {
-  title: "AUREVANT | Global Business Support",
-  description: "AUREVANT is a boutique virtual assistant agency providing premium global business support to US companies: executive administration, roofing and home services support, lead generation, CRM management, customer support, and digital operations.",
-  keywords: "AUREVANT, virtual assistant agency, global business support, executive assistant, administrative support, roofing virtual assistant, home services support, lead generation, CRM management, appointment setting, customer support, website support",
-  authors: [{ name: "AUREVANT" }],
-  creator: "AUREVANT",
-  publisher: "AUREVANT",
+  metadataBase: new URL(siteConfig.url),
+  title: {
+    default: defaultTitle,
+    template: `%s | ${siteConfig.name}`,
+  },
+  description: siteConfig.description,
+  keywords: siteConfig.keywords,
+  applicationName: siteConfig.name,
+  authors: [{ name: siteConfig.name }],
+  creator: siteConfig.name,
+  publisher: siteConfig.name,
+  category: "business",
+  alternates: { canonical: "/" },
   formatDetection: {
     email: false,
     address: false,
     telephone: false,
   },
   openGraph: {
-    title: "AUREVANT | Global Business Support",
-    description: "Your Business. Our Commitment. Premium virtual assistant support for US businesses.",
-    siteName: "AUREVANT",
-    locale: "en_US",
+    title: defaultTitle,
+    description: siteConfig.description,
+    url: "/",
+    siteName: siteConfig.name,
+    locale: siteConfig.locale,
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "AUREVANT | Global Business Support",
-    description: "Your Business. Our Commitment. Premium virtual assistant support for US businesses.",
+    title: defaultTitle,
+    description: siteConfig.description,
   },
   robots: {
     index: true,
@@ -55,6 +69,7 @@ export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
   maximumScale: 5,
+  themeColor: "#F8F5F0",
 };
 
 export default function RootLayout({
@@ -66,11 +81,22 @@ export default function RootLayout({
     <html
       lang="en"
       className={`${playfair.variable} ${inter.variable} h-full antialiased scroll-smooth`}
+      suppressHydrationWarning
     >
       <head>
-        <link rel="icon" href="/favicon.ico" />
+        <script dangerouslySetInnerHTML={{ __html: "document.documentElement.classList.add('js')" }} />
       </head>
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        <a
+          href="#main-content"
+          className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[60] focus:bg-charcoal focus:text-warm-ivory focus:px-4 focus:py-2"
+        >
+          Skip to content
+        </a>
+        <StructuredData />
+        {children}
+        <RevealObserver />
+      </body>
     </html>
   );
 }

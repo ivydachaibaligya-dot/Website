@@ -1,3 +1,17 @@
+# AUREVANT Launch Checklist (Netlify)
+
+The site is hosted on Netlify and is currently private (team login). Before going public:
+
+1. **Custom domain:** after connecting it in Netlify, set `url` in `src/config/site.ts` to the new domain. Canonical URLs, Open Graph tags, `sitemap.xml`, `robots.txt`, and structured data all read from it.
+2. **Pricing:** set `hourlyRate` for each service in `src/config/pricing.ts` (leave `null` to show "Available on request").
+3. **Forms:** confirm form detection is enabled (Site configuration → Forms), redeploy, and check that the `contact` and `quote-request` forms are listed. Forms are declared statically in `public/__forms.html`; keep field names there in sync with the React forms.
+4. **Notifications:** add an email notification for new form submissions.
+5. **Visitor access:** switch Site configuration → Access & security → Visitor access to public only when approved.
+6. **Live test:** submit the contact form, the homepage consultation form, and a pricing quote request, then confirm each appears in Netlify Forms and in the notification inbox.
+7. **Search Console:** submit `https://<domain>/sitemap.xml` after launch.
+
+---
+
 # Vercel Deployment Guide
 
 This guide will walk you through deploying the AUREVANT website to Vercel.

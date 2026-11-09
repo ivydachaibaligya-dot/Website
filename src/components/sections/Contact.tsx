@@ -7,7 +7,7 @@ export default function Contact() {
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
           {/* Left Content */}
-          <div>
+          <div data-reveal>
             <div className="inline-block mb-6">
               <span className="text-sm font-medium tracking-widest uppercase text-coral-pink">
                 Get in Touch
@@ -66,7 +66,7 @@ export default function Contact() {
           </div>
 
           {/* Right Content - Contact Form Visual */}
-          <div className="bg-white p-8 lg:p-12 shadow-xl">
+          <div data-reveal style={{ ["--reveal-delay" as string]: "150ms" }} className="bg-white p-8 lg:p-12 shadow-xl">
             <h3 className="text-2xl font-semibold text-charcoal mb-6">
               Request a Consultation
             </h3>

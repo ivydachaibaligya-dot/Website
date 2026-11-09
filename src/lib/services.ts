@@ -1,7 +1,11 @@
+export type ServiceIcon = 'assistant' | 'design' | 'web' | 'social' | 'digital';
+
 export type Service = {
   id: string;
   number: string;
   title: string;
+  icon: ServiceIcon;
+  tagline: string;
   summary: string;
   description: string;
   features: string[];
@@ -9,99 +13,94 @@ export type Service = {
 
 export const services: Service[] = [
   {
-    id: 'administrative-executive-support',
+    id: 'virtual-assistance',
     number: '01',
-    title: 'Administrative & Executive Support',
+    title: 'Virtual Assistance',
+    icon: 'assistant',
+    tagline: 'Administration, customer care & operations',
     summary:
-      'Inbox, calendar, travel, and document management handled with the discretion and precision your leadership time deserves.',
+      'Dedicated assistants for executive administration, customer support, appointment setting, lead generation, CRM upkeep, and roofing & home services back-office work.',
     description:
-      'Reclaim your day with a dedicated assistant who keeps your inbox, calendar, and paperwork in order. We manage the details behind the scenes so you and your leadership team can stay focused on decisions that move the business forward.',
+      'A dedicated assistant who learns your business and handles the daily operations that keep it running: inboxes, calendars, customer communication, appointments, prospect research, and CRM records. We also offer specialized back-office support for roofing and home services companies, from estimates and job files to crew scheduling.',
     features: [
-      'Inbox triage and email management',
-      'Calendar, meeting, and travel coordination',
-      'Document preparation, formatting, and filing',
-      'Data entry, reporting, and record keeping',
-      'Research and project coordination',
+      'Executive inbox, calendar, and travel management',
+      'Customer support and appointment setting',
+      'Lead generation and prospect research',
+      'CRM updates, data cleanup, and reporting',
+      'Roofing & home services back-office support',
+      'Document preparation, data entry, and research',
     ],
   },
   {
-    id: 'roofing-home-services-support',
+    id: 'graphic-design',
     number: '02',
-    title: 'Roofing & Home Services Support',
+    title: 'Graphic Design',
+    icon: 'design',
+    tagline: 'Brand-consistent visuals for every channel',
     summary:
-      'Specialized back-office support for roofing and home services companies, from estimates and job files to crew scheduling.',
+      'Polished, on-brand graphics for social media, marketing campaigns, presentations, and print, designed to make your business look as professional as it is.',
     description:
-      'Purpose-built support for roofing contractors and home services businesses. We understand the workflow from first inquiry to final invoice, and we keep your office running so your crews can stay on the job.',
+      'Consistent, high-quality visuals build trust. We design social media graphics, marketing collateral, presentations, and brand assets that follow your brand guidelines, or help you define them if you are just getting started.',
     features: [
-      'Inspection and estimate scheduling',
-      'Estimate, proposal, and job file preparation',
-      'Crew scheduling and job coordination',
-      'Photo documentation and project records',
-      'Homeowner status updates and follow-ups',
+      'Social media graphics and templates',
+      'Marketing collateral, flyers, and brochures',
+      'Pitch decks and presentation design',
+      'Brand kits, color palettes, and style guides',
+      'Print-ready and digital ad creatives',
     ],
   },
   {
-    id: 'lead-generation',
+    id: 'web-development',
     number: '03',
-    title: 'Lead Generation',
+    title: 'Web Development',
+    icon: 'web',
+    tagline: 'Fast, responsive, conversion-focused websites',
     summary:
-      'Targeted prospect research, list building, and outreach support that keeps your pipeline full of qualified opportunities.',
+      'Modern, mobile-first websites and landing pages built for speed, search visibility, and turning visitors into enquiries, plus ongoing updates and maintenance.',
     description:
-      'Consistent growth starts with a healthy pipeline. We research, qualify, and organize prospects that fit your ideal customer profile, then support the outreach and follow-up that turns interest into conversations.',
+      'Your website is often the first impression of your business. We design and build responsive websites and landing pages with clean code, strong technical SEO foundations, and clear calls to action, then keep them current with ongoing updates and maintenance.',
     features: [
-      'Ideal customer profile and prospect research',
-      'Contact list building and data verification',
-      'Outreach sequence support and follow-ups',
-      'Lead qualification and handoff to your team',
-      'Pipeline tracking and reporting',
+      'Responsive website design and development',
+      'Landing pages for campaigns and lead capture',
+      'Technical SEO foundations and page speed',
+      'Contact, booking, and quote form integration',
+      'Website updates, content, and maintenance',
     ],
   },
   {
-    id: 'crm-management',
+    id: 'social-media-management',
     number: '04',
-    title: 'CRM Management',
+    title: 'Social Media Management',
+    icon: 'social',
+    tagline: 'Consistent content and engaged communities',
     summary:
-      'Clean, current, and well-structured CRM data, so every lead, deal, and customer record is accurate and actionable.',
+      'Content calendars, captions, scheduling, and community engagement that keep your brand visible and consistent across the platforms your customers use.',
     description:
-      'Your CRM is only as valuable as the data inside it. We keep records accurate, pipelines up to date, and reporting reliable, giving you clear visibility into every lead, deal, and customer relationship.',
+      'Showing up consistently is what builds an audience. We plan content calendars, write captions, design and schedule posts, and respond to comments and messages, so your social presence stays active and on-brand without taking over your week.',
     features: [
-      'Contact, deal, and pipeline updates',
-      'Data cleanup, deduplication, and organization',
-      'Task, reminder, and follow-up management',
-      'Workflow and automation support',
-      'Pipeline and activity reporting',
+      'Content strategy and monthly calendars',
+      'Caption writing and post design',
+      'Scheduling across major platforms',
+      'Comment, message, and community management',
+      'Monthly performance summaries',
     ],
   },
   {
-    id: 'customer-support-appointment-setting',
+    id: 'digital-solutions',
     number: '05',
-    title: 'Customer Support & Appointment Setting',
+    title: 'Digital Solutions',
+    icon: 'digital',
+    tagline: 'Systems, automation & digital operations',
     summary:
-      'Warm, professional customer communication and appointment setting that represents your brand with care.',
+      'CRM setup, workflow automation, email marketing, and online listings that connect your tools and remove repetitive manual work.',
     description:
-      'Every interaction is a reflection of your brand. We respond to inquiries, confirm appointments, and follow up with customers promptly and professionally, so no opportunity or client slips through the cracks.',
+      'The right systems save hours every week. We set up and organize CRMs, connect your tools with automations, prepare email campaigns, and keep your online listings and profiles accurate, so your digital operations run smoothly in the background.',
     features: [
-      'Email, chat, and inquiry management',
-      'Appointment setting, confirmations, and reminders',
-      'Customer follow-ups and status updates',
-      'Help desk and ticket management',
-      'Review and feedback request support',
-    ],
-  },
-  {
-    id: 'digital-website-support',
-    number: '06',
-    title: 'Digital & Website Support',
-    summary:
-      'Website updates, content publishing, and social media support that keep your digital presence polished and current.',
-    description:
-      'Keep your online presence as professional as your service. We handle routine website updates, content publishing, and social media coordination so your brand always looks current and credible.',
-    features: [
-      'Website content updates and maintenance',
-      'Social media scheduling and coordination',
-      'Branded graphics and content in Canva',
-      'Online listings and profile management',
-      'Email newsletter preparation',
+      'CRM setup, pipelines, and workflow automation',
+      'Tool integrations with Zapier and native connectors',
+      'Email newsletters and campaign preparation',
+      'Online listings and business profile management',
+      'Process documentation and SOPs',
     ],
   },
 ];

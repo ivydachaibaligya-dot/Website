@@ -10,11 +10,11 @@ export default function About() {
   ];
 
   return (
-    <section id="about" className="py-24 lg:py-32 bg-soft-beige/30 section-transition">
+    <section id="about" className="py-24 lg:py-32 bg-soft-beige/30 section-transition overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           {/* Left Content */}
-          <div>
+          <div data-reveal>
             <div className="inline-block mb-6">
               <span className="text-sm font-medium tracking-widest uppercase text-coral-pink">
                 About AUREVANT
@@ -28,21 +28,20 @@ export default function About() {
 
             <div className="space-y-6 text-charcoal/80 text-lg leading-relaxed">
               <p>
-                AUREVANT is an international virtual assistant agency providing global business
-                support to companies across the United States. We partner with founders, executives,
+                AUREVANT is an international virtual assistant and creative digital agency providing
+                global business support to companies across the United States. We partner with founders, executives,
                 and growing teams who need dependable support without the overhead of in-house hiring.
               </p>
 
               <p>
-                From executive administration and CRM management to lead generation and customer
-                care, we become a seamless extension of your team, working inside your systems,
+                From executive assistance and customer care to brand design, websites, and social
+                media, we become a seamless extension of your team, working inside your systems,
                 following your standards, and representing your brand with care.
               </p>
 
               <p>
-                We bring particular depth to roofing and home services businesses, where we
-                understand the rhythm of inspections, estimates, crews, and homeowner communication,
-                not just general administrative tasks.
+                One partner for operations and creative work means fewer handoffs, a consistent
+                brand everywhere your clients find you, and more time for you to lead the business.
               </p>
             </div>
 
@@ -69,7 +68,7 @@ export default function About() {
           </div>
 
           {/* Right Content - Standards Visual */}
-          <div className="relative">
+          <div className="relative" data-reveal style={{ ['--reveal-delay' as string]: '150ms' }}>
             <div className="bg-warm-ivory p-8 lg:p-12 shadow-xl">
               <div className="space-y-8">
                 <div>
@@ -105,7 +104,7 @@ export default function About() {
             </div>
 
             {/* Decorative element */}
-            <div className="absolute -bottom-8 -right-8 w-32 h-32 bg-coral-pink/20 rounded-sm"></div>
+            <div aria-hidden="true" className="absolute -bottom-8 -right-8 -z-0 w-32 h-32 bg-coral-pink/20 rounded-sm float-rotate pointer-events-none"></div>
           </div>
         </div>
       </div>

@@ -4,13 +4,15 @@ import Footer from '@/components/layout/Footer';
 import PricingCalculator from '@/components/sections/PricingCalculator';
 
 export const metadata: Metadata = {
-  title: 'Pricing & Custom Quote | AUREVANT',
+  title: 'Pricing Calculator & Custom Quote',
   description:
-    'Build your own virtual support plan. Select services, set your preferred working hours, and request a custom quote from AUREVANT.',
+    'Build your own support plan. Select services, set hours per day and days per week, see estimated hourly, weekly, and monthly pricing, and request a custom quote.',
+  alternates: { canonical: '/pricing' },
   openGraph: {
-    title: 'Build Your Own Support Plan | AUREVANT',
+    title: 'Pricing Calculator & Custom Quote | AUREVANT',
     description:
-      'Customize your virtual support package based on your business needs, preferred working hours, and selected services.',
+      'Build your own support plan. Select services, set hours per day and days per week, see estimated hourly, weekly, and monthly pricing, and request a custom quote.',
+    url: '/pricing',
   },
 };
 
@@ -18,7 +20,7 @@ export default function PricingPage() {
   return (
     <div className="min-h-screen">
       <Navigation />
-      <main className="pt-20">
+      <main id="main-content" className="pt-20">
         <PricingCalculator headingLevel="h1" />
       </main>
       <Footer />

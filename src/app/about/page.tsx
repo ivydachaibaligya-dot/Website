@@ -4,11 +4,15 @@ import Footer from '@/components/layout/Footer';
 import CallToAction from '@/components/sections/CallToAction';
 
 export const metadata: Metadata = {
-  title: 'About | AUREVANT',
-  description: 'AUREVANT is a boutique international virtual assistant agency providing global business support to US companies. Learn about our mission, vision, and values.',
+  title: 'About AUREVANT',
+  description:
+    'Meet AUREVANT, a boutique virtual assistant and creative digital agency providing global business support to US companies. Our mission, vision, and values.',
+  alternates: { canonical: '/about' },
   openGraph: {
-    title: 'About | AUREVANT',
-    description: 'Global Business Support. Your Business. Our Commitment.',
+    title: 'About AUREVANT | AUREVANT',
+    description:
+      'Meet AUREVANT, a boutique virtual assistant and creative digital agency providing global business support to US companies. Our mission, vision, and values.',
+    url: '/about',
   },
 };
 
@@ -35,7 +39,7 @@ export default function AboutPage() {
   return (
     <div className="min-h-screen">
       <Navigation />
-      <main className="pt-20">
+      <main id="main-content" className="pt-20">
         {/* Hero Section */}
         <section className="py-24 lg:py-32 bg-warm-ivory">
           <div className="max-w-7xl mx-auto px-6 lg:px-8">
@@ -58,7 +62,7 @@ export default function AboutPage() {
         </section>
 
         {/* Our Story */}
-        <section className="py-24 lg:py-32 bg-soft-beige/30 section-transition">
+        <section className="py-24 lg:py-32 bg-soft-beige/30 section-transition overflow-hidden">
           <div className="max-w-7xl mx-auto px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
               <div>
@@ -77,9 +81,9 @@ export default function AboutPage() {
                     business running but keeps them from growing it. AUREVANT exists to change that.
                   </p>
                   <p>
-                    We provide dedicated, remote support across administration, lead generation,
-                    CRM management, customer care, and digital operations, with specialized
-                    expertise for roofing and home services companies.
+                    We provide dedicated, remote support across virtual assistance, graphic design,
+                    web development, social media management, and digital solutions, including
+                    specialized back-office support for roofing and home services companies.
                   </p>
                   <p>
                     Our boutique model means you are never just another account. We take the time to

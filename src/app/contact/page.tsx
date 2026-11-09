@@ -5,11 +5,15 @@ import ContactForm from '@/components/sections/ContactForm';
 import { contactEmail, linkedInUrl } from '@/lib/services';
 
 export const metadata: Metadata = {
-  title: 'Contact | AUREVANT',
-  description: 'Contact AUREVANT to book a consultation and discover how our premium virtual assistant services can support your US business.',
+  title: 'Contact & Book a Consultation',
+  description:
+    'Book a consultation with AUREVANT. Tell us about your business and we will recommend the right mix of virtual assistance, design, web, and social media support.',
+  alternates: { canonical: '/contact' },
   openGraph: {
-    title: 'Contact | AUREVANT',
-    description: 'Book a consultation with AUREVANT. Your Business. Our Commitment.',
+    title: 'Contact & Book a Consultation | AUREVANT',
+    description:
+      'Book a consultation with AUREVANT. Tell us about your business and we will recommend the right mix of virtual assistance, design, web, and social media support.',
+    url: '/contact',
   },
 };
 
@@ -47,7 +51,7 @@ export default function ContactPage() {
   return (
     <div className="min-h-screen">
       <Navigation />
-      <main className="pt-20">
+      <main id="main-content" className="pt-20">
         {/* Hero Section */}
         <section className="py-24 lg:py-32 bg-warm-ivory">
           <div className="max-w-7xl mx-auto px-6 lg:px-8">

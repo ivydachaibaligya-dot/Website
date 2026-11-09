@@ -1,23 +1,30 @@
+import AmbientBackground from '@/components/visuals/AmbientBackground';
+
 export default function Tools() {
   const tools = [
     { name: 'Google Workspace', category: 'Productivity' },
     { name: 'Microsoft 365', category: 'Productivity' },
     { name: 'GoHighLevel', category: 'CRM & Marketing' },
+    { name: 'HubSpot', category: 'CRM' },
+    { name: 'Figma', category: 'Design' },
+    { name: 'Adobe Creative Cloud', category: 'Design' },
+    { name: 'Canva', category: 'Design' },
+    { name: 'WordPress', category: 'Web Development' },
+    { name: 'Meta Business Suite', category: 'Social Media' },
+    { name: 'Zapier', category: 'Automation' },
+    { name: 'Notion', category: 'Knowledge & Planning' },
+    { name: 'Trello', category: 'Project Management' },
+    { name: 'QuickBooks', category: 'Accounting' },
     { name: 'Apollo', category: 'Lead Generation' },
     { name: 'Roofr', category: 'Roofing Software' },
     { name: 'CompanyCam', category: 'Photo Documentation' },
-    { name: 'Zuper', category: 'Field Service Management' },
-    { name: 'QuickBooks', category: 'Accounting' },
-    { name: 'Trello', category: 'Project Management' },
-    { name: 'Notion', category: 'Knowledge & Planning' },
-    { name: 'Zapier', category: 'Automation' },
-    { name: 'Canva', category: 'Design' },
   ];
 
   return (
-    <section id="tools" className="py-24 lg:py-32 bg-charcoal text-warm-ivory section-transition">
-      <div className="max-w-7xl mx-auto px-6 lg:px-8">
-        <div className="mb-16">
+    <section id="tools" className="relative py-24 lg:py-32 bg-charcoal text-warm-ivory section-transition overflow-hidden">
+      <AmbientBackground variant="dark" />
+      <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
+        <div className="mb-16" data-reveal>
           <div className="inline-block mb-6">
             <span className="text-sm font-medium tracking-widest uppercase text-coral-pink">
               Tools & Technology
@@ -33,13 +40,15 @@ export default function Tools() {
         </div>
 
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-          {tools.map((tool) => (
+          {tools.map((tool, index) => (
             <div
               key={tool.name}
-              className="bg-charcoal/50 p-8 hover:bg-coral-pink transition-colors group border border-soft-beige/20"
+              data-reveal
+              style={{ ['--reveal-delay' as string]: `${(index % 4) * 70}ms` }}
+              className="bg-charcoal/50 p-6 md:p-8 hover:bg-coral-pink transition-colors group border border-soft-beige/20"
             >
               <div className="text-coral-pink text-sm mb-3 group-hover:text-white transition-colors">{tool.category}</div>
-              <div className="text-xl font-semibold text-warm-ivory group-hover:text-white transition-colors">
+              <div className="text-lg md:text-xl font-semibold text-warm-ivory group-hover:text-white transition-colors">
                 {tool.name}
               </div>
             </div>

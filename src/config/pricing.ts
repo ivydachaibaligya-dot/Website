@@ -90,9 +90,21 @@ export const pricingConfig = {
       hourlyRate: null,
     },
     {
+      id: 'web-development',
+      name: 'Web Development',
+      description: 'Website and landing page design and builds.',
+      hourlyRate: null,
+    },
+    {
       id: 'website-management',
       name: 'Website Management',
       description: 'Content updates and routine site maintenance.',
+      hourlyRate: null,
+    },
+    {
+      id: 'digital-solutions',
+      name: 'Digital Solutions',
+      description: 'Automation, integrations, and systems setup.',
       hourlyRate: null,
     },
   ] satisfies PricedService[],

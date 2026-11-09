@@ -31,7 +31,7 @@ export default function Approach() {
   return (
     <section id="approach" className="py-24 lg:py-32 bg-soft-beige/30 section-transition">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
-        <div className="mb-16">
+        <div className="mb-16" data-reveal>
           <div className="inline-block mb-6">
             <span className="text-sm font-medium tracking-widest uppercase text-coral-pink">
               Our Approach
@@ -49,7 +49,7 @@ export default function Approach() {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
           {/* Featured Step */}
-          <div className="lg:col-span-2 card-premium bg-warm-ivory p-10 lg:p-14 shadow-lg border-l-4 border-coral-pink">
+          <div data-reveal className="lg:col-span-2 card-premium bg-warm-ivory p-10 lg:p-14 shadow-lg border-l-4 border-coral-pink">
             <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-6">
               <div className="flex-1">
                 <div className="inline-block px-3 py-1 bg-coral-pink/10 text-sm font-medium text-coral-pink mb-4">
@@ -72,9 +72,11 @@ export default function Approach() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {steps.slice(1).map((step) => (
+          {steps.slice(1).map((step, index) => (
             <div
               key={step.number}
+              data-reveal
+              style={{ ['--reveal-delay' as string]: `${index * 100}ms` }}
               className="card-premium bg-warm-ivory p-8 shadow-sm border border-soft-beige/30"
             >
               <div className="inline-block px-3 py-1 bg-soft-beige/50 text-sm font-medium text-charcoal/60 mb-4">
@@ -90,7 +92,7 @@ export default function Approach() {
           ))}
         </div>
 
-        <div className="mt-16 bg-warm-ivory p-8 lg:p-12 shadow-lg">
+        <div data-reveal className="mt-16 bg-warm-ivory p-8 lg:p-12 shadow-lg">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <h3 className="text-3xl text-charcoal mb-4">
@@ -104,7 +106,7 @@ export default function Approach() {
             <div className="flex justify-center lg:justify-end">
               <Link
                 href="/contact"
-                className="btn-premium bg-coral-pink text-white px-8 py-4 text-base font-medium hover:bg-charcoal transition-colors inline-block"
+                className="btn-premium btn-lift bg-coral-pink text-white px-8 py-4 text-base font-medium hover:bg-charcoal inline-block"
               >
                 Book a Consultation
               </Link>
