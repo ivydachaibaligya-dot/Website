@@ -2,16 +2,17 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import Logo from '@/components/brand/Logo';
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
 
   const navLinks = [
-    { name: 'About', href: '#about' },
-    { name: 'Services', href: '#services' },
-    { name: 'Tools', href: '#tools' },
-    { name: 'Portfolio', href: '#portfolio' },
-    { name: 'Contact', href: '#contact' },
+    { name: 'Services', href: '/services' },
+    { name: 'Approach', href: '/#approach' },
+    { name: 'About', href: '/about' },
+    { name: 'FAQ', href: '/#faq' },
+    { name: 'Contact', href: '/contact' },
   ];
 
   return (
@@ -19,15 +20,10 @@ export default function Navigation() {
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
-          <Link href="/" className="flex items-center space-x-3">
-            <div className="w-10 h-10 bg-coral-pink rounded-sm flex items-center justify-center">
-              <span className="text-white font-bold text-xl">I</span>
-            </div>
-            <span className="text-xl font-semibold tracking-tight text-charcoal">Ivy</span>
-          </Link>
+          <Logo />
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex space-x-10">
+          <div className="hidden lg:flex space-x-8">
             {navLinks.map((link) => (
               <Link
                 key={link.name}
@@ -40,19 +36,19 @@ export default function Navigation() {
           </div>
 
           {/* CTA Button */}
-          <div className="hidden md:block">
+          <div className="hidden lg:block">
             <Link
-              href="#contact"
+              href="/contact"
               className="bg-coral-pink text-white px-6 py-3 text-sm font-medium hover:bg-charcoal transition-colors tracking-wide btn-premium"
             >
-              Let's Talk
+              Book a Consultation
             </Link>
           </div>
 
           {/* Mobile menu button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden p-2 rounded-md text-charcoal hover:text-coral-pink"
+            className="lg:hidden p-2 rounded-md text-charcoal hover:text-coral-pink"
             aria-label="Toggle menu"
           >
             <svg
@@ -76,7 +72,7 @@ export default function Navigation() {
 
       {/* Mobile Navigation */}
       {isOpen && (
-        <div className="md:hidden bg-warm-ivory border-t border-soft-beige">
+        <div className="lg:hidden bg-warm-ivory border-t border-soft-beige">
           <div className="px-6 py-6 space-y-4">
             {navLinks.map((link) => (
               <Link
@@ -89,11 +85,11 @@ export default function Navigation() {
               </Link>
             ))}
             <Link
-              href="#contact"
+              href="/contact"
               className="block bg-coral-pink text-white px-6 py-3 font-medium hover:bg-charcoal transition-colors text-center mt-6 btn-premium"
               onClick={() => setIsOpen(false)}
             >
-              Let's Talk
+              Book a Consultation
             </Link>
           </div>
         </div>

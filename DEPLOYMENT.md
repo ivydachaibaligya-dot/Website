@@ -1,6 +1,6 @@
 # Vercel Deployment Guide
 
-This guide will walk you through deploying the BrightSide Solutions website to Vercel.
+This guide will walk you through deploying the AUREVANT website to Vercel.
 
 ## 🚀 Prerequisites
 
@@ -71,7 +71,7 @@ Before deploying, ensure you have:
 
 1. Go to your project in Vercel Dashboard
 2. Navigate to Settings → Domains
-3. Add your custom domain (e.g., `brightsidesolutions.com`)
+3. Add your custom domain (e.g., `your-domain.com`)
 4. Update DNS records as instructed by Vercel
 
 ### Environment Variables
@@ -197,4 +197,4 @@ If you encounter issues:
 
 ---
 
-Your BrightSide Solutions website is now live! 🎉
+Your AUREVANT website is now live! 🎉

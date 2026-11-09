@@ -1,6 +1,8 @@
+import { contactEmail, linkedInUrl } from '@/lib/services';
+
 export default function Contact() {
   return (
-    <section id="contact" className="py-24 lg:py-32 bg-soft-beige/30 section-transition">
+    <section id="contact" className="py-24 lg:py-32 bg-warm-ivory section-transition">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
           {/* Left Content */}
@@ -12,13 +14,13 @@ export default function Contact() {
             </div>
 
             <h2 className="text-4xl md:text-5xl text-charcoal mb-6 leading-tight">
-              Let's Work
-              <span className="block text-coral-pink">Together</span>
+              Let&apos;s Build Your
+              <span className="block text-coral-pink">Support Team</span>
             </h2>
 
             <p className="text-xl text-charcoal/70 mb-10 leading-relaxed">
-              Ready to streamline your roofing operations and focus on growing your business?
-              Let's discuss how I can help you achieve your goals.
+              Tell us where your time is going and we will show you how AUREVANT can take it
+              off your plate. Your business. Our commitment.
             </p>
 
             <div className="space-y-6">
@@ -27,10 +29,10 @@ export default function Contact() {
                   Email
                 </div>
                 <a
-                  href="mailto:ivydachaibaligya@gmail.com"
+                  href={`mailto:${contactEmail}`}
                   className="text-2xl font-semibold text-charcoal hover:text-coral-pink transition-colors link-hover"
                 >
-                  ivydachaibaligya@gmail.com
+                  {contactEmail}
                 </a>
               </div>
 
@@ -39,12 +41,12 @@ export default function Contact() {
                   LinkedIn
                 </div>
                 <a
-                  href="https://linkedin.com/in/ivy-embone-1a6445323"
+                  href={linkedInUrl}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-2xl font-semibold text-charcoal hover:text-coral-pink transition-colors link-hover"
                 >
-                  Ivy Embone
+                  Connect on LinkedIn
                 </a>
               </div>
 
@@ -56,16 +58,16 @@ export default function Contact() {
                   Philippines
                 </div>
                 <div className="text-charcoal/70">
-                  Serving US-based roofing companies
+                  Supporting US-based businesses remotely
                 </div>
               </div>
             </div>
           </div>
 
           {/* Right Content - Contact Form Visual */}
-          <div className="bg-warm-ivory p-8 lg:p-12 shadow-xl">
+          <div className="bg-white p-8 lg:p-12 shadow-xl">
             <h3 className="text-2xl font-semibold text-charcoal mb-6">
-              Send a Message
+              Request a Consultation
             </h3>
 
             <form className="space-y-6">
@@ -104,7 +106,7 @@ export default function Contact() {
                   name="message"
                   rows={5}
                   className="w-full px-4 py-3 border border-soft-beige focus:border-coral-pink focus:outline-none transition-colors resize-none bg-warm-ivory"
-                  placeholder="Tell me about your business and how I can help..."
+                  placeholder="Tell us about your business and the support you need..."
                 />
               </div>
 
@@ -112,12 +114,12 @@ export default function Contact() {
                 type="submit"
                 className="btn-premium w-full bg-coral-pink text-white px-8 py-4 text-base font-medium hover:bg-charcoal transition-colors"
               >
-                Send Message
+                Send Inquiry
               </button>
             </form>
 
             <p className="text-sm text-charcoal/60 mt-6">
-              I typically respond within 24 hours.
+              We typically respond within one business day.
             </p>
           </div>
         </div>

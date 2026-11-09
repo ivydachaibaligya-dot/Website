@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Playfair_Display, Inter } from "next/font/google";
 import "./globals.css";
 
@@ -15,28 +15,28 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Ivy | Roofing Operations Virtual Assistant",
-  description: "Expert Virtual Assistant specializing in roofing operations, administrative support, and business management for US-based roofing companies. Industry knowledge, reliability, and proven results.",
-  keywords: "virtual assistant, roofing operations, administrative support, CRM management, lead generation, appointment setting, roofing industry, business support",
-  authors: [{ name: "Ivy" }],
-  creator: "Ivy",
-  publisher: "Ivy",
+  title: "AUREVANT | Global Business Support",
+  description: "AUREVANT is a boutique virtual assistant agency providing premium global business support to US companies: executive administration, roofing and home services support, lead generation, CRM management, customer support, and digital operations.",
+  keywords: "AUREVANT, virtual assistant agency, global business support, executive assistant, administrative support, roofing virtual assistant, home services support, lead generation, CRM management, appointment setting, customer support, website support",
+  authors: [{ name: "AUREVANT" }],
+  creator: "AUREVANT",
+  publisher: "AUREVANT",
   formatDetection: {
     email: false,
     address: false,
     telephone: false,
   },
   openGraph: {
-    title: "Ivy | Roofing Operations Virtual Assistant",
-    description: "Expert Virtual Assistant specializing in roofing operations and administrative support for US-based roofing companies.",
-    siteName: "Ivy",
+    title: "AUREVANT | Global Business Support",
+    description: "Your Business. Our Commitment. Premium virtual assistant support for US businesses.",
+    siteName: "AUREVANT",
     locale: "en_US",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Ivy | Roofing Operations Virtual Assistant",
-    description: "Expert Virtual Assistant specializing in roofing operations and administrative support.",
+    title: "AUREVANT | Global Business Support",
+    description: "Your Business. Our Commitment. Premium virtual assistant support for US businesses.",
   },
   robots: {
     index: true,
@@ -49,11 +49,12 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
-  viewport: {
-    width: "device-width",
-    initialScale: 1,
-    maximumScale: 5,
-  },
+};
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 5,
 };
 
 export default function RootLayout({
