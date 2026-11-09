@@ -4,9 +4,10 @@
     <meta name="robots" content="noindex" />
   </head>
   <body>
-    <!-- Deploy-time form definition for Netlify Forms. Used by src/components/sections/QuoteRequestForm.tsx. -->
+    <!-- Deploy-time form definition for Netlify Forms. Used by src/components/sections/QuoteRequestForm.tsx; field names must match the submitted data. -->
     <form name="quote-request" data-netlify="true" netlify-honeypot="bot-field" hidden>
       <input type="hidden" name="form-name" value="quote-request" />
+      <input type="hidden" name="subject" />
       <input name="fullName" type="text" />
       <input name="businessName" type="text" />
       <input name="email" type="email" />
@@ -25,6 +26,19 @@
       <textarea name="requirements"></textarea>
       <input name="bot-field" />
       <input name="consent" type="text" />
+    </form>
+
+    <!-- Used by src/components/sections/ContactForm.tsx. -->
+    <form name="contact" data-netlify="true" netlify-honeypot="bot-field" hidden>
+      <input type="hidden" name="form-name" value="contact" />
+      <input type="hidden" name="subject" />
+      <input name="name" type="text" />
+      <input name="email" type="email" />
+      <input name="phone" type="tel" />
+      <input name="company" type="text" />
+      <input name="service" type="text" />
+      <textarea name="message"></textarea>
+      <input name="bot-field" />
     </form>
   </body>
 </html>

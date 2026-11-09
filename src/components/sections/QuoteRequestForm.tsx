@@ -4,6 +4,7 @@ import { useState, type FormEvent } from 'react';
 import { pricingConfig } from '@/config/pricing';
 import { formatCurrency, formatHours, roundTo2, type BillingType, type Estimate } from '@/lib/pricing';
 import { contactEmail } from '@/lib/services';
+import { EMAIL_PATTERN, submitNetlifyForm } from '@/lib/forms';
 
 type Props = {
   estimate: Estimate;
@@ -34,8 +35,6 @@ const initialFields: Fields = {
   requirements: '',
   consent: false,
 };
-
-const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
 
 const inputClass =
   'w-full px-4 py-3 border focus:border-coral-pink focus:outline-none transition-colors bg-warm-ivory';
@@ -83,8 +82,8 @@ export default function QuoteRequestForm({ estimate, hoursPerDay, daysPerWeek, b
 
     const honeypot = (event.currentTarget.elements.namedItem('bot-field') as HTMLInputElement | null)?.value ?? '';
 
-    const payload = new URLSearchParams({
-      'form-name': pricingConfig.quoteRequest.formName,
+    const payload = {
+      subject: `AUREVANT quote request: ${fields.businessName.trim()} (%{submissionId})`,
       'bot-field': honeypot,
       fullName: fields.fullName.trim(),
       businessName: fields.businessName.trim(),
@@ -103,16 +102,11 @@ export default function QuoteRequestForm({ estimate, hoursPerDay, daysPerWeek, b
       budget: fields.budget.trim(),
       requirements: fields.requirements.trim(),
       consent: 'yes',
-    });
+    };
 
     setStatus('submitting');
     try {
-      const response = await fetch(pricingConfig.quoteRequest.endpoint, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: payload.toString(),
-      });
-      if (!response.ok) throw new Error(`Request failed with status ${response.status}`);
+      await submitNetlifyForm(pricingConfig.quoteRequest.formName, payload);
       setSubmittedName(fields.fullName.trim().split(/\s+/)[0]);
       setFields(initialFields);
       setStatus('success');

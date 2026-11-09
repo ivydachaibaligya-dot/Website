@@ -96,12 +96,8 @@ export const pricingConfig = {
       hourlyRate: null,
     },
   ] satisfies PricedService[],
-  /**
-   * Where quote requests are sent. The default posts to Netlify Forms using
-   * the static form definition in `public/__forms.html`.
-   */
+  /** Netlify form that receives quote requests (declared in `public/__forms.html`). */
   quoteRequest: {
-    endpoint: '/__forms.html',
     formName: 'quote-request',
   },
 };
