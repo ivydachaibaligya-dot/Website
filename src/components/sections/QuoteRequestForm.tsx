@@ -2,7 +2,7 @@
 
 import { useState, type FormEvent } from 'react';
 import { pricingConfig } from '@/config/pricing';
-import { formatCurrency, formatHours, type BillingType, type Estimate } from '@/lib/pricing';
+import { formatCurrency, formatHours, roundTo2, type BillingType, type Estimate } from '@/lib/pricing';
 import { contactEmail } from '@/lib/services';
 
 type Props = {
@@ -95,8 +95,8 @@ export default function QuoteRequestForm({ estimate, hoursPerDay, daysPerWeek, b
       billing: billingText,
       hoursPerDay: String(hoursPerDay),
       daysPerWeek: String(daysPerWeek),
-      weeklyHours: estimate.weeklyHours.toFixed(2),
-      monthlyHours: estimate.monthlyHours.toFixed(2),
+      weeklyHours: String(roundTo2(estimate.weeklyHours)),
+      monthlyHours: String(roundTo2(estimate.monthlyHours)),
       estimatedRate: `${estimate.rateLabel}: ${rateText}`,
       estimatedWeeklyCost: money(estimate.weeklyCost),
       estimatedMonthlyCost: money(estimate.monthlyCost),

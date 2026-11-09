@@ -58,15 +58,20 @@ export function calculateEstimate(
   };
 }
 
+/** Rounds to 2 decimals, half up, avoiding binary float errors (97.425 -> 97.43). */
+export function roundTo2(value: number): number {
+  return Math.round(Number((value * 100).toPrecision(12))) / 100;
+}
+
 export function formatCurrency(amount: number, config = pricingConfig): string {
   return new Intl.NumberFormat(config.locale, {
     style: 'currency',
     currency: config.currency,
     minimumFractionDigits: 2,
     maximumFractionDigits: 2,
-  }).format(amount);
+  }).format(roundTo2(amount));
 }
 
 export function formatHours(hours: number): string {
-  return `${Number(hours.toFixed(2)).toLocaleString('en-US')} hrs`;
+  return `${roundTo2(hours).toLocaleString('en-US')} hrs`;
 }
