@@ -1,4 +1,5 @@
 import { contactEmail, linkedInUrl } from '@/lib/services';
+import ContactForm from '@/components/sections/ContactForm';
 
 export default function Contact() {
   return (
@@ -70,53 +71,7 @@ export default function Contact() {
               Request a Consultation
             </h3>
 
-            <form className="space-y-6">
-              <div>
-                <label htmlFor="name" className="block text-sm font-medium text-charcoal mb-2">
-                  Name
-                </label>
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  className="w-full px-4 py-3 border border-soft-beige focus:border-coral-pink focus:outline-none transition-colors bg-warm-ivory"
-                  placeholder="Your name"
-                />
-              </div>
-
-              <div>
-                <label htmlFor="email" className="block text-sm font-medium text-charcoal mb-2">
-                  Email
-                </label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  className="w-full px-4 py-3 border border-soft-beige focus:border-coral-pink focus:outline-none transition-colors bg-warm-ivory"
-                  placeholder="your@email.com"
-                />
-              </div>
-
-              <div>
-                <label htmlFor="message" className="block text-sm font-medium text-charcoal mb-2">
-                  Message
-                </label>
-                <textarea
-                  id="message"
-                  name="message"
-                  rows={5}
-                  className="w-full px-4 py-3 border border-soft-beige focus:border-coral-pink focus:outline-none transition-colors resize-none bg-warm-ivory"
-                  placeholder="Tell us about your business and the support you need..."
-                />
-              </div>
-
-              <button
-                type="submit"
-                className="btn-premium w-full bg-coral-pink text-white px-8 py-4 text-base font-medium hover:bg-charcoal transition-colors"
-              >
-                Send Inquiry
-              </button>
-            </form>
+            <ContactForm />
 
             <p className="text-sm text-charcoal/60 mt-6">
               We typically respond within one business day.

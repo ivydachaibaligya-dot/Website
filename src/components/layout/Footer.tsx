@@ -8,6 +8,7 @@ export default function Footer() {
   const companyLinks = [
     { name: 'About AUREVANT', href: '/about' },
     { name: 'Our Services', href: '/services' },
+    { name: 'Pricing & Quote', href: '/pricing' },
     { name: 'Our Approach', href: '/#approach' },
     { name: 'FAQ', href: '/#faq' },
     { name: 'Contact', href: '/contact' },
