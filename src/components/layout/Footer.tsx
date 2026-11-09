@@ -1,7 +1,17 @@
 import Link from 'next/link';
+import Logo from '@/components/brand/Logo';
+import { services, contactEmail } from '@/lib/services';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
+
+  const companyLinks = [
+    { name: 'About AUREVANT', href: '/about' },
+    { name: 'Our Services', href: '/services' },
+    { name: 'Our Approach', href: '/#approach' },
+    { name: 'FAQ', href: '/#faq' },
+    { name: 'Contact', href: '/contact' },
+  ];
 
   return (
     <footer className="bg-charcoal text-warm-ivory">
@@ -9,74 +19,59 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
           {/* Company Info */}
           <div className="col-span-1 md:col-span-2">
-            <div className="flex items-center space-x-3 mb-6">
-              <div className="w-10 h-10 bg-coral-pink rounded-sm flex items-center justify-center">
-                <span className="text-white font-bold text-xl">I</span>
-              </div>
-              <span className="text-xl font-semibold tracking-tight">Ivy</span>
+            <div className="mb-6">
+              <Logo variant="light" />
             </div>
-            <p className="text-warm-ivory/70 mb-6 leading-relaxed max-w-md">
-              Roofing Operations Virtual Assistant helping US-based roofing companies streamline operations, manage leads, and grow their business.
+            <p className="font-serif text-2xl text-warm-ivory mb-4">
+              Your Business. <span className="text-coral-pink">Our Commitment.</span>
             </p>
+            <p className="text-warm-ivory/70 mb-6 leading-relaxed max-w-md">
+              A boutique virtual assistant agency delivering premium global business support to
+              US companies, so leaders can focus on growth while we handle the details.
+            </p>
+            <a
+              href={`mailto:${contactEmail}`}
+              className="text-warm-ivory/70 hover:text-coral-pink transition-colors"
+            >
+              {contactEmail}
+            </a>
           </div>
 
-          {/* Quick Links */}
+          {/* Company */}
           <div>
-            <h3 className="text-sm font-semibold mb-4 tracking-wide uppercase text-coral-pink">Quick Links</h3>
+            <h3 className="text-sm font-semibold mb-4 tracking-wide uppercase text-coral-pink">Company</h3>
             <ul className="space-y-3">
-              <li>
-                <Link href="#about" className="text-warm-ivory/70 hover:text-coral-pink transition-colors">
-                  About
-                </Link>
-              </li>
-              <li>
-                <Link href="#services" className="text-warm-ivory/70 hover:text-coral-pink transition-colors">
-                  Services
-                </Link>
-              </li>
-              <li>
-                <Link href="#tools" className="text-warm-ivory/70 hover:text-coral-pink transition-colors">
-                  Tools
-                </Link>
-              </li>
-              <li>
-                <Link href="#portfolio" className="text-warm-ivory/70 hover:text-coral-pink transition-colors">
-                  Portfolio
-                </Link>
-              </li>
+              {companyLinks.map((link) => (
+                <li key={link.name}>
+                  <Link href={link.href} className="text-warm-ivory/70 hover:text-coral-pink transition-colors">
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 
           {/* Services */}
           <div>
-            <h3 className="text-sm font-semibold mb-4 tracking-wide uppercase text-coral-pink">Expertise</h3>
+            <h3 className="text-sm font-semibold mb-4 tracking-wide uppercase text-coral-pink">Services</h3>
             <ul className="space-y-3">
-              <li>
-                <Link href="#services" className="text-warm-ivory/70 hover:text-coral-pink transition-colors">
-                  Roofing Operations
-                </Link>
-              </li>
-              <li>
-                <Link href="#services" className="text-warm-ivory/70 hover:text-coral-pink transition-colors">
-                  Lead Management
-                </Link>
-              </li>
-              <li>
-                <Link href="#services" className="text-warm-ivory/70 hover:text-coral-pink transition-colors">
-                  CRM Management
-                </Link>
-              </li>
-              <li>
-                <Link href="#contact" className="text-warm-ivory/70 hover:text-coral-pink transition-colors">
-                  Get in Touch
-                </Link>
-              </li>
+              {services.map((service) => (
+                <li key={service.id}>
+                  <Link
+                    href={`/services#${service.id}`}
+                    className="text-warm-ivory/70 hover:text-coral-pink transition-colors"
+                  >
+                    {service.title}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
         </div>
 
-        <div className="border-t border-soft-beige/20 mt-12 pt-8 text-center text-warm-ivory/60 text-sm">
-          <p>&copy; {currentYear} Ivy. All rights reserved.</p>
+        <div className="border-t border-soft-beige/20 mt-12 pt-8 flex flex-col md:flex-row justify-between gap-4 text-warm-ivory/60 text-sm">
+          <p>&copy; {currentYear} AUREVANT. All rights reserved.</p>
+          <p className="tracking-[0.2em] uppercase text-xs">Global Business Support</p>
         </div>
       </div>
     </footer>

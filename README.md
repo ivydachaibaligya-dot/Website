@@ -1,48 +1,38 @@
-# BrightSide Solutions Website
+# AUREVANT Website
 
-A modern, professional, and mobile-responsive website for BrightSide Solutions - a Virtual Assistant agency. Built with Next.js 15, TypeScript, and Tailwind CSS.
+**AUREVANT — Global Business Support**
+*Your Business. Our Commitment.*
+
+The official website for AUREVANT, a premium boutique virtual assistant agency serving US businesses. Built with Next.js, TypeScript, and Tailwind CSS.
 
 ## 🌟 Features
 
-- **Modern Design**: Clean, professional, and trust-focused interface
+- **Premium Editorial Design**: Blush pink, warm cream, white, and charcoal palette with Playfair Display and Inter typography
 - **Mobile Responsive**: Fully responsive design that works on all devices
-- **Fast Performance**: Built with Next.js 15 for optimal speed and SEO
 - **SEO Optimized**: Comprehensive metadata for search engine visibility
-- **Smooth Animations**: Modern animations and smooth scrolling
-- **Contact Forms**: Functional contact forms with validation
-- **Professional Icons**: SVG icons throughout the interface
-- **Reusable Components**: Clean, modular component architecture
+- **Smooth Animations**: Subtle animations and hover effects
+- **Contact Forms**: Consultation request forms with validation
+- **Shared Service Data**: All service content lives in `src/lib/services.ts`
+
+## 🧭 Services
+
+1. Administrative & Executive Support
+2. Roofing & Home Services Support
+3. Lead Generation
+4. CRM Management
+5. Customer Support & Appointment Setting
+6. Digital & Website Support
 
 ## 📄 Pages
 
-1. **Home**
-   - Hero section with CTAs
-   - Why Choose Us section
-   - Services Overview
-   - Testimonials
-   - FAQ section
-   - Call-to-action
-
-2. **Services**
-   - Comprehensive service listings
-   - Detailed feature breakdowns
-   - Contact form integration
-
-3. **About Us**
-   - Company story and history
-   - Mission and vision
-   - Core values
-   - Team section
-
-4. **Contact**
-   - Contact form
-   - Contact information
-   - Business hours
-   - Multiple contact methods
+1. **Home** — Hero, About, Services overview, Our Approach, Platforms, The AUREVANT Standard, FAQ, Contact
+2. **Services** — Detailed breakdown of all six service areas with consultation form
+3. **About** — Who we are, mission, vision, and values
+4. **Contact** — Contact details, next steps, and consultation request form
 
 ## 🛠️ Tech Stack
 
-- **Next.js 15** - React framework with App Router
+- **Next.js 16** - React framework with App Router
 - **TypeScript** - Type-safe development
 - **Tailwind CSS** - Utility-first CSS framework
 - **React 19** - Latest React features
@@ -98,24 +88,27 @@ Website/
 │   │   ├── layout.tsx            # Root layout
 │   │   └── page.tsx              # Home page
 │   ├── components/
+│   │   ├── brand/
+│   │   │   └── Logo.tsx          # AUREVANT logo & wordmark
 │   │   ├── layout/
 │   │   │   ├── Navigation.tsx    # Navigation component
 │   │   │   └── Footer.tsx        # Footer component
-│   │   ├── sections/
-│   │   │   ├── CallToAction.tsx  # CTA section
-│   │   │   ├── ContactForm.tsx   # Contact form
-│   │   │   ├── FAQ.tsx           # FAQ section
-│   │   │   ├── Hero.tsx          # Hero section
-│   │   │   ├── ServicesOverview.tsx # Services preview
-│   │   │   ├── Testimonials.tsx  # Testimonials section
-│   │   │   └── WhyChooseUs.tsx   # Benefits section
-│   │   └── ui/                   # UI components (extensible)
-│   ├── lib/                      # Utility functions
-│   └── types/                    # TypeScript types
+│   │   └── sections/
+│   │       ├── About.tsx         # About AUREVANT
+│   │       ├── Approach.tsx      # Four-step engagement process
+│   │       ├── CallToAction.tsx  # CTA section
+│   │       ├── Contact.tsx       # Homepage contact section
+│   │       ├── ContactForm.tsx   # Consultation request form
+│   │       ├── FAQ.tsx           # FAQ section
+│   │       ├── Hero.tsx          # Hero section
+│   │       ├── ServicesOverview.tsx # Services preview
+│   │       ├── Tools.tsx         # Platforms we support
+│   │       └── WhyAurevant.tsx   # The AUREVANT Standard
+│   └── lib/
+│       └── services.ts           # Service content & contact details
 ├── public/                       # Static assets
 ├── package.json
 ├── tsconfig.json
-├── tailwind.config.ts
 └── next.config.ts
 ```
 
@@ -125,9 +118,9 @@ Website/
 
 Update the following files to customize branding:
 
-- **Logo & Colors**: Modify Tailwind config and component colors
-- **Content**: Edit text in `src/app/` page files
-- **Contact Info**: Update contact details in `src/app/contact/page.tsx`
+- **Colors**: Brand palette is defined in `src/app/globals.css`
+- **Services**: Edit service copy in `src/lib/services.ts`
+- **Contact Info**: Update `contactEmail` and `linkedInUrl` in `src/lib/services.ts`
 - **Metadata**: Modify SEO metadata in layout and page files
 
 ### Images
@@ -176,14 +169,12 @@ This Next.js application can be deployed to any platform that supports Next.js:
 
 ## 📝 License
 
-This project is proprietary software for BrightSide Solutions.
+This project is proprietary software for AUREVANT.
 
 ## 🤝 Support
 
-For support and questions, please contact:
-- Email: info@brightsidesolutions.com
-- Phone: +1 (555) 123-4567
+For support and questions, please contact: ivydachaibaligya@gmail.com
 
 ---
 
-Built with ❤️ using Next.js 15, TypeScript, and Tailwind CSS
+Built with Next.js, TypeScript, and Tailwind CSS

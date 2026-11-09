@@ -1,12 +1,16 @@
 export default function Tools() {
   const tools = [
+    { name: 'Google Workspace', category: 'Productivity' },
+    { name: 'Microsoft 365', category: 'Productivity' },
+    { name: 'GoHighLevel', category: 'CRM & Marketing' },
+    { name: 'Apollo', category: 'Lead Generation' },
     { name: 'Roofr', category: 'Roofing Software' },
     { name: 'CompanyCam', category: 'Photo Documentation' },
     { name: 'Zuper', category: 'Field Service Management' },
-    { name: 'GoHighLevel', category: 'CRM & Marketing' },
-    { name: 'Trello', category: 'Project Management' },
-    { name: 'Zapier', category: 'Automation' },
     { name: 'QuickBooks', category: 'Accounting' },
+    { name: 'Trello', category: 'Project Management' },
+    { name: 'Notion', category: 'Knowledge & Planning' },
+    { name: 'Zapier', category: 'Automation' },
     { name: 'Canva', category: 'Design' },
   ];
 
@@ -20,18 +24,18 @@ export default function Tools() {
             </span>
           </div>
           <h2 className="text-4xl md:text-5xl text-warm-ivory mb-6 leading-tight">
-            Software I Work With
+            Platforms We Support
           </h2>
           <p className="text-xl text-warm-ivory/70 max-w-3xl">
-            Proficient in the tools that power modern roofing businesses.
-            I can hit the ground running with systems you already use or learn new ones quickly.
+            We work inside the systems that power modern US businesses, so there is no need to
+            change how your team operates. We adapt to your stack, not the other way around.
           </p>
         </div>
 
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-          {tools.map((tool, index) => (
+          {tools.map((tool) => (
             <div
-              key={index}
+              key={tool.name}
               className="bg-charcoal/50 p-8 hover:bg-coral-pink transition-colors group border border-soft-beige/20"
             >
               <div className="text-coral-pink text-sm mb-3 group-hover:text-white transition-colors">{tool.category}</div>
@@ -44,7 +48,8 @@ export default function Tools() {
 
         <div className="mt-16 border-t border-soft-beige/20 pt-8">
           <p className="text-warm-ivory/70 text-lg">
-            And many more — I'm quick to learn new systems and adapt to your specific workflow requirements.
+            Using something different? We onboard quickly to new platforms and document every
+            workflow along the way.
           </p>
         </div>
       </div>

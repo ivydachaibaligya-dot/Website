@@ -1,28 +1,28 @@
-export default function WhyWorkWithMe() {
+export default function WhyAurevant() {
   const advantages = [
     {
-      title: 'Industry Knowledge',
-      description: 'I understand roofing operations, not just general admin tasks. I know how to manage leads, coordinate crews, and handle customer communications effectively.',
+      title: 'Commitment First',
+      description: 'Your priorities become our priorities. We take ownership of every task and follow through until it is done right.',
     },
     {
-      title: 'Adaptability',
-      description: 'Quick to learn new systems and processes. I adapt to your workflow and become an integral part of your team.',
+      title: 'Industry Understanding',
+      description: 'From executive offices to roofing and home services companies, we learn the workflows behind your business, not just the task list.',
     },
     {
-      title: 'Organization',
-      description: 'Exceptional attention to detail and organization skills ensure nothing falls through the cracks.',
+      title: 'Discretion & Security',
+      description: 'Your data, accounts, and client information are handled confidentially, with access managed on your terms.',
     },
     {
-      title: 'Communication',
-      description: 'Clear, professional communication with customers, team members, and stakeholders keeps everyone aligned.',
+      title: 'Clear Communication',
+      description: 'Proactive updates, clear reporting, and responsive communication keep you informed without having to ask.',
     },
     {
-      title: 'Ownership',
-      description: 'I take ownership of daily operations and proactively identify areas for improvement.',
+      title: 'Proactive Ownership',
+      description: 'We do not wait to be told. We anticipate needs, flag issues early, and recommend improvements to how work gets done.',
     },
     {
-      title: 'Reliability',
-      description: 'Consistent, dependable support you can count on every day to keep your business running smoothly.',
+      title: 'Support That Scales',
+      description: 'Start with the support you need today and expand into additional service areas as your business grows.',
     },
   ];
 
@@ -32,22 +32,22 @@ export default function WhyWorkWithMe() {
         <div className="mb-16">
           <div className="inline-block mb-6">
             <span className="text-sm font-medium tracking-widest uppercase text-coral-pink">
-              Why Work With Me
+              Why AUREVANT
             </span>
           </div>
           <h2 className="text-4xl md:text-5xl text-charcoal mb-6 leading-tight">
-            The Ivy Advantage
+            The AUREVANT Standard
           </h2>
           <p className="text-xl text-charcoal/70 max-w-3xl">
-            What sets me apart from other virtual assistants is my combination of
-            industry expertise, adaptability, and genuine commitment to your success.
+            Premium support is defined by the details. Here is what you can expect from every
+            AUREVANT engagement.
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {advantages.map((advantage, index) => (
+          {advantages.map((advantage) => (
             <div
-              key={index}
+              key={advantage.title}
               className="card-premium bg-soft-beige/20 p-8 hover:bg-warm-ivory transition-colors border border-soft-beige/30"
             >
               <div className="w-12 h-12 bg-coral-pink text-white rounded-sm flex items-center justify-center mb-6">

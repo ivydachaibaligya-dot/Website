@@ -1,100 +1,90 @@
-export default function Portfolio() {
-  const workItems = [
+import Link from 'next/link';
+
+export default function Approach() {
+  const steps = [
     {
-      title: 'Lead Management System',
-      description: 'Implemented a structured lead tracking process that improved response times and conversion rates.',
-      category: 'Operations',
-      featured: true,
+      number: '01',
+      title: 'Discovery Consultation',
+      description:
+        'We start with a focused conversation about your business, your goals, and the tasks that are taking time away from growth.',
     },
     {
-      title: 'Customer Communication Workflow',
-      description: 'Created standardized templates and processes for consistent, professional customer interactions.',
-      category: 'Communication',
-      featured: false,
+      number: '02',
+      title: 'Tailored Support Plan',
+      description:
+        'We recommend the right mix of services and outline clear responsibilities, communication rhythms, and expectations.',
     },
     {
-      title: 'CRM Optimization',
-      description: 'Streamlined CRM data entry and reporting to provide better visibility into sales pipeline.',
-      category: 'CRM',
-      featured: false,
+      number: '03',
+      title: 'Onboarding & Integration',
+      description:
+        'Your assistant is onboarded into your tools and processes, with workflows documented so nothing depends on memory.',
     },
     {
-      title: 'Scheduling Coordination',
-      description: 'Managed complex crew schedules and job assignments to maximize efficiency and minimize conflicts.',
-      category: 'Operations',
-      featured: false,
-    },
-    {
-      title: 'Documentation Standards',
-      description: 'Established clear documentation protocols for job files, estimates, and project records.',
-      category: 'Administration',
-      featured: false,
-    },
-    {
-      title: 'Process Improvement',
-      description: 'Identified bottlenecks and implemented solutions to streamline daily operations.',
-      category: 'Strategy',
-      featured: false,
+      number: '04',
+      title: 'Ongoing Support & Refinement',
+      description:
+        'We deliver consistently, report progress clearly, and refine processes as your business evolves and grows.',
     },
   ];
 
   return (
-    <section id="portfolio" className="py-24 lg:py-32 bg-soft-beige/30 section-transition">
+    <section id="approach" className="py-24 lg:py-32 bg-soft-beige/30 section-transition">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="mb-16">
           <div className="inline-block mb-6">
             <span className="text-sm font-medium tracking-widest uppercase text-coral-pink">
-              Experience & Portfolio
+              Our Approach
             </span>
           </div>
           <h2 className="text-4xl md:text-5xl text-charcoal mb-6 leading-tight">
-            Real Results from
-            <span className="block text-coral-pink">Real Work</span>
+            A Seamless Path to
+            <span className="block text-coral-pink">Dependable Support</span>
           </h2>
           <p className="text-xl text-charcoal/70 max-w-3xl">
-            Examples of how I've helped roofing businesses improve their operations,
-            streamline processes, and deliver better customer experiences.
+            A structured, white-glove onboarding process designed to get you supported quickly
+            without disrupting the way your business already runs.
           </p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
-          {/* Featured Item */}
+          {/* Featured Step */}
           <div className="lg:col-span-2 card-premium bg-warm-ivory p-10 lg:p-14 shadow-lg border-l-4 border-coral-pink">
             <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-6">
               <div className="flex-1">
                 <div className="inline-block px-3 py-1 bg-coral-pink/10 text-sm font-medium text-coral-pink mb-4">
-                  {workItems[0].category}
+                  Step {steps[0].number}
                 </div>
                 <h3 className="text-3xl font-semibold text-charcoal mb-4">
-                  {workItems[0].title}
+                  {steps[0].title}
                 </h3>
                 <p className="text-charcoal/70 text-lg leading-relaxed">
-                  {workItems[0].description}
+                  {steps[0].description}
                 </p>
               </div>
               <div className="w-16 h-16 bg-coral-pink/10 rounded-sm flex items-center justify-center flex-shrink-0">
                 <svg className="w-8 h-8 text-coral-pink" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
                 </svg>
               </div>
             </div>
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {workItems.slice(1).map((item, index) => (
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {steps.slice(1).map((step) => (
             <div
-              key={index}
+              key={step.number}
               className="card-premium bg-warm-ivory p-8 shadow-sm border border-soft-beige/30"
             >
               <div className="inline-block px-3 py-1 bg-soft-beige/50 text-sm font-medium text-charcoal/60 mb-4">
-                {item.category}
+                Step {step.number}
               </div>
               <h3 className="text-xl font-semibold text-charcoal mb-3">
-                {item.title}
+                {step.title}
               </h3>
               <p className="text-charcoal/70 leading-relaxed">
-                {item.description}
+                {step.description}
               </p>
             </div>
           ))}
@@ -104,21 +94,20 @@ export default function Portfolio() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <h3 className="text-3xl text-charcoal mb-4">
-                Ready to See More?
+                Ready to Delegate with Confidence?
               </h3>
               <p className="text-charcoal/70 text-lg mb-6">
-                I can provide detailed case studies, workflow examples, and specific metrics
-                from my work with roofing companies. Let's discuss how I can bring similar
-                results to your business.
+                Book a complimentary consultation and we will map out exactly where AUREVANT can
+                take work off your plate, starting this month.
               </p>
             </div>
             <div className="flex justify-center lg:justify-end">
-              <a
-                href="#contact"
+              <Link
+                href="/contact"
                 className="btn-premium bg-coral-pink text-white px-8 py-4 text-base font-medium hover:bg-charcoal transition-colors inline-block"
               >
-                Request Portfolio Details
-              </a>
+                Book a Consultation
+              </Link>
             </div>
           </div>
         </div>
