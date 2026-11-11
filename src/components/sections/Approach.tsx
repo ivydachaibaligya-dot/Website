@@ -19,13 +19,13 @@ export default function Approach() {
 
         <div className="mb-12 grid grid-cols-3 gap-3 sm:gap-5">
           <div className="image-zoom relative aspect-[4/5] overflow-hidden bg-soft-beige">
-            <div role="img" aria-label="Thoughtful planning at a modern workspace" className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=800&q=80')" }} />
+            <div role="img" aria-label="Virtual assistant planning content and daily tasks at a laptop" className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: "url('https://images.pexels.com/photos/7667452/pexels-photo-7667452.jpeg?auto=compress&cs=tinysrgb&w=800')" }} />
           </div>
           <div className="image-zoom relative mt-6 aspect-[4/5] overflow-hidden bg-soft-beige sm:mt-10">
-            <div role="img" aria-label="Team collaborating on business projects" className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=800&q=80')" }} />
+            <div role="img" aria-label="Virtual assistant working on a laptop in a modern office" className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: "url('https://images.pexels.com/photos/8154766/pexels-photo-8154766.jpeg?auto=compress&cs=tinysrgb&w=800')" }} />
           </div>
           <div className="image-zoom relative aspect-[4/5] overflow-hidden bg-soft-beige">
-            <div role="img" aria-label="Organized professional desk and laptop" className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80')" }} />
+            <div role="img" aria-label="Remote assistant typing and researching on a laptop" className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: "url('https://images.pexels.com/photos/6348133/pexels-photo-6348133.jpeg?auto=compress&cs=tinysrgb&w=800')" }} />
           </div>
         </div>
 
