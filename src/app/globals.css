@@ -13,6 +13,10 @@
   --accent: var(--coral-pink);
   --accent-light: var(--soft-beige);
   --muted: #6B6B6B;
+
+  /* Local system font stacks avoid remote Google Font build-time requests. */
+  --font-playfair: 'Iowan Old Style', 'Palatino Linotype', 'Book Antiqua', Georgia, serif;
+  --font-inter: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
 }
 
 @theme inline {
