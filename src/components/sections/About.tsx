@@ -14,7 +14,7 @@ export default function About() {
       <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-12 px-6 lg:grid-cols-2 lg:gap-20 lg:px-8">
         <div className="relative">
           <div className="relative aspect-[4/5] max-h-[680px] overflow-hidden bg-soft-beige shadow-2xl">
-            <div className="absolute inset-0 bg-cover bg-center transition-transform duration-700 hover:scale-105" role="img" aria-label="Collaborative team working together in a bright modern office" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=1200&q=85')" }} />
+            <div className="absolute inset-0 bg-cover bg-center transition-transform duration-700 hover:scale-105" role="img" aria-label="Virtual assistant working across a laptop and tablet" style={{ backgroundImage: "url('https://images.pexels.com/photos/8837745/pexels-photo-8837745.jpeg?auto=compress&cs=tinysrgb&w=1200')" }} />
             <div className="absolute inset-0 bg-charcoal/10" />
             <div className="absolute bottom-5 left-5 right-5 bg-warm-ivory/95 p-5 shadow-lg sm:bottom-7 sm:left-7 sm:right-7 sm:p-7">
               <p className="text-xs font-semibold uppercase tracking-[0.2em] text-coral-pink">Our promise</p>
