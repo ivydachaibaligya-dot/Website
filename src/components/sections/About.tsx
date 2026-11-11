@@ -10,103 +10,43 @@ export default function About() {
   ];
 
   return (
-    <section id="about" className="py-24 lg:py-32 bg-soft-beige/30 section-transition">
-      <div className="max-w-7xl mx-auto px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-          {/* Left Content */}
-          <div>
-            <div className="inline-block mb-6">
-              <span className="text-sm font-medium tracking-widest uppercase text-coral-pink">
-                About AUREVANT
-              </span>
-            </div>
-
-            <h2 className="text-4xl md:text-5xl text-charcoal mb-6 leading-tight">
-              A Boutique Agency Built on
-              <span className="block text-coral-pink">Commitment</span>
-            </h2>
-
-            <div className="space-y-6 text-charcoal/80 text-lg leading-relaxed">
-              <p>
-                AUREVANT is an international virtual assistant agency providing global business
-                support to companies across the United States. We partner with founders, executives,
-                and growing teams who need dependable support without the overhead of in-house hiring.
-              </p>
-
-              <p>
-                From executive administration and CRM management to lead generation and customer
-                care, we become a seamless extension of your team, working inside your systems,
-                following your standards, and representing your brand with care.
-              </p>
-
-              <p>
-                We bring particular depth to roofing and home services businesses, where we
-                understand the rhythm of inspections, estimates, crews, and homeowner communication,
-                not just general administrative tasks.
-              </p>
-            </div>
-
-            <div className="mt-10 flex flex-wrap gap-4">
-              <div className="bg-warm-ivory px-6 py-4 rounded-sm shadow-sm">
-                <div className="text-2xl font-bold text-charcoal">1:1</div>
-                <div className="text-sm text-charcoal/60">Dedicated Support</div>
-              </div>
-              <div className="bg-warm-ivory px-6 py-4 rounded-sm shadow-sm">
-                <div className="text-2xl font-bold text-charcoal">US</div>
-                <div className="text-sm text-charcoal/60">Time-Zone Aligned</div>
-              </div>
-              <div className="bg-warm-ivory px-6 py-4 rounded-sm shadow-sm">
-                <div className="text-2xl font-bold text-charcoal">NDA</div>
-                <div className="text-sm text-charcoal/60">Ready on Request</div>
-              </div>
-            </div>
-
-            <div className="mt-10">
-              <Link href="/about" className="text-coral-pink font-medium link-hover">
-                More about AUREVANT
-              </Link>
+    <section id="about" className="section-transition reveal-on-scroll overflow-hidden bg-soft-beige/30 py-20 sm:py-24 lg:py-32">
+      <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-12 px-6 lg:grid-cols-2 lg:gap-20 lg:px-8">
+        <div className="relative">
+          <div className="relative aspect-[4/5] max-h-[680px] overflow-hidden bg-soft-beige shadow-2xl">
+            <div className="absolute inset-0 bg-cover bg-center transition-transform duration-700 hover:scale-105" role="img" aria-label="Collaborative team working together in a bright modern office" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=1200&q=85')" }} />
+            <div className="absolute inset-0 bg-charcoal/10" />
+            <div className="absolute bottom-5 left-5 right-5 bg-warm-ivory/95 p-5 shadow-lg sm:bottom-7 sm:left-7 sm:right-7 sm:p-7">
+              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-coral-pink">Our promise</p>
+              <p className="mt-2 font-serif text-2xl leading-tight text-charcoal sm:text-3xl">Your business is in thoughtful hands.</p>
             </div>
           </div>
+          <div className="absolute -bottom-5 -right-4 -z-10 h-32 w-32 bg-coral-pink/20 sm:-bottom-7 sm:-right-7 sm:h-44 sm:w-44" />
+        </div>
 
-          {/* Right Content - Standards Visual */}
-          <div className="relative">
-            <div className="bg-warm-ivory p-8 lg:p-12 shadow-xl">
-              <div className="space-y-8">
-                <div>
-                  <div className="text-sm font-medium tracking-widest uppercase text-coral-pink mb-3">
-                    Our Promise
-                  </div>
-                  <div className="text-2xl font-semibold text-charcoal mb-2">
-                    Your Business. Our Commitment.
-                  </div>
-                  <div className="text-charcoal/70">
-                    We treat your business as if it were our own.
-                  </div>
-                </div>
-
-                <div className="border-t border-soft-beige pt-8">
-                  <div className="text-sm font-medium tracking-widest uppercase text-coral-pink mb-3">
-                    What Every Client Receives
-                  </div>
-                  <div className="space-y-3">
-                    {standards.map((standard) => (
-                      <div key={standard} className="flex items-start space-x-3">
-                        <div className="w-6 h-6 bg-coral-pink text-white rounded-sm flex items-center justify-center flex-shrink-0 mt-0.5">
-                          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                          </svg>
-                        </div>
-                        <span className="text-charcoal/80">{standard}</span>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Decorative element */}
-            <div className="absolute -bottom-8 -right-8 w-32 h-32 bg-coral-pink/20 rounded-sm"></div>
+        <div>
+          <span className="mb-5 inline-flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.22em] text-coral-pink"><span className="h-px w-8 bg-coral-pink" />About AUREVANT</span>
+          <h2 className="mb-6 text-4xl leading-tight text-charcoal sm:text-5xl">A Boutique Agency Built on <span className="block text-coral-pink">Commitment</span></h2>
+          <div className="space-y-5 text-base leading-8 text-charcoal/80 sm:text-lg">
+            <p>AUREVANT is an international virtual assistant agency providing global business support to companies across the United States. We partner with founders, executives, and growing teams who need dependable support without the overhead of in-house hiring.</p>
+            <p>From executive administration and CRM management to lead generation and customer care, we become a seamless extension of your team, working inside your systems, following your standards, and representing your brand with care.</p>
+            <p>We bring particular depth to roofing and home services businesses, where we understand the rhythm of inspections, estimates, crews, and homeowner communication, not just general administrative tasks.</p>
           </div>
+
+          <div className="mt-8 grid grid-cols-3 gap-3">
+            <div className="border-l-2 border-coral-pink bg-warm-ivory px-3 py-4 sm:px-5"><div className="font-serif text-2xl text-charcoal">1:1</div><div className="mt-1 text-xs leading-5 text-charcoal/60 sm:text-sm">Dedicated support</div></div>
+            <div className="border-l-2 border-coral-pink bg-warm-ivory px-3 py-4 sm:px-5"><div className="font-serif text-2xl text-charcoal">US</div><div className="mt-1 text-xs leading-5 text-charcoal/60 sm:text-sm">Time-zone aligned</div></div>
+            <div className="border-l-2 border-coral-pink bg-warm-ivory px-3 py-4 sm:px-5"><div className="font-serif text-2xl text-charcoal">NDA</div><div className="mt-1 text-xs leading-5 text-charcoal/60 sm:text-sm">Ready on request</div></div>
+          </div>
+          <Link href="/about" className="link-hover mt-8 inline-block font-medium text-coral-pink">More about AUREVANT <span aria-hidden="true">→</span></Link>
+        </div>
+
+        <div className="lg:col-span-2 grid grid-cols-1 gap-4 border-t border-soft-beige pt-8 sm:grid-cols-2 lg:grid-cols-5">
+          {standards.map((standard, index) => (
+            <div key={standard} className="flex items-start gap-3 text-sm leading-6 text-charcoal/75">
+              <span className="font-serif text-lg text-coral-pink">0{index + 1}</span><span>{standard}</span>
+            </div>
+          ))}
         </div>
       </div>
     </section>
