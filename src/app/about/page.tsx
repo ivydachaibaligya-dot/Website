@@ -55,6 +55,11 @@ export default function AboutPage() {
               </p>
             </div>
           </div>
+          <div className="mt-12 grid grid-cols-3 gap-3 sm:gap-5">
+            <div className="image-zoom relative aspect-[5/4] overflow-hidden bg-soft-beige"><div role="img" aria-label="Virtual assistant creating and scheduling digital content" className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: "url('https://images.pexels.com/photos/4549414/pexels-photo-4549414.jpeg?auto=compress&cs=tinysrgb&w=900')" }} /></div>
+            <div className="image-zoom relative mt-5 aspect-[5/4] overflow-hidden bg-soft-beige sm:mt-8"><div role="img" aria-label="Virtual assistant planning a weekly digital work schedule" className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: "url('https://images.pexels.com/photos/19915766/pexels-photo-19915766.jpeg?auto=compress&cs=tinysrgb&w=900')" }} /></div>
+            <div className="image-zoom relative aspect-[5/4] overflow-hidden bg-soft-beige"><div role="img" aria-label="Customer support representative assisting customers with a headset" className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: "url('https://images.pexels.com/photos/8867440/pexels-photo-8867440.jpeg?auto=compress&cs=tinysrgb&w=900')" }} /></div>
+          </div>
         </section>
 
         {/* Our Story */}

@@ -55,12 +55,23 @@ export default function ServicesPage() {
         {/* Services Detail */}
         <section className="py-24 lg:py-32 bg-soft-beige/30 section-transition">
           <div className="max-w-7xl mx-auto px-6 lg:px-8 space-y-8">
-            {services.map((service) => (
+            {services.map((service, index) => (
               <div
                 key={service.id}
                 id={service.id}
                 className="card-premium scroll-mt-28 bg-warm-ivory p-8 lg:p-12 shadow-sm border border-soft-beige/30"
               >
+                <div className="image-zoom relative mb-8 aspect-[16/5] overflow-hidden bg-soft-beige">
+                  <div role="img" aria-label={`${service.title} virtual assistant performing related work`} className="absolute inset-0 bg-cover bg-center transition-transform duration-700 hover:scale-105" style={{ backgroundImage: `url(${[
+                    "https://images.pexels.com/photos/19915766/pexels-photo-19915766.jpeg?auto=compress&cs=tinysrgb&w=1400",
+                    "https://images.pexels.com/photos/3769135/pexels-photo-3769135.jpeg?auto=compress&cs=tinysrgb&w=1400",
+                    "https://images.pexels.com/photos/4405367/pexels-photo-4405367.jpeg?auto=compress&cs=tinysrgb&w=1400",
+                    "https://images.pexels.com/photos/37828832/pexels-photo-37828832.jpeg?auto=compress&cs=tinysrgb&w=1400",
+                    "https://images.pexels.com/photos/7709109/pexels-photo-7709109.jpeg?auto=compress&cs=tinysrgb&w=1400",
+                    "https://images.pexels.com/photos/4549414/pexels-photo-4549414.jpeg?auto=compress&cs=tinysrgb&w=1400"
+                  ][index]})` }} />
+                  <div className="absolute inset-0 bg-charcoal/10" />
+                </div>
                 <div className="grid grid-cols-1 lg:grid-cols-5 gap-10">
                   <div className="lg:col-span-3">
                     <div className="text-5xl font-bold text-coral-pink/30 mb-4">
