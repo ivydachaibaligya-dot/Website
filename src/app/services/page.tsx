@@ -63,12 +63,12 @@ export default function ServicesPage() {
               >
                 <div className="image-zoom relative mb-8 aspect-[16/5] overflow-hidden bg-soft-beige">
                   <div role="img" aria-label={`${service.title} virtual assistant performing related work`} className="absolute inset-0 bg-cover bg-center transition-transform duration-700 hover:scale-105" style={{ backgroundImage: `url(${[
-                    "https://images.pexels.com/photos/19915766/pexels-photo-19915766/free-photo-of-making-a-schedule-on-the-laptop.jpeg?auto=compress&cs=tinysrgb&w=1400",
-                    "https://images.pexels.com/photos/7710092/pexels-photo-7710092.jpeg?auto=compress&cs=tinysrgb&w=1400",
-                    "https://images.pexels.com/photos/8297058/pexels-photo-8297058.jpeg?auto=compress&cs=tinysrgb&w=1400",
-                    "https://images.pexels.com/photos/7651812/pexels-photo-7651812.jpeg?auto=compress&cs=tinysrgb&w=1400",
-                    "https://images.pexels.com/photos/8866740/pexels-photo-8866740.jpeg?auto=compress&cs=tinysrgb&w=1400",
-                    "https://images.pexels.com/photos/6016365/pexels-photo-6016365.jpeg?auto=compress&cs=tinysrgb&w=1400"
+                    "https://images.pexels.com/photos/19915766/pexels-photo-19915766.jpeg?auto=compress&cs=tinysrgb&w=1400",
+                    "https://images.pexels.com/photos/3769135/pexels-photo-3769135.jpeg?auto=compress&cs=tinysrgb&w=1400",
+                    "https://images.pexels.com/photos/4405367/pexels-photo-4405367.jpeg?auto=compress&cs=tinysrgb&w=1400",
+                    "https://images.pexels.com/photos/37828832/pexels-photo-37828832.jpeg?auto=compress&cs=tinysrgb&w=1400",
+                    "https://images.pexels.com/photos/7709109/pexels-photo-7709109.jpeg?auto=compress&cs=tinysrgb&w=1400",
+                    "https://images.pexels.com/photos/4549414/pexels-photo-4549414.jpeg?auto=compress&cs=tinysrgb&w=1400"
                   ][index]})` }} />
                   <div className="absolute inset-0 bg-charcoal/10" />
                 </div>
