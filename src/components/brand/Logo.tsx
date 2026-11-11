@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Link from 'next/link';
 
 type LogoProps = {
@@ -5,20 +6,17 @@ type LogoProps = {
 };
 
 export default function Logo({ variant = 'dark' }: LogoProps) {
-  const wordmarkColor = variant === 'dark' ? 'text-charcoal' : 'text-warm-ivory';
-  const descriptorColor = variant === 'dark' ? 'text-charcoal/60' : 'text-warm-ivory/60';
-
   return (
-    <Link href="/" className="flex items-center space-x-3" aria-label="AUREVANT home">
-      <div className="w-10 h-10 bg-coral-pink rounded-sm flex items-center justify-center">
-        <span className="text-white font-serif font-semibold text-xl">A</span>
-      </div>
-      <div className="flex flex-col leading-none">
-        <span className={`text-lg font-semibold tracking-[0.25em] ${wordmarkColor}`}>AUREVANT</span>
-        <span className={`text-[10px] font-medium tracking-[0.2em] uppercase mt-1 ${descriptorColor}`}>
-          Global Business Support
-        </span>
-      </div>
+    <Link href="/" className="flex shrink-0 items-center" aria-label="AUREVANT home">
+      <Image
+        src="/images/Aurevant%20Virtual%20Assistant%20Services%20Logo.png"
+        alt="AUREVANT Virtual Assistant Services"
+        width={2048}
+        height={682}
+        priority
+        sizes="(max-width: 640px) 42vw, (max-width: 1024px) 190px, 230px"
+        className="h-10 w-auto max-w-[48vw] object-contain object-left sm:h-11 lg:h-12"
+      />
     </Link>
   );
 }
