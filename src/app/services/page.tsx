@@ -62,7 +62,14 @@ export default function ServicesPage() {
                 className="card-premium scroll-mt-28 bg-warm-ivory p-8 lg:p-12 shadow-sm border border-soft-beige/30"
               >
                 <div className="image-zoom relative mb-8 aspect-[16/5] overflow-hidden bg-soft-beige">
-                  <div role="img" aria-label={`${service.title} in a professional business environment`} className="absolute inset-0 bg-cover bg-center transition-transform duration-700 hover:scale-105" style={{ backgroundImage: `url(https://images.unsplash.com/${["photo-1497366216548-37526070297c", "photo-1486406146926-c627a92ad1ab", "photo-1556761175-b413da4baf72", "photo-1460925895917-afdab827c52f", "photo-1551836022-d5d88e9218df", "photo-1498050108023-c5249f4df085"][index]}?auto=format&fit=crop&w=1400&q=80)` }} />
+                  <div role="img" aria-label={`${service.title} virtual assistant performing related work`} className="absolute inset-0 bg-cover bg-center transition-transform duration-700 hover:scale-105" style={{ backgroundImage: `url(${[
+                    "https://images.pexels.com/photos/19915766/pexels-photo-19915766/free-photo-of-making-a-schedule-on-the-laptop.jpeg?auto=compress&cs=tinysrgb&w=1400",
+                    "https://images.pexels.com/photos/7710092/pexels-photo-7710092.jpeg?auto=compress&cs=tinysrgb&w=1400",
+                    "https://images.pexels.com/photos/8297058/pexels-photo-8297058.jpeg?auto=compress&cs=tinysrgb&w=1400",
+                    "https://images.pexels.com/photos/7651812/pexels-photo-7651812.jpeg?auto=compress&cs=tinysrgb&w=1400",
+                    "https://images.pexels.com/photos/8866740/pexels-photo-8866740.jpeg?auto=compress&cs=tinysrgb&w=1400",
+                    "https://images.pexels.com/photos/6016365/pexels-photo-6016365.jpeg?auto=compress&cs=tinysrgb&w=1400"
+                  ][index]})` }} />
                   <div className="absolute inset-0 bg-charcoal/10" />
                 </div>
                 <div className="grid grid-cols-1 lg:grid-cols-5 gap-10">
