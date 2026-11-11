@@ -39,7 +39,7 @@ export default function ServicesPage() {
             </div>
 
             <div className="mt-12 flex flex-wrap gap-3">
-              {services.map((service, index) => (
+              {services.map((service) => (
                 <a
                   key={service.id}
                   href={`#${service.id}`}
@@ -55,7 +55,7 @@ export default function ServicesPage() {
         {/* Services Detail */}
         <section className="py-24 lg:py-32 bg-soft-beige/30 section-transition">
           <div className="max-w-7xl mx-auto px-6 lg:px-8 space-y-8">
-            {services.map((service) => (
+            {services.map((service, index) => (
               <div
                 key={service.id}
                 id={service.id}
