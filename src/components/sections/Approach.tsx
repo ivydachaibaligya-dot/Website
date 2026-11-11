@@ -19,10 +19,10 @@ export default function Approach() {
 
         <div className="mb-12 grid grid-cols-3 gap-3 sm:gap-5">
           <div className="image-zoom relative aspect-[4/5] overflow-hidden bg-soft-beige">
-            <div role="img" aria-label="Virtual assistant planning content and daily tasks at a laptop" className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: "url('https://images.pexels.com/photos/7667452/pexels-photo-7667452.jpeg?auto=compress&cs=tinysrgb&w=800')" }} />
+            <div role="img" aria-label="Virtual assistant planning content and daily tasks at a laptop" className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: "url('https://images.pexels.com/photos/7679449/pexels-photo-7679449.jpeg?auto=compress&cs=tinysrgb&w=800')" }} />
           </div>
           <div className="image-zoom relative mt-6 aspect-[4/5] overflow-hidden bg-soft-beige sm:mt-10">
-            <div role="img" aria-label="Virtual assistant working on a laptop in a modern office" className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: "url('https://images.pexels.com/photos/8154766/pexels-photo-8154766.jpeg?auto=compress&cs=tinysrgb&w=800')" }} />
+            <div role="img" aria-label="Virtual assistant working on a laptop in a modern office" className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: "url('https://images.pexels.com/photos/7241378/pexels-photo-7241378.jpeg?auto=compress&cs=tinysrgb&w=800')" }} />
           </div>
           <div className="image-zoom relative aspect-[4/5] overflow-hidden bg-soft-beige">
             <div role="img" aria-label="Remote assistant typing and researching on a laptop" className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: "url('https://images.pexels.com/photos/6348133/pexels-photo-6348133.jpeg?auto=compress&cs=tinysrgb&w=800')" }} />
