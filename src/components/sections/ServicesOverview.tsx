@@ -2,12 +2,12 @@ import Link from 'next/link';
 import { services } from '@/lib/services';
 
 const serviceImages = [
-  'https://images.pexels.com/photos/19915766/pexels-photo-19915766/free-photo-of-making-a-schedule-on-the-laptop.jpeg?auto=compress&cs=tinysrgb&w=900',
-  'https://images.pexels.com/photos/7710092/pexels-photo-7710092.jpeg?auto=compress&cs=tinysrgb&w=900',
-  'https://images.pexels.com/photos/8297058/pexels-photo-8297058.jpeg?auto=compress&cs=tinysrgb&w=900',
-  'https://images.pexels.com/photos/7651812/pexels-photo-7651812.jpeg?auto=compress&cs=tinysrgb&w=900',
-  'https://images.pexels.com/photos/8866740/pexels-photo-8866740.jpeg?auto=compress&cs=tinysrgb&w=900',
-  'https://images.pexels.com/photos/6016365/pexels-photo-6016365.jpeg?auto=compress&cs=tinysrgb&w=900',
+  'https://images.pexels.com/photos/19915766/pexels-photo-19915766.jpeg?auto=compress&cs=tinysrgb&w=900',
+  'https://images.pexels.com/photos/3769135/pexels-photo-3769135.jpeg?auto=compress&cs=tinysrgb&w=900',
+  'https://images.pexels.com/photos/4405367/pexels-photo-4405367.jpeg?auto=compress&cs=tinysrgb&w=900',
+  'https://images.pexels.com/photos/37828832/pexels-photo-37828832.jpeg?auto=compress&cs=tinysrgb&w=900',
+  'https://images.pexels.com/photos/7709109/pexels-photo-7709109.jpeg?auto=compress&cs=tinysrgb&w=900',
+  'https://images.pexels.com/photos/4549414/pexels-photo-4549414.jpeg?auto=compress&cs=tinysrgb&w=900',
 ];
 
 export default function Services() {
