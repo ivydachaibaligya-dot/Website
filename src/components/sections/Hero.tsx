@@ -51,8 +51,8 @@ export default function Hero() {
           <div
             className="relative aspect-[5/4] overflow-hidden bg-soft-beige bg-cover bg-center shadow-2xl sm:aspect-[4/3]"
             role="img"
-            aria-label="Bright modern workspace prepared for focused business collaboration"
-            style={{ backgroundImage: "url('https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1500&q=85')" }}
+            aria-label="Virtual assistant working remotely on a laptop in a bright home workspace"
+            style={{ backgroundImage: "url('https://images.pexels.com/photos/7901763/pexels-photo-7901763.jpeg?auto=compress&cs=tinysrgb&w=1500')" }}
           >
             <div className="absolute inset-0 bg-charcoal/10" />
             <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-charcoal/80 via-charcoal/35 to-transparent p-6 pt-24 sm:p-9 sm:pt-28">
