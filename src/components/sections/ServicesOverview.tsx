@@ -2,12 +2,12 @@ import Link from 'next/link';
 import { services } from '@/lib/services';
 
 const serviceImages = [
-  'photo-1497366216548-37526070297c',
-  'photo-1486406146926-c627a92ad1ab',
-  'photo-1556761175-b413da4baf72',
-  'photo-1460925895917-afdab827c52f',
-  'photo-1551836022-d5d88e9218df',
-  'photo-1498050108023-c5249f4df085',
+  'https://images.pexels.com/photos/19915766/pexels-photo-19915766/free-photo-of-making-a-schedule-on-the-laptop.jpeg?auto=compress&cs=tinysrgb&w=900',
+  'https://images.pexels.com/photos/7710092/pexels-photo-7710092.jpeg?auto=compress&cs=tinysrgb&w=900',
+  'https://images.pexels.com/photos/8297058/pexels-photo-8297058.jpeg?auto=compress&cs=tinysrgb&w=900',
+  'https://images.pexels.com/photos/7651812/pexels-photo-7651812.jpeg?auto=compress&cs=tinysrgb&w=900',
+  'https://images.pexels.com/photos/8866740/pexels-photo-8866740.jpeg?auto=compress&cs=tinysrgb&w=900',
+  'https://images.pexels.com/photos/6016365/pexels-photo-6016365.jpeg?auto=compress&cs=tinysrgb&w=900',
 ];
 
 export default function Services() {
@@ -24,7 +24,7 @@ export default function Services() {
           {services.map((service, index) => (
             <Link key={service.id} href={`/services#${service.id}`} className="group card-premium flex flex-col overflow-hidden border border-soft-beige/50 bg-warm-ivory shadow-sm">
               <div className="image-zoom relative aspect-[16/10] overflow-hidden bg-soft-beige">
-                <div className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" role="img" aria-label={`${service.title} professional workspace`} style={{ backgroundImage: `url('https://images.unsplash.com/${serviceImages[index]}?auto=format&fit=crop&w=900&q=80')` }} />
+                <div className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" role="img" aria-label={`${service.title} virtual assistant at work`} style={{ backgroundImage: `url('${serviceImages[index]}')` }} />
                 <div className="absolute inset-0 bg-charcoal/15 transition-colors duration-500 group-hover:bg-charcoal/5" />
                 <span className="absolute bottom-4 left-5 font-serif text-4xl text-white/90">{service.number}</span>
               </div>
