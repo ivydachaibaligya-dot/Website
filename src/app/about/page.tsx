@@ -56,9 +56,9 @@ export default function AboutPage() {
             </div>
           </div>
           <div className="mt-12 grid grid-cols-3 gap-3 sm:gap-5">
-            <div className="image-zoom relative aspect-[5/4] overflow-hidden bg-soft-beige"><div role="img" aria-label="Bright collaborative office workspace" className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=900&q=80')" }} /></div>
-            <div className="image-zoom relative mt-5 aspect-[5/4] overflow-hidden bg-soft-beige sm:mt-8"><div role="img" aria-label="Professional team working together" className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=900&q=80')" }} /></div>
-            <div className="image-zoom relative aspect-[5/4] overflow-hidden bg-soft-beige"><div role="img" aria-label="Organized modern office desk" className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=900&q=80')" }} /></div>
+            <div className="image-zoom relative aspect-[5/4] overflow-hidden bg-soft-beige"><div role="img" aria-label="Virtual assistant creating and scheduling digital content" className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: "url('https://images.pexels.com/photos/4549414/pexels-photo-4549414.jpeg?auto=compress&cs=tinysrgb&w=900')" }} /></div>
+            <div className="image-zoom relative mt-5 aspect-[5/4] overflow-hidden bg-soft-beige sm:mt-8"><div role="img" aria-label="Virtual assistant planning a weekly digital work schedule" className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: "url('https://images.pexels.com/photos/19915766/pexels-photo-19915766.jpeg?auto=compress&cs=tinysrgb&w=900')" }} /></div>
+            <div className="image-zoom relative aspect-[5/4] overflow-hidden bg-soft-beige"><div role="img" aria-label="Customer support representative assisting customers with a headset" className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: "url('https://images.pexels.com/photos/8867440/pexels-photo-8867440.jpeg?auto=compress&cs=tinysrgb&w=900')" }} /></div>
           </div>
         </section>
 
