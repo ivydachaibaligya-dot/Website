@@ -67,21 +67,21 @@ const experience = [
   },
   {
     role: "Virtual Assistant — Mortgage Administration",
-    company: "New Zealand-based client",
+    company: "Mortgage Administration Client",
     detail:
       "Supported a mortgage administration team with data entry, administrative tasks, CRM updates, and Pipedrive management on a contract basis.",
     type: "Administrative operations",
   },
   {
     role: "Virtual Assistant — Administrative Support",
-    company: "Germany-based real estate client",
+    company: "Real Estate Client",
     detail:
       "Provided remote administrative support, including data entry, CRM management, and email management.",
     type: "Real estate support",
   },
   {
     role: "Lead Generation Project",
-    company: "Netherlands-based startup",
+    company: "Lead Generation Startup",
     detail:
       "Completed a two-month project involving prospect research, outreach, cold emailing, and email client support.",
     type: "Lead generation",
