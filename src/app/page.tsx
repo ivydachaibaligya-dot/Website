@@ -99,20 +99,6 @@ const experience = [
     type: "Customer communication",
   },
   {
-    role: "Virtual Assistant — Mortgage Administration",
-    company: "Mortgage Administration Client",
-    detail:
-      "Supported mortgage administration through data entry, administrative tasks, CRM updates, and Pipedrive management on a contract basis.",
-    type: "Administrative operations",
-  },
-  {
-    role: "Virtual Assistant — Administrative Support",
-    company: "Real Estate Client",
-    detail:
-      "Provided remote administrative support, including data entry, CRM management, and email management.",
-    type: "Real estate support",
-  },
-  {
     role: "Lead Generation Project",
     company: "Lead Generation Startup",
     detail:
@@ -234,9 +220,8 @@ export default function Home() {
           <div className="ivy-about-copy">
             <p className="ivy-lead">I help make the busy parts of business feel a little more manageable.</p>
             <p>
-              My experience has grown across different industries and teams — from real estate and
-              mortgage administration to lead generation, insurance support, and U.S. roofing and
-              home-service operations.
+              My experience spans lead generation, insurance support, and U.S. roofing and
+              home-service operations, alongside administrative and business support.
             </p>
             <p>
               I enjoy bringing structure to everyday tasks, keeping information organized, following
