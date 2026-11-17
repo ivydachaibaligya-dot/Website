@@ -24,8 +24,8 @@ const services = [
     number: "02",
     title: "Construction & Roofing Support",
     description:
-      "Administrative coordination for roofing and home-service teams, including customer updates, job tracking, work orders, and inspection scheduling.",
-    tags: ["Job coordination", "Customer updates", "Work orders", "Roofing operations"],
+      "Hands-on administrative support for roofing teams, from roof measurements and estimates to proposal preparation, insurance-claim documentation support, job photo organization, material ordering, crew dispatching, and job coordination.",
+    tags: ["Roof measurements", "Estimates & proposals", "Claim documentation", "Job photos", "Material orders", "Crew dispatching"],
   },
   {
     number: "03",
@@ -36,10 +36,10 @@ const services = [
   },
   {
     number: "04",
-    title: "Lead Generation & Marketing Support",
+    title: "Lead Generation, Copywriting & Content Support",
     description:
-      "Prospect research, outreach support, social media coordination, and practical marketing materials for growing businesses.",
-    tags: ["Lead research", "Email outreach", "Social media", "Canva graphics"],
+      "Prospect research, personalized outreach, client communication, copywriting, social media coordination, and practical content materials for growing businesses.",
+    tags: ["Lead research", "Email outreach", "Customer support", "Copywriting", "Social media", "Canva graphics"],
   },
 ];
 
@@ -48,28 +48,46 @@ const experience = [
     role: "Office Administrator",
     company: "TexasMade Roofing & Renovations",
     detail:
-      "Supporting a U.S.-based roofing and home-services business with administrative operations, customer and job coordination, CRM updates, lead tracking, and marketing support.",
-    type: "Construction & home services",
+      "Support day-to-day roofing and home-service operations, including client communication, office administration, roof measurements using Roofr, preparing estimates and proposals, organizing job photos and project documents, assisting with insurance-claim documentation, coordinating material orders through ABC Supply, managing calendars and email, supporting automation and social media, dispatching crews, and coordinating schedules and job updates.",
+    type: "Roofing & construction operations",
+    period: "2026",
   },
   {
-    role: "Appointment Setting & CRM Support",
-    company: "Insurance / Final Expense",
+    role: "Operations Support",
+    company: "Miayni",
     detail:
-      "Working with GoHighLevel to support lead follow-up, contact management, and appointment coordination for an insurance team.",
-    type: "Customer communication",
+      "Support daily team operations by coordinating tasks, tracking expenses, assisting with payroll coordination and credit card payments, preparing operational reports, serving as a point of contact for stakeholders, and helping leadership maintain productive and organized workflows.",
+    type: "Business operations",
+    period: "2025–2026",
+  },
+  {
+    role: "Administrative & Client Support",
+    company: "TopSchools Admission",
+    detail:
+      "Provided executive-level administrative and client communication support for education services. Managed student records, organized databases in Notion, maintained course systems in Kajabi, supported workflow automations, and coordinated between clients and internal teams to help ensure timely deliverables.",
+    type: "Education & client services",
+    period: "2025–2026",
   },
   {
     role: "Strategic Partnership Specialist",
     company: "Agencia Gutiérrez & Socios",
     detail:
-      "Experience supporting partnership-focused work and professional business communication.",
-    type: "Partnerships",
+      "Built and maintained lead lists using Apollo and ContactOut, carried out personalized cold email campaigns and follow-up sequences, reviewed engagement metrics, refined outreach based on performance data and KPIs, and maintained Google Workspace tracking systems for reporting and pipeline visibility.",
+    type: "Lead generation & partnerships",
+    period: "2024–2025",
+  },
+  {
+    role: "Appointment Setting & CRM Support",
+    company: "Insurance / Final Expense",
+    detail:
+      "Used GoHighLevel to support lead follow-up, contact management, customer communication, and appointment coordination for an insurance team.",
+    type: "Customer communication",
   },
   {
     role: "Virtual Assistant — Mortgage Administration",
     company: "Mortgage Administration Client",
     detail:
-      "Supported a mortgage administration team with data entry, administrative tasks, CRM updates, and Pipedrive management on a contract basis.",
+      "Supported mortgage administration through data entry, administrative tasks, CRM updates, and Pipedrive management on a contract basis.",
     type: "Administrative operations",
   },
   {
