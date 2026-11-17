@@ -2,13 +2,13 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Ivy Embone | Administrative & Construction Operations Support",
+  title: "Ivy Embone | Virtual Assistant & Web Developer",
   description:
-    "Meet Ivy Embone, a virtual assistant with hands-on experience in administrative support, construction and roofing operations, CRM coordination, customer support, and lead generation.",
+    "Meet Ivy Embone, a Virtual Assistant and Web Developer supporting businesses with administration, construction operations, website creation and management, CRM coordination, and lead generation.",
   openGraph: {
-    title: "Ivy Embone | Virtual Assistant & Operations Support",
+    title: "Ivy Embone | Virtual Assistant & Web Developer",
     description:
-      "Practical, organized support for busy teams — from daily administration to construction and roofing operations.",
+      "Practical business support combining virtual assistance, website development, and construction operations coordination.",
   },
 };
 
@@ -36,6 +36,13 @@ const services = [
   },
   {
     number: "04",
+    title: "Website Development & Management",
+    description:
+      "Creating, updating, and maintaining business websites with a focus on clear presentation, responsive layouts, and a helpful online presence.",
+    tags: ["Website creation", "Responsive design", "Website updates", "Site maintenance", "Basic SEO"],
+  },
+  {
+    number: "05",
     title: "Lead Generation, Copywriting & Content Support",
     description:
       "Prospect research, personalized outreach, client communication, copywriting, social media coordination, and practical content materials for growing businesses.",
@@ -159,7 +166,7 @@ export default function Home() {
       <nav className="ivy-nav">
         <Link href="#home" className="ivy-brand" aria-label="Ivy Embone home">
           <span className="ivy-brand-mark">IE</span>
-          <span>IVY EMBONE<small>VIRTUAL ASSISTANT</small></span>
+          <span>IVY EMBONE<small>VIRTUAL ASSISTANT · WEB DEVELOPER</small></span>
         </Link>
         <div className="ivy-nav-links">
           <Link href="#about">About</Link>
@@ -177,8 +184,7 @@ export default function Home() {
           <div className="ivy-eyebrow"><span className="ivy-live-dot" /> AVAILABLE FOR THE RIGHT OPPORTUNITY</div>
           <h1>Good work happens<br />when <em>everything</em><br />is in its place.</h1>
           <p className="ivy-hero-intro">
-            Hi, I&apos;m <strong>Ivy</strong> — a Virtual Assistant supporting business owners and teams with
-            administrative work, construction operations, CRM coordination, and lead generation.
+            Hi, I&apos;m <strong>Ivy</strong> — a Virtual Assistant and Web Developer helping businesses stay organized and build a stronger online presence through administrative support, construction operations, website development, CRM coordination, and lead generation.
           </p>
           <div className="ivy-hero-actions">
             <Link href="#contact" className="ivy-button ivy-button-dark">Let&apos;s work together <span>↗</span></Link>
@@ -192,7 +198,7 @@ export default function Home() {
             <div className="ivy-art-top"><span>WORKSPACE / 001</span><span>✳</span></div>
             <div className="ivy-art-monogram">I<span>.</span></div>
             <div className="ivy-art-name">Ivy Embone</div>
-            <div className="ivy-art-role">ADMINISTRATION · OPERATIONS · SUPPORT</div>
+            <div className="ivy-art-role">VIRTUAL ASSISTANCE · WEB DEVELOPMENT</div>
             <div className="ivy-art-line" />
             <div className="ivy-art-bottom"><span>DETAIL-ORIENTED</span><span>PEOPLE-FOCUSED</span></div>
           </div>
@@ -204,7 +210,7 @@ export default function Home() {
       </section>
 
       <div className="ivy-marquee" aria-label="Areas of support">
-        <div>ADMINISTRATIVE SUPPORT <b>✳</b> CONSTRUCTION OPERATIONS <b>✳</b> CRM COORDINATION <b>✳</b> LEAD GENERATION <b>✳</b> CUSTOMER SUPPORT <b>✳</b> </div>
+        <div>VIRTUAL ASSISTANCE <b>✳</b> WEBSITE DEVELOPMENT <b>✳</b> CONSTRUCTION OPERATIONS <b>✳</b> CRM COORDINATION <b>✳</b> LEAD GENERATION <b>✳</b> </div>
       </div>
 
       <section className="ivy-section ivy-about" id="about">
@@ -294,7 +300,7 @@ export default function Home() {
         <h2>Have a lot on<br />your <em>to-do list?</em></h2>
         <p>Let&apos;s talk about how I can support your team and help keep things organized.</p>
         <a className="ivy-button ivy-button-light" href="mailto:hello@iaurevant.com">Get in touch <span>↗</span></a>
-        <div className="ivy-contact-footer"><span>IVY EMBONE · VIRTUAL ASSISTANT</span><a href="mailto:hello@iaurevant.com">HELLO@IAUREVANT.COM</a><span>PHILIPPINES · WORKING REMOTELY</span></div>
+        <div className="ivy-contact-footer"><span>IVY EMBONE · VIRTUAL ASSISTANT & WEB DEVELOPER</span><a href="mailto:hello@iaurevant.com">HELLO@IAUREVANT.COM</a><span>PHILIPPINES · WORKING REMOTELY</span></div>
       </section>
       <footer className="ivy-footer"><span>© {new Date().getFullYear()} Ivy Embone</span><span>Made with care, and attention to detail. ✳</span><Link href="#home">BACK TO TOP ↑</Link></footer>
     </main>
