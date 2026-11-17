@@ -108,18 +108,20 @@ const experience = [
 ];
 
 const tools = [
-  "Google Workspace",
-  "Microsoft 365",
-  "GoHighLevel",
-  "Zuper",
-  "Roofr",
-  "Trello",
-  "Zapier",
-  "QuickBooks",
-  "Canva",
-  "Apollo",
-  "CompanyCam",
-  "Pipedrive",
+  { name: "Google Workspace", icon: "googleworkspace" },
+  { name: "GoHighLevel", icon: "highlevel" },
+  { name: "Zuper", icon: null },
+  { name: "Roofr", icon: null },
+  { name: "Trello", icon: "trello" },
+  { name: "Zapier", icon: "zapier" },
+  { name: "QuickBooks", icon: "quickbooks" },
+  { name: "Canva", icon: "canva" },
+  { name: "Apollo", icon: "apollo" },
+  { name: "CompanyCam", icon: null },
+  { name: "CapCut", icon: "capcut" },
+  { name: "Wix", icon: "wix" },
+  { name: "Vercel", icon: "vercel" },
+  { name: "GitHub", icon: "github" },
 ];
 
 const projects = [
@@ -287,7 +289,7 @@ export default function Home() {
       <section className="ivy-tools">
         <div className="ivy-section ivy-tools-inner">
           <div><div className="ivy-section-kicker">05 — TOOLS I WORK WITH</div><h2>Comfortable with<br /><em>the tools behind the work.</em></h2></div>
-          <div className="ivy-tool-cloud">{tools.map((tool, index) => <span key={tool} className={index % 4 === 0 ? "ivy-tool-featured" : ""}>{tool}</span>)}</div>
+          <div className="ivy-tool-cloud">{tools.map((tool, index) => <span key={tool.name} className={index % 4 === 0 ? "ivy-tool-featured" : ""}>{tool.icon ? <img src={`https://cdn.simpleicons.org/${tool.icon}`} alt="" aria-hidden="true" loading="lazy" /> : <span className="ivy-tool-monogram" aria-hidden="true">{tool.name.slice(0, 1)}</span>}<span className="ivy-tool-name">{tool.name}</span></span>)}</div>
         </div>
       </section>
 
