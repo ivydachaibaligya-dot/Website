@@ -2,59 +2,20 @@ import type { Metadata, Viewport } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "AUREVANT | Global Business Support",
-  description: "AUREVANT is a boutique virtual assistant agency providing premium global business support to US companies: executive administration, roofing and home services support, lead generation, CRM management, customer support, and digital operations.",
-  keywords: "AUREVANT, virtual assistant agency, global business support, executive assistant, administrative support, roofing virtual assistant, home services support, lead generation, CRM management, appointment setting, customer support, website support",
-  authors: [{ name: "AUREVANT" }],
-  creator: "AUREVANT",
-  publisher: "AUREVANT",
-  formatDetection: {
-    email: false,
-    address: false,
-    telephone: false,
-  },
-  openGraph: {
-    title: "AUREVANT | Global Business Support",
-    description: "Your Business. Our Commitment. Premium virtual assistant support for US businesses.",
-    siteName: "AUREVANT",
-    locale: "en_US",
-    type: "website",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "AUREVANT | Global Business Support",
-    description: "Your Business. Our Commitment. Premium virtual assistant support for US businesses.",
-  },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      "max-video-preview": -1,
-      "max-image-preview": "large",
-      "max-snippet": -1,
-    },
-  },
+  title: "Ivy Embone | Administrative & Construction Operations Support",
+  description: "Personal portfolio of Ivy Embone, Virtual Assistant supporting administration, construction and roofing operations, CRM coordination, customer support, and lead generation.",
+  keywords: "Ivy Embone, Virtual Assistant, Administrative Support, Construction Operations, Roofing Support, CRM Coordination, Lead Generation",
+  authors: [{ name: "Ivy Embone" }],
+  creator: "Ivy Embone",
+  publisher: "Ivy Embone",
+  formatDetection: { email: false, address: false, telephone: false },
+  openGraph: { title: "Ivy Embone | Virtual Assistant & Operations Support", description: "Practical, organized support for busy teams.", siteName: "Ivy Embone", locale: "en_US", type: "website" },
+  twitter: { card: "summary_large_image", title: "Ivy Embone | Virtual Assistant & Operations Support", description: "Practical, organized support for busy teams." },
+  robots: { index: true, follow: true, googleBot: { index: true, follow: true, "max-video-preview": -1, "max-image-preview": "large", "max-snippet": -1 } },
 };
 
-export const viewport: Viewport = {
-  width: "device-width",
-  initialScale: 1,
-  maximumScale: 5,
-};
+export const viewport: Viewport = { width: "device-width", initialScale: 1, maximumScale: 5 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
-  return (
-    <html lang="en" className="h-full antialiased scroll-smooth">
-      <head>
-        <link rel="icon" href="/favicon.ico" />
-      </head>
-      <body className="min-h-full flex flex-col">{children}</body>
-    </html>
-  );
+export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
+  return <html lang="en" className="h-full antialiased scroll-smooth"><head><link rel="icon" href="/favicon.ico" /></head><body className="min-h-full flex flex-col">{children}</body></html>;
 }

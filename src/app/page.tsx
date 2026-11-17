@@ -1,39 +1,276 @@
-import { Metadata } from 'next';
-import Navigation from '@/components/layout/Navigation';
-import Footer from '@/components/layout/Footer';
-import Hero from '@/components/sections/Hero';
-import About from '@/components/sections/About';
-import Services from '@/components/sections/ServicesOverview';
-import Approach from '@/components/sections/Approach';
-import Tools from '@/components/sections/Tools';
-import WhyAurevant from '@/components/sections/WhyAurevant';
-import FAQ from '@/components/sections/FAQ';
-import Contact from '@/components/sections/Contact';
+import type { Metadata } from "next";
+import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: 'AUREVANT | Global Business Support',
-  description: 'AUREVANT is a boutique virtual assistant agency providing premium global business support to US companies. Your Business. Our Commitment.',
+  title: "Ivy Embone | Administrative & Construction Operations Support",
+  description:
+    "Meet Ivy Embone, a virtual assistant with hands-on experience in administrative support, construction and roofing operations, CRM coordination, customer support, and lead generation.",
   openGraph: {
-    title: 'AUREVANT | Global Business Support',
-    description: 'Your Business. Our Commitment. Premium virtual assistant support for US businesses.',
+    title: "Ivy Embone | Virtual Assistant & Operations Support",
+    description:
+      "Practical, organized support for busy teams — from daily administration to construction and roofing operations.",
   },
 };
 
+const services = [
+  {
+    number: "01",
+    title: "Administrative Support",
+    description:
+      "Email and document coordination, data entry, calendar support, follow-ups, and the day-to-day details that keep work moving.",
+    tags: ["Email & documents", "Data entry", "Scheduling", "Team coordination"],
+  },
+  {
+    number: "02",
+    title: "Construction & Roofing Support",
+    description:
+      "Administrative coordination for roofing and home-service teams, including customer updates, job tracking, work orders, and inspection scheduling.",
+    tags: ["Job coordination", "Customer updates", "Work orders", "Roofing operations"],
+  },
+  {
+    number: "03",
+    title: "CRM & Business Operations",
+    description:
+      "Keeping customer records, pipelines, tasks, and workflows organized across the tools a team already uses.",
+    tags: ["CRM management", "Lead tracking", "Process follow-up", "Reporting"],
+  },
+  {
+    number: "04",
+    title: "Lead Generation & Marketing Support",
+    description:
+      "Prospect research, outreach support, social media coordination, and practical marketing materials for growing businesses.",
+    tags: ["Lead research", "Email outreach", "Social media", "Canva graphics"],
+  },
+];
+
+const experience = [
+  {
+    role: "Office Administrator",
+    company: "TexasMade Roofing & Renovations",
+    detail:
+      "Supporting a U.S.-based roofing and home-services business with administrative operations, customer and job coordination, CRM updates, lead tracking, and marketing support.",
+    type: "Construction & home services",
+  },
+  {
+    role: "Appointment Setting & CRM Support",
+    company: "Insurance / Final Expense",
+    detail:
+      "Working with GoHighLevel to support lead follow-up, contact management, and appointment coordination for an insurance team.",
+    type: "Customer communication",
+  },
+  {
+    role: "Strategic Partnership Specialist",
+    company: "Agencia Gutiérrez & Socios",
+    detail:
+      "Experience supporting partnership-focused work and professional business communication.",
+    type: "Partnerships",
+  },
+  {
+    role: "Virtual Assistant — Mortgage Administration",
+    company: "New Zealand-based client",
+    detail:
+      "Supported a mortgage administration team with data entry, administrative tasks, CRM updates, and Pipedrive management on a contract basis.",
+    type: "Administrative operations",
+  },
+  {
+    role: "Virtual Assistant — Administrative Support",
+    company: "Germany-based real estate client",
+    detail:
+      "Provided remote administrative support, including data entry, CRM management, and email management.",
+    type: "Real estate support",
+  },
+  {
+    role: "Lead Generation Project",
+    company: "Netherlands-based startup",
+    detail:
+      "Completed a two-month project involving prospect research, outreach, cold emailing, and email client support.",
+    type: "Lead generation",
+  },
+];
+
+const tools = [
+  "Google Workspace",
+  "Microsoft 365",
+  "GoHighLevel",
+  "Zuper",
+  "Roofr",
+  "Trello",
+  "Zapier",
+  "QuickBooks",
+  "Canva",
+  "Apollo",
+  "CompanyCam",
+  "Pipedrive",
+];
+
+const projects = [
+  {
+    label: "Operations",
+    title: "Roofing & home-service coordination",
+    text: "Job tracking, customer communication, inspection scheduling, CRM updates, and administrative follow-through.",
+    visual: "project-visual project-visual-roof",
+    mark: "FIELD\nTO OFFICE",
+  },
+  {
+    label: "CRM & data",
+    title: "Organized records and lead pipelines",
+    text: "Maintaining customer information, updating lead records, and keeping tasks and follow-ups visible.",
+    visual: "project-visual project-visual-crm",
+    mark: "CRM\nWORKFLOW",
+  },
+  {
+    label: "Marketing",
+    title: "Practical marketing support",
+    text: "Social media content coordination, Canva graphics, and outreach materials that help businesses communicate clearly.",
+    visual: "project-visual project-visual-marketing",
+    mark: "CONTENT\nSTUDIO",
+  },
+];
+
 export default function Home() {
   return (
-    <div className="min-h-screen">
-      <Navigation />
-      <main>
-        <Hero />
-        <About />
-        <Services />
-        <Approach />
-        <Tools />
-        <WhyAurevant />
-        <FAQ />
-        <Contact />
-      </main>
-      <Footer />
-    </div>
+    <main className="ivy-site">
+      <nav className="ivy-nav">
+        <Link href="#home" className="ivy-brand" aria-label="Ivy Embone home">
+          <span className="ivy-brand-mark">IE</span>
+          <span>IVY EMBONE<small>VIRTUAL ASSISTANT</small></span>
+        </Link>
+        <div className="ivy-nav-links">
+          <Link href="#about">About</Link>
+          <Link href="#services">What I do</Link>
+          <Link href="#experience">Experience</Link>
+          <Link href="#work">Work samples</Link>
+        </div>
+        <Link className="ivy-nav-cta" href="#contact">Let&apos;s connect <span>↗</span></Link>
+      </nav>
+
+      <section className="ivy-hero" id="home">
+        <div className="ivy-hero-orbit ivy-orbit-one" />
+        <div className="ivy-hero-orbit ivy-orbit-two" />
+        <div className="ivy-hero-copy">
+          <div className="ivy-eyebrow"><span className="ivy-live-dot" /> AVAILABLE FOR THE RIGHT OPPORTUNITY</div>
+          <h1>Good work happens<br />when <em>everything</em><br />is in its place.</h1>
+          <p className="ivy-hero-intro">
+            Hi, I&apos;m <strong>Ivy</strong> — a Virtual Assistant supporting business owners and teams with
+            administrative work, construction operations, CRM coordination, and lead generation.
+          </p>
+          <div className="ivy-hero-actions">
+            <Link href="#contact" className="ivy-button ivy-button-dark">Let&apos;s work together <span>↗</span></Link>
+            <Link href="#experience" className="ivy-text-link">Explore my experience <span>↓</span></Link>
+          </div>
+          <div className="ivy-hero-note"><span>✳</span> Thoughtful support. Organized operations. Reliable follow-through.</div>
+        </div>
+        <div className="ivy-hero-art" aria-label="Abstract portfolio illustration">
+          <div className="ivy-art-backdrop" />
+          <div className="ivy-art-card ivy-art-card-main">
+            <div className="ivy-art-top"><span>WORKSPACE / 001</span><span>✳</span></div>
+            <div className="ivy-art-monogram">I<span>.</span></div>
+            <div className="ivy-art-name">Ivy Embone</div>
+            <div className="ivy-art-role">ADMINISTRATION · OPERATIONS · SUPPORT</div>
+            <div className="ivy-art-line" />
+            <div className="ivy-art-bottom"><span>DETAIL-ORIENTED</span><span>PEOPLE-FOCUSED</span></div>
+          </div>
+          <div className="ivy-float ivy-float-top"><span>↗</span> Organized workflows</div>
+          <div className="ivy-float ivy-float-bottom"><span>✳</span> Your reliable support partner</div>
+          <div className="ivy-art-stamp">LET&apos;S<br />MAKE<br />THINGS<br /><i>WORK.</i></div>
+        </div>
+        <div className="ivy-hero-index"><span>01 / 05</span><span>SCROLL TO EXPLORE ↓</span></div>
+      </section>
+
+      <div className="ivy-marquee" aria-label="Areas of support">
+        <div>ADMINISTRATIVE SUPPORT <b>✳</b> CONSTRUCTION OPERATIONS <b>✳</b> CRM COORDINATION <b>✳</b> LEAD GENERATION <b>✳</b> CUSTOMER SUPPORT <b>✳</b> </div>
+      </div>
+
+      <section className="ivy-section ivy-about" id="about">
+        <div className="ivy-section-kicker">01 — A LITTLE ABOUT ME</div>
+        <div className="ivy-about-grid">
+          <div>
+            <h2>Behind every<br />well-run business<br />is <em>good support.</em></h2>
+          </div>
+          <div className="ivy-about-copy">
+            <p className="ivy-lead">I help make the busy parts of business feel a little more manageable.</p>
+            <p>
+              My experience has grown across different industries and teams — from real estate and
+              mortgage administration to lead generation, insurance support, and U.S. roofing and
+              home-service operations.
+            </p>
+            <p>
+              I enjoy bringing structure to everyday tasks, keeping information organized, following
+              through on details, and helping teams stay focused on the work that matters.
+            </p>
+            <div className="ivy-facts">
+              <div><strong>REMOTE</strong><span>Based in the Philippines</span></div>
+              <div><strong>MULTI-INDUSTRY</strong><span>Admin, service & operations</span></div>
+              <div><strong>HANDS-ON</strong><span>Tools, systems & coordination</span></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="ivy-section ivy-services" id="services">
+        <div className="ivy-section-heading">
+          <div><div className="ivy-section-kicker">02 — HOW I CAN HELP</div><h2>Support that keeps<br /><em>business moving.</em></h2></div>
+          <p>Practical help for the everyday details, the moving parts, and the follow-ups that keep work on track.</p>
+        </div>
+        <div className="ivy-service-grid">
+          {services.map((service) => (
+            <article className="ivy-service-card" key={service.number}>
+              <div className="ivy-service-top"><span>{service.number}</span><span className="ivy-service-arrow">↗</span></div>
+              <h3>{service.title}</h3>
+              <p>{service.description}</p>
+              <div className="ivy-tags">{service.tags.map((tag) => <span key={tag}>{tag}</span>)}</div>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="ivy-experience" id="experience">
+        <div className="ivy-section ivy-experience-inner">
+          <div className="ivy-section-kicker">03 — EXPERIENCE & JOURNEY</div>
+          <div className="ivy-experience-heading"><h2>Different teams.<br /><em>One steady approach.</em></h2><p>My background spans several industries, with a common thread: helping people stay organized and work move forward.</p></div>
+          <div className="ivy-timeline">
+            {experience.map((item, index) => (
+              <article className="ivy-timeline-item" key={item.company + item.role}>
+                <div className="ivy-timeline-index">0{index + 1}</div>
+                <div className="ivy-timeline-main"><span>{item.type}</span><h3>{item.role}</h3><strong>{item.company}</strong><p>{item.detail}</p></div>
+                <div className="ivy-timeline-symbol">↗</div>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="ivy-section ivy-work" id="work">
+        <div className="ivy-section-heading">
+          <div><div className="ivy-section-kicker">04 — WHAT I WORK ON</div><h2>A closer look at<br /><em>the details.</em></h2></div>
+          <p>A snapshot of the kinds of work I support. Client information is kept private, so these are service examples rather than confidential project files.</p>
+        </div>
+        <div className="ivy-project-grid">
+          {projects.map((project) => (
+            <article className="ivy-project-card" key={project.title}>
+              <div className={project.visual}><span>{project.mark.split("\n").map((line) => <i key={line}>{line}</i>)}</span><b>✳</b></div>
+              <div className="ivy-project-info"><span>{project.label}</span><h3>{project.title}</h3><p>{project.text}</p></div>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="ivy-tools">
+        <div className="ivy-section ivy-tools-inner">
+          <div><div className="ivy-section-kicker">05 — TOOLS I WORK WITH</div><h2>Comfortable with<br /><em>the tools behind the work.</em></h2></div>
+          <div className="ivy-tool-cloud">{tools.map((tool, index) => <span key={tool} className={index % 4 === 0 ? "ivy-tool-featured" : ""}>{tool}</span>)}</div>
+        </div>
+      </section>
+
+      <section className="ivy-contact" id="contact">
+        <div className="ivy-contact-orb" />
+        <div className="ivy-section-kicker">A GOOD PLACE TO START</div>
+        <h2>Have a lot on<br />your <em>to-do list?</em></h2>
+        <p>Let&apos;s talk about how I can support your team and help keep things organized.</p>
+        <a className="ivy-button ivy-button-light" href="mailto:hello@iaurevant.com">Get in touch <span>↗</span></a>
+        <div className="ivy-contact-footer"><span>IVY EMBONE · VIRTUAL ASSISTANT</span><a href="mailto:hello@iaurevant.com">HELLO@IAUREVANT.COM</a><span>PHILIPPINES · WORKING REMOTELY</span></div>
+      </section>
+      <footer className="ivy-footer"><span>© {new Date().getFullYear()} Ivy Embone</span><span>Made with care, and attention to detail. ✳</span><Link href="#home">BACK TO TOP ↑</Link></footer>
+    </main>
   );
 }
