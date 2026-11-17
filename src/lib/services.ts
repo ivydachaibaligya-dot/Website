@@ -106,5 +106,5 @@ export const services: Service[] = [
   },
 ];
 
-export const contactEmail = 'ivydachaibaligya@gmail.com';
+export const contactEmail = 'hello@iaurevant.com';
 export const linkedInUrl = 'https://linkedin.com/in/ivy-embone-1a6445323';
