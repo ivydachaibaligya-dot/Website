@@ -15,10 +15,10 @@ export const metadata: Metadata = {
 const services = [
   {
     number: "01",
-    title: "Administrative Support",
+    title: "Administrative & Executive Support",
     description:
       "Email and document coordination, data entry, calendar support, follow-ups, and the day-to-day details that keep work moving.",
-    tags: ["Email & documents", "Data entry", "Scheduling", "Team coordination"],
+    tags: ["Email & documents", "Data entry", "Scheduling", "Executive assistance", "Team coordination"],
   },
   {
     number: "02",
@@ -31,8 +31,8 @@ const services = [
     number: "03",
     title: "CRM & Business Operations",
     description:
-      "Keeping customer records, pipelines, tasks, and workflows organized across the tools a team already uses.",
-    tags: ["CRM management", "Lead tracking", "Process follow-up", "Reporting"],
+      "Keeping customer records, pipelines, tasks, SOPs, websites, and automated workflows organized across the tools a team already uses.",
+    tags: ["CRM management", "Lead tracking", "SOP development", "Workflow automation", "Website updates", "Reporting"],
   },
   {
     number: "04",
@@ -44,6 +44,13 @@ const services = [
 ];
 
 const experience = [
+  {
+    role: "Executive Assistant / Secretary",
+    company: "XRP Roofing",
+    detail:
+      "Supported business leadership and daily roofing operations through website creation and management, SEO and online presence updates, proposal preparation and delivery, insurance-related coordination and documentation, graphic design and marketing materials, accounting and bookkeeping support, business banking and financial administration, SOP development, workflow automation, client communication, and internal process coordination.",
+    type: "Executive & roofing business support",
+  },
   {
     role: "Office Administrator",
     company: "TexasMade Roofing & Renovations",
