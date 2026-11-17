@@ -155,6 +155,7 @@ const projects = [
 export default function Home() {
   return (
     <main className="ivy-site">
+      <div className="ivy-holiday-lights" aria-hidden="true"><span /><span /><span /><span /><span /><span /><span /><span /><span /><span /><span /><span /></div>
       <nav className="ivy-nav">
         <Link href="#home" className="ivy-brand" aria-label="Ivy Embone home">
           <span className="ivy-brand-mark">IE</span>
