@@ -330,3 +330,60 @@ p, span, div { font-family: var(--font-inter), sans-serif; }
   .ivy-footer { padding:18px 24px; flex-wrap:wrap; } .ivy-footer span:nth-child(2) { display:none; }
 }
 @media(prefers-reduced-motion:reduce) { .ivy-hero-copy,.ivy-hero-art,.ivy-float,.ivy-marquee div { animation:none!important; } }
+
+
+/* Subtle seasonal fairy lights — decorative only, with reduced-motion support. */
+.ivy-site { position: relative; }
+.ivy-holiday-lights {
+  position: absolute;
+  inset: 0;
+  z-index: 4;
+  pointer-events: none;
+  overflow: hidden;
+}
+.ivy-holiday-lights::before,
+.ivy-holiday-lights::after {
+  content: "";
+  position: absolute;
+  top: 104px;
+  bottom: 90px;
+  width: 15px;
+  opacity: .82;
+  background: linear-gradient(90deg, transparent 6px, rgba(70,65,59,.5) 6px 7px, transparent 7px);
+}
+.ivy-holiday-lights::before { left: 8px; }
+.ivy-holiday-lights::after { right: 8px; }
+.ivy-holiday-lights span {
+  position: absolute;
+  width: 7px;
+  height: 10px;
+  border-radius: 50% 50% 45% 45%;
+  background: #f6dca0;
+  box-shadow: 0 0 5px 2px rgba(246,220,160,.45), 0 0 12px rgba(246,220,160,.25);
+  animation: ivyLightGlow 2.8s ease-in-out infinite alternate;
+}
+.ivy-holiday-lights span:nth-child(1) { left: 12px; top: 145px; background:#f6dca0; }
+.ivy-holiday-lights span:nth-child(2) { left: 12px; top: 335px; background:#e97878; animation-delay:-.8s; }
+.ivy-holiday-lights span:nth-child(3) { left: 12px; top: 535px; background:#f6dca0; animation-delay:-1.5s; }
+.ivy-holiday-lights span:nth-child(4) { left: 12px; top: 735px; background:#b9c9b3; animation-delay:-.4s; }
+.ivy-holiday-lights span:nth-child(5) { left: 12px; top: 935px; background:#e97878; animation-delay:-1.2s; }
+.ivy-holiday-lights span:nth-child(6) { left: 12px; top: 1135px; background:#f6dca0; animation-delay:-2s; }
+.ivy-holiday-lights span:nth-child(7) { right: 12px; top: 235px; background:#b9c9b3; animation-delay:-1s; }
+.ivy-holiday-lights span:nth-child(8) { right: 12px; top: 435px; background:#f6dca0; animation-delay:-1.8s; }
+.ivy-holiday-lights span:nth-child(9) { right: 12px; top: 635px; background:#e97878; animation-delay:-.5s; }
+.ivy-holiday-lights span:nth-child(10) { right: 12px; top: 835px; background:#f6dca0; animation-delay:-1.4s; }
+.ivy-holiday-lights span:nth-child(11) { right: 12px; top: 1035px; background:#b9c9b3; animation-delay:-.7s; }
+.ivy-holiday-lights span:nth-child(12) { right: 12px; top: 1235px; background:#e97878; animation-delay:-2.2s; }
+@keyframes ivyLightGlow {
+  from { opacity:.55; filter:brightness(.9); transform:scale(.9); }
+  to { opacity:1; filter:brightness(1.18); transform:scale(1.08); }
+}
+@media (max-width:700px) {
+  .ivy-holiday-lights::before { left:3px; }
+  .ivy-holiday-lights::after { right:3px; }
+  .ivy-holiday-lights span:nth-child(odd) { left:7px; }
+  .ivy-holiday-lights span:nth-child(even) { right:7px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .ivy-holiday-lights span { animation:none; }
+}
