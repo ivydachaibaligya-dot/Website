@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Ivy Embone | Virtual Assistant & Web Developer",
@@ -218,6 +219,17 @@ export default function Home() {
         <div className="ivy-about-grid">
           <div>
             <h2>Behind every<br />well-run business<br />is <em>good support.</em></h2>
+            <figure className="ivy-about-portrait">
+              <Image
+                src="/images/ivy-working.png"
+                alt="Ivy smiling naturally while working at her laptop"
+                width={900}
+                height={1200}
+                priority={false}
+                sizes="(max-width: 700px) 100vw, 42vw"
+              />
+              <figcaption>IVY EMBONE · VIRTUAL ASSISTANT & WEB DEVELOPER</figcaption>
+            </figure>
           </div>
           <div className="ivy-about-copy">
             <p className="ivy-lead">I help make the busy parts of business feel a little more manageable.</p>
