@@ -300,9 +300,12 @@ p, span, div { font-family: var(--font-inter), sans-serif; }
 .ivy-tools { background:#eae2d9; }
 .ivy-tools-inner { display:grid; grid-template-columns:.9fr 1.1fr; gap:8%; align-items:center; }
 .ivy-tool-cloud { display:flex; flex-wrap:wrap; gap:10px; }
-.ivy-tool-cloud span { background:#f8f5f0; border:1px solid #ded4c9; padding:13px 17px; font-size:10px; color:#6e665e; transition:all .25s; }
-.ivy-tool-cloud span:hover { background:var(--ink); color:white; transform:translateY(-3px); }
-.ivy-tool-cloud .ivy-tool-featured { border-color:#d7aaa0; color:#b65e5e; }
+.ivy-tool-cloud > span { display:inline-flex; align-items:center; gap:10px; background:#f8f5f0; border:1px solid #ded4c9; padding:13px 17px; font-size:10px; color:#6e665e; transition:all .25s; }
+.ivy-tool-cloud > span:hover { background:var(--ink); color:white; transform:translateY(-3px); }
+.ivy-tool-cloud > .ivy-tool-featured { border-color:#d7aaa0; color:#b65e5e; }
+.ivy-tool-cloud img { width:17px; height:17px; object-fit:contain; flex:0 0 17px; }
+.ivy-tool-monogram { display:inline-flex; align-items:center; justify-content:center; width:17px; height:17px; border:1px solid currentColor; border-radius:4px; font-size:10px; font-weight:700; flex:0 0 17px; }
+.ivy-tool-name { white-space:nowrap; }
 .ivy-contact { min-height:490px; background:#242424; color:#f8f5f0; text-align:center; padding:100px 8vw 28px; position:relative; overflow:hidden; isolation:isolate; }
 .ivy-contact .ivy-section-kicker { color:#b4a89d; }
 .ivy-contact h2 { margin:26px 0 16px; font-size:clamp(55px,7vw,88px); }
