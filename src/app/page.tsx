@@ -6,13 +6,13 @@ export const metadata: Metadata = {
   title: "Virtual Assistant & Roofing Operations Support | Ivy Embone",
   alternates: { canonical: "https://iaurevant.com/" },
   description:
-    "Hire Ivy Embone, a Philippines-based Virtual Assistant and Web Developer for administrative support, U.S. roofing operations, CRM coordination, website management, and lead generation."
+    "Hire Ivy Embone, a Philippines-based Virtual Assistant and Web Developer for administrative support, U.S. roofing operations, CRM coordination, website management, and lead generation.",
   openGraph: {
     type: "website",
     url: "https://iaurevant.com/",
     title: "Virtual Assistant & Roofing Operations Support | Ivy Embone",
     description:
-      "Philippines-based virtual assistance, U.S. roofing operations support, website management, CRM coordination, and lead generation."
+      "Philippines-based virtual assistance, U.S. roofing operations support, website management, CRM coordination, and lead generation.",
   },
 };
 
