@@ -399,7 +399,11 @@ p, span, div { font-family: var(--font-inter), sans-serif; }
 
 
 /* Friendly AI virtual receptionist */
-.ivy-chat-root { position:fixed; right:24px; bottom:24px; z-index:80; font-family:inherit; }
+.ivy-chat-root { position:fixed; right:max(24px,env(safe-area-inset-right)); bottom:max(24px,env(safe-area-inset-bottom)); z-index:9999; isolation:isolate; font-family:inherit; pointer-events:none; }
+.ivy-chat-root > * { pointer-events:auto; }
+.ivy-chat-launcher { position:relative; transition:transform .2s ease,box-shadow .2s ease; }
+.ivy-chat-launcher:hover { transform:translateY(-3px); box-shadow:0 12px 34px #211b1745; }
+.ivy-chat-launcher:focus-visible,.ivy-chat-close:focus-visible,.ivy-chat-compose button:focus-visible { outline:3px solid #e97878; outline-offset:3px; }
 .ivy-chat-launcher { display:flex; align-items:center; gap:10px; border:0; border-radius:999px; padding:13px 20px; background:#242424; color:#fff; box-shadow:0 8px 30px #211b1733; font-family:inherit; font-size:13px; font-weight:600; cursor:pointer; }
 .ivy-chat-launcher span { display:grid; place-items:center; width:25px; height:25px; border-radius:50%; background:#e97878; color:white; font-size:17px; }
 .ivy-chat-panel { width:min(370px,calc(100vw - 32px)); height:min(590px,calc(100dvh - 110px)); display:flex; flex-direction:column; overflow:hidden; margin-bottom:13px; border:1px solid #e5dcd2; border-radius:18px; background:#fbf8f3; box-shadow:0 18px 60px #211b1730; }
@@ -429,6 +433,6 @@ p, span, div { font-family: var(--font-inter), sans-serif; }
 .ivy-chat-lead-form small,.ivy-chat-status { color:#81776e; font-size:10px; line-height:1.5; }
 .ivy-chat-status { margin:0; }
 @media(max-width:600px) {
-  .ivy-chat-root { right:14px; bottom:14px; }
+  .ivy-chat-root { right:max(14px,env(safe-area-inset-right)); bottom:max(14px,env(safe-area-inset-bottom)); }
   .ivy-chat-panel { height:min(590px,calc(100dvh - 92px)); }
 }
