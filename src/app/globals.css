@@ -222,6 +222,9 @@ p, span, div { font-family: var(--font-inter), sans-serif; }
 .ivy-art-top,.ivy-art-bottom { display:flex; justify-content:space-between; font-size:8px; letter-spacing:.14em; color:#948a80; }
 .ivy-art-top span:last-child { color:var(--pink); font-size:17px; }
 .ivy-art-monogram { margin:40px 0 0 12px; font:190px/.85 Georgia,serif; color:#282725; letter-spacing:-.1em; }
+.ivy-art-photo-wrap { width:100%; height:205px; margin:25px 0 0; overflow:hidden; background:#eee7df; border:1px solid #eee7df; }
+.ivy-art-photo { display:block; width:100%; height:100%; object-fit:cover; object-position:center 38%; }
+
 .ivy-art-monogram span { color:var(--pink); }
 .ivy-art-name { font:28px Georgia,serif; margin:20px 0 6px; }
 .ivy-art-role { font-size:7px; letter-spacing:.15em; color:#8b8178; }
@@ -324,7 +327,7 @@ p, span, div { font-family: var(--font-inter), sans-serif; }
   .ivy-nav { height:70px; padding:0 20px; } .ivy-nav-links { display:none; } .ivy-nav-cta { padding:11px 13px; font-size:10px; }
   .ivy-hero { display:flex; flex-direction:column; align-items:stretch; padding:75px 24px 70px; min-height:auto; }
   .ivy-hero h1 { font-size:clamp(49px,13vw,72px); } .ivy-hero-art { min-height:390px; width:100%; margin-top:20px; }
-  .ivy-art-card { height:340px; width:72%; padding:20px; } .ivy-art-monogram { font-size:150px; margin-top:32px; }
+  .ivy-art-card { height:390px; width:72%; padding:20px; } .ivy-art-photo-wrap { height:205px; margin-top:20px; }
   .ivy-float-top { right:-2px; top:38px; } .ivy-float-bottom { left:-2px; bottom:25px; } .ivy-art-stamp { right:2px; bottom:0; }
   .ivy-hero-index { left:24px; right:24px; bottom:20px; }
   .ivy-section { padding:76px 24px; } .ivy-about-grid,.ivy-tools-inner { grid-template-columns:1fr; gap:28px; }
