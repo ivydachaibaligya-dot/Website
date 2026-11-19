@@ -146,6 +146,14 @@ const projects = [
     visual: "project-visual project-visual-marketing",
     mark: "CONTENT\nSTUDIO",
   },
+  {
+    label: "Roofr · Measurements",
+    title: "Roofr DIY measurements support",
+    text: "Assisted with DIY roof measurements using Roofr, reviewing roof dimensions and square footage to support roofing estimates and project preparation.",
+    image: "/images/ChatGPT%20Image%20Nov%2019,%202026,%2008_29_09%20AM.png",
+    visual: "project-visual project-visual-image",
+    mark: "ROOFR",
+  },
 ];
 
 export default function Home() {
@@ -279,7 +287,7 @@ export default function Home() {
         <div className="ivy-project-grid">
           {projects.map((project) => (
             <article className="ivy-project-card" key={project.title}>
-              <div className={project.visual}><span>{project.mark.split("\n").map((line) => <i key={line}>{line}</i>)}</span><b>✳</b></div>
+              <div className={project.visual}>{project.image ? <Image src={project.image} alt="Roofr DIY roof measurement report showing roof dimensions and square footage" width={952} height={938} /> : <><span>{project.mark.split("\n").map((line) => <i key={line}>{line}</i>)}</span><b>✳</b></>}</div>
               <div className="ivy-project-info"><span>{project.label}</span><h3>{project.title}</h3><p>{project.text}</p></div>
             </article>
           ))}
