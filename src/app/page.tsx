@@ -3,13 +3,16 @@ import Link from "next/link";
 import Image from "next/image";
 
 export const metadata: Metadata = {
-  title: "Ivy Embone | Virtual Assistant & Web Developer",
+  title: "Virtual Assistant & Roofing Operations Support | Ivy Embone",
+  alternates: { canonical: "https://iaurevant.com/" },
   description:
-    "Meet Ivy Embone, a Virtual Assistant and Web Developer supporting businesses with administration, construction operations, website creation and management, CRM coordination, and lead generation.",
+    "Hire Ivy Embone, a Philippines-based Virtual Assistant and Web Developer for administrative support, U.S. roofing operations, CRM coordination, website management, and lead generation."
   openGraph: {
-    title: "Ivy Embone | Virtual Assistant & Web Developer",
+    type: "website",
+    url: "https://iaurevant.com/",
+    title: "Virtual Assistant & Roofing Operations Support | Ivy Embone",
     description:
-      "Practical business support combining virtual assistance, website development, and construction operations coordination.",
+      "Philippines-based virtual assistance, U.S. roofing operations support, website management, CRM coordination, and lead generation."
   },
 };
 
@@ -157,8 +160,31 @@ const projects = [
 ];
 
 export default function Home() {
+  const personSchema = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    name: "Ivy Embone",
+    url: "https://iaurevant.com/",
+    jobTitle: "Virtual Assistant and Web Developer",
+    description: "Philippines-based Virtual Assistant and Web Developer supporting administration, U.S. roofing and construction operations, CRM coordination, website management, and lead generation.",
+    address: {
+      "@type": "PostalAddress",
+      addressCountry: "PH"
+    },
+    knowsAbout: [
+      "Virtual assistance",
+      "Administrative support",
+      "Roofing operations support",
+      "Construction administration",
+      "Roof measurements support",
+      "CRM coordination",
+      "Website development",
+      "Lead generation"
+    ]
+  };
+
   return (
-    <main className="ivy-site">
+    <main className="ivy-site">\n      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }} />
       <div className="ivy-holiday-lights" aria-hidden="true"><span /><span /><span /><span /><span /><span /><span /><span /><span /><span /><span /><span /></div>
       <nav className="ivy-nav">
         <Link href="#home" className="ivy-brand" aria-label="Ivy Embone home">

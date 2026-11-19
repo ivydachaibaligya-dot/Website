@@ -2,7 +2,8 @@ import type { Metadata, Viewport } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Ivy Embone | Administrative & Construction Operations Support",
+  metadataBase: new URL("https://iaurevant.com"),
+  title: "Ivy Embone | Virtual Assistant & Roofing Operations Support",
   description: "Personal portfolio of Ivy Embone, Virtual Assistant supporting administration, construction and roofing operations, CRM coordination, customer support, and lead generation.",
   keywords: "Ivy Embone, Virtual Assistant, Administrative Support, Construction Operations, Roofing Support, CRM Coordination, Lead Generation",
   authors: [{ name: "Ivy Embone" }],
