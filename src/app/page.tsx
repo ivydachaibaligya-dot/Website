@@ -60,7 +60,7 @@ const experience = [
     role: "Executive Assistant / Secretary",
     company: "XRP Roofing",
     detail:
-      "Supported business leadership and daily roofing operations through website creation and management, SEO and online presence updates, proposal preparation and delivery, insurance-related coordination and documentation, graphic design and marketing materials, accounting and bookkeeping support, business banking and financial administration, SOP development, workflow automation, client communication, and internal process coordination.",
+      "Supported business leadership and day-to-day roofing operations through website creation and management, SEO and online presence updates, preparing and sending proposals and invoices, following up on sent proposals and outstanding invoices, coordinating project scheduling, answering incoming calls, managing email communications, supporting insurance-related coordination and documentation, ensuring job photos are completed and properly organized, creating graphic design and marketing materials, assisting with accounting and bookkeeping, handling business banking and financial administration, developing SOPs, improving workflows through automation, maintaining client communication, and coordinating internal processes.",
     type: "Executive & roofing business support",
   },
   {
