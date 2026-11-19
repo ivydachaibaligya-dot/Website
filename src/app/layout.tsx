@@ -17,5 +17,5 @@ export const metadata: Metadata = {
 export const viewport: Viewport = { width: "device-width", initialScale: 1, maximumScale: 5 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
-  return <html lang="en" className="h-full antialiased scroll-smooth"><head><link rel="icon" href="/favicon.ico" /></head><body className="min-h-full flex flex-col">{children}</body></html>;
+  return <html lang="en" className="h-full antialiased scroll-smooth"><head><link rel="icon" type="image/svg+xml" href="/favicon.svg" /></head><body className="min-h-full flex flex-col">{children}</body></html>;
 }
