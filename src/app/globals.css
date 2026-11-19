@@ -341,7 +341,7 @@ p, span, div { font-family: var(--font-inter), sans-serif; }
 @media(prefers-reduced-motion:reduce) { .ivy-hero-copy,.ivy-hero-art,.ivy-float,.ivy-marquee div { animation:none!important; } }
 
 
-/* Subtle seasonal fairy lights — decorative only, with reduced-motion support. */
+/* Playful hanging Christmas lights — larger bulbs and a gentle pull-and-bounce hover. */
 .ivy-site { position: relative; }
 .ivy-holiday-lights {
   position: absolute;
@@ -354,47 +354,73 @@ p, span, div { font-family: var(--font-inter), sans-serif; }
 .ivy-holiday-lights::after {
   content: "";
   position: absolute;
-  top: 104px;
+  top: 105px;
   bottom: 90px;
-  width: 15px;
-  opacity: .82;
-  background: linear-gradient(90deg, transparent 6px, rgba(70,65,59,.5) 6px 7px, transparent 7px);
+  width: 34px;
+  opacity: .78;
+  background:
+    radial-gradient(ellipse at 100% 12%, transparent 0 47%, rgba(105,91,78,.48) 48% 49%, transparent 51%) 0 0 / 34px 190px repeat-y;
 }
-.ivy-holiday-lights::before { left: 8px; }
-.ivy-holiday-lights::after { right: 8px; }
+.ivy-holiday-lights::before { left: 0; transform: rotate(-2deg); }
+.ivy-holiday-lights::after { right: 0; transform: scaleX(-1) rotate(-2deg); }
 .ivy-holiday-lights span {
   position: absolute;
-  width: 7px;
-  height: 10px;
-  border-radius: 50% 50% 45% 45%;
-  background: #f6dca0;
-  box-shadow: 0 0 5px 2px rgba(246,220,160,.45), 0 0 12px rgba(246,220,160,.25);
+  width: 15px;
+  height: 21px;
+  border-radius: 48% 48% 44% 44%;
+  border: 1px solid rgba(255,255,255,.38);
+  box-shadow: 0 0 8px 3px currentColor, 0 0 19px 5px color-mix(in srgb, currentColor 32%, transparent);
   animation: ivyLightGlow 2.8s ease-in-out infinite alternate;
+  pointer-events: auto;
+  cursor: grab;
+  transform-origin: 50% -13px;
 }
-.ivy-holiday-lights span:nth-child(1) { left: 12px; top: 145px; background:#f6dca0; }
-.ivy-holiday-lights span:nth-child(2) { left: 12px; top: 335px; background:#e97878; animation-delay:-.8s; }
-.ivy-holiday-lights span:nth-child(3) { left: 12px; top: 535px; background:#f6dca0; animation-delay:-1.5s; }
-.ivy-holiday-lights span:nth-child(4) { left: 12px; top: 735px; background:#b9c9b3; animation-delay:-.4s; }
-.ivy-holiday-lights span:nth-child(5) { left: 12px; top: 935px; background:#e97878; animation-delay:-1.2s; }
-.ivy-holiday-lights span:nth-child(6) { left: 12px; top: 1135px; background:#f6dca0; animation-delay:-2s; }
-.ivy-holiday-lights span:nth-child(7) { right: 12px; top: 235px; background:#b9c9b3; animation-delay:-1s; }
-.ivy-holiday-lights span:nth-child(8) { right: 12px; top: 435px; background:#f6dca0; animation-delay:-1.8s; }
-.ivy-holiday-lights span:nth-child(9) { right: 12px; top: 635px; background:#e97878; animation-delay:-.5s; }
-.ivy-holiday-lights span:nth-child(10) { right: 12px; top: 835px; background:#f6dca0; animation-delay:-1.4s; }
-.ivy-holiday-lights span:nth-child(11) { right: 12px; top: 1035px; background:#b9c9b3; animation-delay:-.7s; }
-.ivy-holiday-lights span:nth-child(12) { right: 12px; top: 1235px; background:#e97878; animation-delay:-2.2s; }
+.ivy-holiday-lights span:active { cursor: grabbing; }
+.ivy-holiday-lights span:nth-child(1) { left: 10px; top: 145px; color:#f6d58b; background:#f6d58b; }
+.ivy-holiday-lights span:nth-child(2) { left: 17px; top: 335px; color:#e97878; background:#e97878; animation-delay:-.8s; }
+.ivy-holiday-lights span:nth-child(3) { left: 8px; top: 535px; color:#f6d58b; background:#f6d58b; animation-delay:-1.5s; }
+.ivy-holiday-lights span:nth-child(4) { left: 17px; top: 735px; color:#b9c9a8; background:#b9c9a8; animation-delay:-.4s; }
+.ivy-holiday-lights span:nth-child(5) { left: 8px; top: 935px; color:#e97878; background:#e97878; animation-delay:-1.2s; }
+.ivy-holiday-lights span:nth-child(6) { left: 17px; top: 1135px; color:#f6d58b; background:#f6d58b; animation-delay:-2s; }
+.ivy-holiday-lights span:nth-child(7) { right: 17px; top: 235px; color:#b9c9a8; background:#b9c9a8; animation-delay:-1s; }
+.ivy-holiday-lights span:nth-child(8) { right: 8px; top: 435px; color:#f6d58b; background:#f6d58b; animation-delay:-1.8s; }
+.ivy-holiday-lights span:nth-child(9) { right: 17px; top: 635px; color:#e97878; background:#e97878; animation-delay:-.5s; }
+.ivy-holiday-lights span:nth-child(10) { right: 8px; top: 835px; color:#f6d58b; background:#f6d58b; animation-delay:-1.4s; }
+.ivy-holiday-lights span:nth-child(11) { right: 17px; top: 1035px; color:#b9c9a8; background:#b9c9a8; animation-delay:-.7s; }
+.ivy-holiday-lights span:nth-child(12) { right: 8px; top: 1235px; color:#e97878; background:#e97878; animation-delay:-2.2s; }
+.ivy-holiday-lights:has(span:hover) span {
+  animation: ivyLightSwing .85s cubic-bezier(.34,1.56,.64,1) both, ivyLightGlow 2.8s ease-in-out infinite alternate;
+}
+.ivy-holiday-lights span:hover {
+  animation: ivyLightPull .75s cubic-bezier(.34,1.56,.64,1), ivyLightGlow 2.8s ease-in-out infinite alternate;
+  filter: brightness(1.2);
+}
 @keyframes ivyLightGlow {
-  from { opacity:.55; filter:brightness(.9); transform:scale(.9); }
-  to { opacity:1; filter:brightness(1.18); transform:scale(1.08); }
+  from { opacity:.72; filter:brightness(.92); }
+  to { opacity:1; filter:brightness(1.22); }
+}
+@keyframes ivyLightSwing {
+  0% { transform:rotate(0) translateY(0); }
+  28% { transform:rotate(9deg) translateY(3px); }
+  55% { transform:rotate(-7deg) translateY(-1px); }
+  78% { transform:rotate(4deg); }
+  100% { transform:rotate(0); }
+}
+@keyframes ivyLightPull {
+  0% { transform:scale(1) rotate(0); }
+  35% { transform:scale(1.22,1.12) rotate(13deg) translateY(5px); }
+  68% { transform:scale(.94) rotate(-8deg); }
+  100% { transform:scale(1) rotate(0); }
 }
 @media (max-width:700px) {
-  .ivy-holiday-lights::before { left:3px; }
-  .ivy-holiday-lights::after { right:3px; }
+  .ivy-holiday-lights::before { left:-3px; }
+  .ivy-holiday-lights::after { right:-3px; }
+  .ivy-holiday-lights span { width:13px; height:18px; }
   .ivy-holiday-lights span:nth-child(odd) { left:7px; }
   .ivy-holiday-lights span:nth-child(even) { right:7px; }
 }
 @media (prefers-reduced-motion: reduce) {
-  .ivy-holiday-lights span { animation:none; }
+  .ivy-holiday-lights span { animation:none !important; }
 }
 
 
