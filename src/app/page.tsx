@@ -184,7 +184,7 @@ export default function Home() {
   };
 
   return (
-    <main className="ivy-site">\n      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }} />
+    <main className="ivy-site">      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }} />
       <div className="ivy-holiday-lights" aria-hidden="true"><span /><span /><span /><span /><span /><span /><span /><span /><span /><span /><span /><span /></div>
       <nav className="ivy-nav">
         <Link href="#home" className="ivy-brand" aria-label="Ivy Embone home">
