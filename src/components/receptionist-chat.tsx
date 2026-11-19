@@ -1,6 +1,7 @@
 "use client";
 
-import { FormEvent, useState } from "react";
+import { FormEvent, useEffect, useState } from "react";
+import { createPortal } from "react-dom";
 
 type ChatMessage = { role: "user" | "assistant"; text: string };
 
@@ -11,7 +12,12 @@ const starters = [
 ];
 
 export default function ReceptionistChat() {
+  const [mounted, setMounted] = useState(false);
   const [open, setOpen] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
   const [messages, setMessages] = useState<ChatMessage[]>([
     {
       role: "assistant",
@@ -71,7 +77,9 @@ export default function ReceptionistChat() {
     }
   }
 
-  return (
+  if (!mounted) return null;
+
+  return createPortal(
     <div className="ivy-chat-root">
       {open && (
         <section className="ivy-chat-panel" aria-label="Ivy’s virtual receptionist">
@@ -118,6 +126,7 @@ export default function ReceptionistChat() {
       <button className="ivy-chat-launcher" onClick={() => setOpen((value) => !value)} aria-expanded={open}>
         <span>{open ? "×" : "✳"}</span>{open ? "Close" : "Chat with us"}
       </button>
-    </div>
+    </div>,
+    document.body
   );
 }
