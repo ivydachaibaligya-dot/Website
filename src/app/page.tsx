@@ -193,7 +193,17 @@ export default function Home() {
           <div className="ivy-art-backdrop" />
           <div className="ivy-art-card ivy-art-card-main">
             <div className="ivy-art-top"><span>WORKSPACE / 001</span><span>✳</span></div>
-            <div className="ivy-art-monogram">I<span>.</span></div>
+            <div className="ivy-art-photo-wrap">
+              <Image
+                src="/images/ivy-working.png"
+                alt="Ivy smiling naturally while working at her laptop"
+                width={900}
+                height={1200}
+                priority
+                sizes="(max-width: 700px) 72vw, 355px"
+                className="ivy-art-photo"
+              />
+            </div>
             <div className="ivy-art-name">Ivy Embone</div>
             <div className="ivy-art-role">VIRTUAL ASSISTANCE · WEB DEVELOPMENT</div>
             <div className="ivy-art-line" />
@@ -215,17 +225,6 @@ export default function Home() {
         <div className="ivy-about-grid">
           <div>
             <h2>Behind every<br />well-run business<br />is <em>good support.</em></h2>
-            <figure className="ivy-about-portrait">
-              <Image
-                src="/images/ivy-working.png"
-                alt="Ivy smiling naturally while working at her laptop"
-                width={900}
-                height={1200}
-                priority={false}
-                sizes="(max-width: 700px) 100vw, 42vw"
-              />
-              <figcaption>IVY EMBONE · VIRTUAL ASSISTANT & WEB DEVELOPER</figcaption>
-            </figure>
           </div>
           <div className="ivy-about-copy">
             <p className="ivy-lead">I help make the busy parts of business feel a little more manageable.</p>
