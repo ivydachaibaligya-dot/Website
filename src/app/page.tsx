@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
+import ReceptionistChat from "@/components/receptionist-chat";
 
 export const metadata: Metadata = {
   title: "Philippines-Based Virtual Assistant | Roofing & Business Support | Ivy Embone",
@@ -369,6 +370,7 @@ export default function Home() {
         <div className="ivy-contact-footer"><span>IVY EMBONE · VIRTUAL ASSISTANT & WEB DEVELOPER</span><a href="mailto:hello@iaurevant.com">HELLO@IAUREVANT.COM</a><span>PHILIPPINES · WORKING REMOTELY</span></div>
       </section>
       <footer className="ivy-footer"><span>© {new Date().getFullYear()} Ivy Embone</span><span>Made with care, and attention to detail. ✳</span><Link href="#home">BACK TO TOP ↑</Link></footer>
+      <ReceptionistChat />
     </main>
   );
 }
