@@ -3,16 +3,16 @@ import Link from "next/link";
 import Image from "next/image";
 
 export const metadata: Metadata = {
-  title: "Virtual Assistant & Roofing Operations Support | Ivy Embone",
+  title: "Philippines-Based Virtual Assistant | Roofing & Business Support | Ivy Embone",
   alternates: { canonical: "https://iaurevant.com/" },
   description:
-    "Hire Ivy Embone, a Philippines-based Virtual Assistant and Web Developer for administrative support, U.S. roofing operations, CRM coordination, website management, and lead generation.",
+    "Ivy Embone is a Philippines-based virtual assistant supporting U.S. roofing teams and businesses with administrative coordination, Roofr measurements, CRM support, website management, and lead generation.",
   openGraph: {
     type: "website",
     url: "https://iaurevant.com/",
-    title: "Virtual Assistant & Roofing Operations Support | Ivy Embone",
+    title: "Philippines-Based Virtual Assistant | Roofing & Business Support | Ivy Embone",
     description:
-      "Philippines-based virtual assistance, U.S. roofing operations support, website management, CRM coordination, and lead generation.",
+      "Administrative support, U.S. roofing operations coordination, CRM assistance, website management, and lead generation from Ivy Embone in the Philippines.",
   },
 };
 
@@ -205,9 +205,9 @@ export default function Home() {
         <div className="ivy-hero-orbit ivy-orbit-two" />
         <div className="ivy-hero-copy">
           <div className="ivy-eyebrow"><span className="ivy-live-dot" /> AVAILABLE FOR THE RIGHT OPPORTUNITY</div>
-          <h1>Good work happens<br />when <em>everything</em><br />is in its place.</h1>
+          <h1>Virtual Assistant<br /><em>Roofing Operations</em><br />&amp; Business Support.</h1>
           <p className="ivy-hero-intro">
-            Hi, I&apos;m <strong>Ivy</strong> — a Virtual Assistant and Web Developer helping businesses stay organized and build a stronger online presence through administrative support, construction operations, website development, CRM coordination, and lead generation.
+            Hi, I&apos;m <strong>Ivy</strong>, a Philippines-based Virtual Assistant and Web Developer supporting U.S. roofing teams and growing businesses. I help with administrative tasks, roofing operations coordination, CRM updates, website support, and lead generation.
           </p>
           <div className="ivy-hero-actions">
             <Link href="#contact" className="ivy-button ivy-button-dark">Let&apos;s work together <span>↗</span></Link>
@@ -326,6 +326,40 @@ export default function Home() {
         </div>
       </section>
 
+
+      <section className="ivy-section ivy-services" id="faq">
+        <div className="ivy-section-heading">
+          <div><div className="ivy-section-kicker">06 — COMMON QUESTIONS</div><h2>Good to know<br /><em>before we connect.</em></h2></div>
+          <p>A few details about my virtual assistance, roofing operations, and remote support experience.</p>
+        </div>
+        <div className="ivy-service-grid">
+          <article className="ivy-service-card">
+            <div className="ivy-service-top"><span>01</span><span className="ivy-service-arrow">↗</span></div>
+            <h3>What services do you provide?</h3>
+            <p>I provide administrative and executive support, roofing and construction operations assistance, CRM and business operations support, website development and management, and lead generation and content support.</p>
+          </article>
+          <article className="ivy-service-card">
+            <div className="ivy-service-top"><span>02</span><span className="ivy-service-arrow">↗</span></div>
+            <h3>Can you support U.S. roofing businesses?</h3>
+            <p>My experience includes supporting U.S. roofing and home-service operations with Roofr measurements, estimates and proposals, job photos and project documents, insurance-claim documentation support, material-order coordination, crew dispatching, and schedule updates.</p>
+          </article>
+          <article className="ivy-service-card">
+            <div className="ivy-service-top"><span>03</span><span className="ivy-service-arrow">↗</span></div>
+            <h3>Where are you based?</h3>
+            <p>I am based in the Philippines and provide remote administrative, website, CRM, and operations support to businesses.</p>
+          </article>
+          <article className="ivy-service-card">
+            <div className="ivy-service-top"><span>04</span><span className="ivy-service-arrow">↗</span></div>
+            <h3>What tools do you work with?</h3>
+            <p>My tools include Google Workspace, GoHighLevel, Roofr, Zuper, CompanyCam, Trello, Zapier, QuickBooks, Canva, Apollo, Wix, Vercel, and GitHub.</p>
+          </article>
+          <article className="ivy-service-card">
+            <div className="ivy-service-top"><span>05</span><span className="ivy-service-arrow">↗</span></div>
+            <h3>How can we discuss a project?</h3>
+            <p>Email me with a little information about your business, the tasks you need help with, and your preferred next step. I can review your inquiry and respond with more information.</p>
+          </article>
+        </div>
+      </section>
       <section className="ivy-contact" id="contact">
         <div className="ivy-contact-orb" />
         <div className="ivy-section-kicker">A GOOD PLACE TO START</div>

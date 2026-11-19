@@ -3,15 +3,15 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://iaurevant.com"),
-  title: "Ivy Embone | Virtual Assistant & Roofing Operations Support",
-  description: "Personal portfolio of Ivy Embone, Virtual Assistant supporting administration, construction and roofing operations, CRM coordination, customer support, and lead generation.",
-  keywords: "Ivy Embone, Virtual Assistant, Administrative Support, Construction Operations, Roofing Support, CRM Coordination, Lead Generation",
+  title: "Philippines-Based Virtual Assistant | Roofing & Business Support | Ivy Embone",
+  description: "Ivy Embone is a Philippines-based virtual assistant supporting U.S. roofing teams and businesses with administrative coordination, CRM support, website management, and lead generation.",
+  keywords: "Ivy Embone, Philippines Virtual Assistant, Virtual Assistant Philippines, Roofing Virtual Assistant, Roofing Operations Support, Administrative Virtual Assistant, CRM Support, Website Management, Lead Generation",
   authors: [{ name: "Ivy Embone" }],
   creator: "Ivy Embone",
   publisher: "Ivy Embone",
   formatDetection: { email: false, address: false, telephone: false },
-  openGraph: { title: "Ivy Embone | Virtual Assistant & Operations Support", description: "Practical, organized support for busy teams.", siteName: "Ivy Embone", locale: "en_US", type: "website" },
-  twitter: { card: "summary_large_image", title: "Ivy Embone | Virtual Assistant & Operations Support", description: "Practical, organized support for busy teams." },
+  openGraph: { title: "Philippines-Based Virtual Assistant | Roofing & Business Support | Ivy Embone", description: "Administrative support, U.S. roofing operations coordination, CRM assistance, website management, and lead generation from Ivy Embone in the Philippines.", siteName: "Ivy Embone", locale: "en_US", type: "website" },
+  twitter: { card: "summary_large_image", title: "Philippines-Based Virtual Assistant | Roofing & Business Support | Ivy Embone", description: "Administrative support, U.S. roofing operations coordination, CRM assistance, website management, and lead generation from Ivy Embone in the Philippines." },
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, "max-video-preview": -1, "max-image-preview": "large", "max-snippet": -1 } },
 };
 
