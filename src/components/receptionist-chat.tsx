@@ -82,7 +82,7 @@ export default function ReceptionistChat() {
           </header>
           <div className="ivy-chat-messages" aria-live="polite">
             {messages.map((message, index) => (
-              <div className={\`ivy-chat-message ivy-chat-\${message.role}\`} key={index}>{message.text}</div>
+              <div className={`ivy-chat-message ivy-chat-${message.role}`} key={index}>{message.text}</div>
             ))}
             {busy && <div className="ivy-chat-message ivy-chat-assistant">One moment, please…</div>}
             {messages.length === 1 && (
