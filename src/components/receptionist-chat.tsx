@@ -17,6 +17,8 @@ export default function ReceptionistChat() {
 
   useEffect(() => {
     setMounted(true);
+    const autoOpenTimer = window.setTimeout(() => setOpen(true), 4500);
+    return () => window.clearTimeout(autoOpenTimer);
   }, []);
   const [messages, setMessages] = useState<ChatMessage[]>([
     {
