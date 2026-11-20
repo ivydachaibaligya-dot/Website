@@ -34,10 +34,10 @@ const services = [
   },
   {
     number: "03",
-    title: "CRM & Business Operations",
+    title: "CRM, Business Operations & SOP Development",
     description:
-      "Keeping customer records, pipelines, tasks, SOPs, websites, and automated workflows organized across the tools a team already uses.",
-    tags: ["CRM management", "Lead tracking", "SOP development", "Workflow automation", "Website updates", "Reporting"],
+      "Keeping customer records, pipelines, tasks, and automated workflows organized, while creating clear company SOPs, process guides, and internal documentation that help teams work consistently.",
+    tags: ["CRM management", "Lead tracking", "Company SOPs", "Process documentation", "Workflow automation", "Reporting"],
   },
   {
     number: "04",
@@ -48,10 +48,17 @@ const services = [
   },
   {
     number: "05",
-    title: "Lead Generation, Copywriting & Content Support",
+    title: "Graphic Design & Social Media Content",
     description:
-      "Prospect research, personalized outreach, client communication, copywriting, social media coordination, and practical content materials for growing businesses.",
-    tags: ["Lead research", "Email outreach", "Customer support", "Copywriting", "Social media", "Canva graphics"],
+      "Creating branded graphics, promotional materials, social media content, and clear captions that help businesses communicate consistently online.",
+    tags: ["Graphic design", "Canva graphics", "Social media content", "SEO captions", "Promotional materials", "Content planning"],
+  },
+  {
+    number: "06",
+    title: "Monthly Social Media Content Package",
+    description:
+      "A one-month social media content package that includes a monthly content calendar, 20 custom graphics, and SEO-friendly captions to help keep your business visible and consistent online. Package price: $399 per month.",
+    tags: ["1-month calendar", "20 custom graphics", "SEO-friendly captions", "$399 / month"],
   },
 ];
 
