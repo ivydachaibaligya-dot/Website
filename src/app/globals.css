@@ -436,3 +436,18 @@ p, span, div { font-family: var(--font-inter), sans-serif; }
   .ivy-chat-root { right:max(14px,env(safe-area-inset-right)); bottom:max(14px,env(safe-area-inset-bottom)); }
   .ivy-chat-panel { height:min(590px,calc(100dvh - 92px)); }
 }
+
+
+/* Client testimonials */
+.ivy-testimonials { background:#f2e9e2; }
+.ivy-testimonial-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:16px; align-items:stretch; }
+.ivy-testimonial-card { display:flex; flex-direction:column; min-height:270px; padding:30px 26px; background:#fbf8f3; border:1px solid #e4d8ce; box-shadow:0 12px 35px #34281b0b; }
+.ivy-testimonial-featured { background:#fffdfa; border-color:#e5b6ae; transform:translateY(-10px); }
+.ivy-testimonial-stars { color:#e6a900; font-size:25px; letter-spacing:4px; line-height:1; }
+.ivy-testimonial-card blockquote { margin:28px 0 30px; color:#37322e; font:21px/1.55 Georgia,serif; }
+.ivy-testimonial-author { margin-top:auto; padding-top:15px; border-top:1px solid #e8ded5; color:var(--pink); font:24px Georgia,serif; }
+@media(max-width:700px) {
+  .ivy-testimonial-grid { grid-template-columns:1fr; }
+  .ivy-testimonial-card { min-height:0; }
+  .ivy-testimonial-featured { transform:none; }
+}
