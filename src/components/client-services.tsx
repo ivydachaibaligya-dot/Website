@@ -9,6 +9,37 @@ type Service = {
   tags: string[];
 };
 
+const tagIcons: Record<string, string> = {
+  "Email & documents": "✉", "Data entry": "▦", "Scheduling": "◷",
+  "Executive assistance": "✦", "Team coordination": "↗",
+  "Roof measurements": "⌁", "Estimates & proposals": "▤",
+  "Claim documentation": "✓", "Job photos": "▧", "Material orders": "◇",
+  "Crew dispatching": "⇄", "CRM management": "◎", "Lead tracking": "⌖",
+  "Company SOPs": "▤", "Process documentation": "≡",
+  "Workflow automation": "⟳", "Reporting": "▥",
+  "Website creation": "⌘", "Responsive design": "▣",
+  "Website updates": "↻", "Site maintenance": "⚙", "Basic SEO": "⌕",
+  "Graphic design": "✎", "Canva graphics": "▧",
+  "Social media content": "◉", "SEO captions": "✧",
+  "Promotional materials": "◇",
+  "1-month social media content calendar": "▦",
+  "20 custom graphics": "✎", "SEO-friendly captions": "✧",
+  "$399 per month": "$"
+};
+
+function ServiceTags({ tags }: { tags: string[] }) {
+  return (
+    <div className="ivy-tags">
+      {tags.map((tag) => (
+        <span className="ivy-service-tag" key={tag}>
+          <i aria-hidden="true">{tagIcons[tag] || "✦"}</i>
+          <span>{tag}</span>
+        </span>
+      ))}
+    </div>
+  );
+}
+
 export default function ClientServices({ services }: { services: Service[] }) {
   const [packageOpen, setPackageOpen] = useState(false);
 
@@ -37,12 +68,7 @@ export default function ClientServices({ services }: { services: Service[] }) {
                 </button>
                 <div id="ivy-package-details" className={`ivy-package-details${packageOpen ? " is-open" : ""}`} aria-hidden={!packageOpen}>
                   <div className="ivy-package-details-inner">
-                    <ul className="ivy-package-inclusions">
-                      <li>1-month social media content calendar</li>
-                      <li>20 custom graphics</li>
-                      <li>SEO-friendly captions</li>
-                      <li>$399 per month</li>
-                    </ul>
+                    <ServiceTags tags={["1-month social media content calendar", "20 custom graphics", "SEO-friendly captions", "$399 per month"]} />
                     <button className="ivy-package-close" type="button" onClick={() => setPackageOpen(false)}>Close package details ×</button>
                   </div>
                 </div>
@@ -56,7 +82,7 @@ export default function ClientServices({ services }: { services: Service[] }) {
             <div className="ivy-service-top"><span>{service.number}</span><span className="ivy-service-arrow">↗</span></div>
             <h3>{service.title}</h3>
             <p>{service.description}</p>
-            <div className="ivy-tags">{service.tags.map((tag) => <span key={tag}>{tag}</span>)}</div>
+            <ServiceTags tags={service.tags} />
           </article>
         );
       })}
