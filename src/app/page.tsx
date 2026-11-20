@@ -51,13 +51,13 @@ const services = [
     title: "Graphic Design & Social Media Content",
     description:
       "Creating branded graphics, promotional materials, social media content, and clear captions that help businesses communicate consistently online.",
-    tags: ["Graphic design", "Canva graphics", "Social media content", "SEO captions", "Promotional materials", "Content planning"],
+    tags: ["Graphic design", "Canva graphics", "Social media content", "SEO captions", "Promotional materials"],
   },
   {
     number: "06",
     title: "Monthly Social Media Content Package",
     description:
-      "A one-month social media content package that includes a monthly content calendar, 20 custom graphics, and SEO-friendly captions to help keep your business visible and consistent online. Package price: $399 per month.",
+      "A one-month social media package that includes a monthly social media calendar, 20 custom graphics, and SEO-friendly captions. Package price: $399 per month.",
     tags: ["1-month calendar", "20 custom graphics", "SEO-friendly captions", "$399 / month"],
   },
 ];
