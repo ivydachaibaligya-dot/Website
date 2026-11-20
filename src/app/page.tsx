@@ -204,6 +204,7 @@ export default function Home() {
           <Link href="#services">What I do</Link>
           <Link href="#experience">Experience</Link>
           <Link href="#work">Work samples</Link>
+          <Link href="#testimonials">Testimonials</Link>
         </div>
         <Link className="ivy-nav-cta" href="#contact">Let&apos;s connect <span>↗</span></Link>
       </nav>
@@ -368,6 +369,31 @@ export default function Home() {
           </article>
         </div>
       </section>
+
+      <section className="ivy-section ivy-testimonials" id="testimonials">
+        <div className="ivy-section-heading">
+          <div><div className="ivy-section-kicker">05 — KIND WORDS FROM CLIENTS</div><h2>What my clients<br /><em>say about me.</em></h2></div>
+          <p>Feedback from people I have had the opportunity to work with.</p>
+        </div>
+        <div className="ivy-testimonial-grid">
+          <article className="ivy-testimonial-card">
+            <div className="ivy-testimonial-stars" aria-label="5 out of 5 stars">★★★★★</div>
+            <blockquote>“She is really great, and a high value to our company.”</blockquote>
+            <div className="ivy-testimonial-author">John C.</div>
+          </article>
+          <article className="ivy-testimonial-card ivy-testimonial-featured">
+            <div className="ivy-testimonial-stars" aria-label="5 out of 5 stars">★★★★★</div>
+            <blockquote>“I would certainly recommend Ivy. She has an unbelievable work ethics and strong values. Able to take feedback well and work on feedback. She was a great value to the projects we worked on.”</blockquote>
+            <div className="ivy-testimonial-author">Nicholas T.</div>
+          </article>
+          <article className="ivy-testimonial-card">
+            <div className="ivy-testimonial-stars" aria-label="5 out of 5 stars">★★★★★</div>
+            <blockquote>“She is very consistent and she help us on backend specially on automations.”</blockquote>
+            <div className="ivy-testimonial-author">Edward G.</div>
+          </article>
+        </div>
+      </section>
+
       <section className="ivy-contact" id="contact">
         <div className="ivy-contact-orb" />
         <div className="ivy-section-kicker">A GOOD PLACE TO START</div>
