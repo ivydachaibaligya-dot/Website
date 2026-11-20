@@ -3,6 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import ReceptionistChat from "@/components/receptionist-chat";
 import ClientTestimonials from "@/components/client-testimonials";
+import ClientServices from "@/components/client-services";
 
 export const metadata: Metadata = {
   title: "Philippines-Based Virtual Assistant | Roofing & Business Support | Ivy Embone",
@@ -286,16 +287,7 @@ export default function Home() {
           <div><div className="ivy-section-kicker">02 — HOW I CAN HELP</div><h2>Support that keeps<br /><em>business moving.</em></h2></div>
           <p>Practical help for the everyday details, the moving parts, and the follow-ups that keep work on track.</p>
         </div>
-        <div className="ivy-service-grid">
-          {services.map((service) => (
-            <article className="ivy-service-card" key={service.number}>
-              <div className="ivy-service-top"><span>{service.number}</span><span className="ivy-service-arrow">↗</span></div>
-              <h3>{service.title}</h3>
-              <p>{service.description}</p>
-              <div className="ivy-tags">{service.tags.map((tag) => <span key={tag}>{tag}</span>)}</div>
-            </article>
-          ))}
-        </div>
+        <ClientServices services={services} />
       </section>
 
       <section className="ivy-experience" id="experience">
