@@ -698,3 +698,74 @@ p, span, div { font-family: var(--font-inter), sans-serif; }
  .ivy-service-card,.ivy-package-trigger,.ivy-package-details { transition:none!important; }
  .ivy-package-trigger span:last-child { animation:none!important; }
 }
+
+
+/* Premium pill tags — warm cream, coral, and tactile micro-interactions */
+.ivy-tags {
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center;
+  gap:10px 11px;
+  margin-top:24px;
+}
+.ivy-tags .ivy-service-tag {
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  max-width:100%;
+  padding:9px 14px 9px 11px;
+  border:1px solid rgba(226,207,193,.72);
+  border-radius:999px;
+  background:linear-gradient(135deg,#fffaf4 0%,#f4eae0 100%);
+  color:#71645b;
+  box-shadow:0 3px 9px rgba(75,53,39,.055),inset 0 1px 0 rgba(255,255,255,.9);
+  font-size:13px;
+  font-weight:500;
+  line-height:1.35;
+  letter-spacing:.005em;
+  transition:transform .25s cubic-bezier(.2,.7,.2,1),background .25s,border-color .25s,color .25s,box-shadow .25s;
+}
+.ivy-service-tag i {
+  display:grid;
+  place-items:center;
+  flex:0 0 21px;
+  width:21px;
+  height:21px;
+  border-radius:50%;
+  background:rgba(233,120,120,.13);
+  color:#c87570;
+  font-size:12px;
+  font-style:normal;
+  font-weight:700;
+  line-height:1;
+  transition:background .25s,color .25s,transform .25s;
+}
+.ivy-tags .ivy-service-tag:hover {
+  transform:translateY(-3px);
+  border-color:rgba(219,133,124,.55);
+  background:linear-gradient(135deg,#fbe5df 0%,#f8eee5 100%);
+  color:#a85e59;
+  box-shadow:0 8px 18px rgba(172,104,91,.13),inset 0 1px 0 rgba(255,255,255,.9);
+}
+.ivy-service-tag:hover i {
+  transform:scale(1.08) rotate(-5deg);
+  background:#e97878;
+  color:#fff;
+}
+.ivy-package-card .ivy-package-details-inner .ivy-tags {
+  padding-top:18px;
+  border-top:1px solid #e9d8ce;
+}
+.ivy-package-card .ivy-package-details-inner .ivy-service-tag {
+  font-size:13px;
+  background:linear-gradient(135deg,#fff9f4 0%,#f6e7df 100%);
+}
+@media(max-width:700px) {
+  .ivy-tags { gap:8px; margin-top:20px; }
+  .ivy-tags .ivy-service-tag { padding:8px 12px 8px 9px; gap:7px; font-size:12px; }
+  .ivy-service-tag i { flex-basis:20px; width:20px; height:20px; font-size:11px; }
+}
+@media(prefers-reduced-motion:reduce) {
+  .ivy-tags .ivy-service-tag,.ivy-service-tag i { transition:none!important; }
+  .ivy-tags .ivy-service-tag:hover { transform:none; }
+}
