@@ -22,11 +22,13 @@ const reviews = [
 export default function ClientTestimonials() {
   const [revealed, setRevealed] = useState(false);
   const [pullDistance, setPullDistance] = useState(0);
+  const [isPulling, setIsPulling] = useState(false);
   const startY = useRef<number | null>(null);
   const dragged = useRef(false);
 
   function handlePointerDown(event: React.PointerEvent<HTMLButtonElement>) {
     startY.current = event.clientY;
+    setIsPulling(true);
     dragged.current = false;
     event.currentTarget.setPointerCapture(event.pointerId);
   }
@@ -45,6 +47,7 @@ export default function ClientTestimonials() {
     }
     startY.current = null;
     setPullDistance(0);
+    setIsPulling(false);
   }
 
   function handleClick() {
@@ -67,7 +70,7 @@ export default function ClientTestimonials() {
         <p>Good work is better when the people you work with feel the difference.</p>
       </div>
 
-      <div className={`ivy-pull-control ${revealed ? "is-revealed" : ""}`}>
+      <div className={`ivy-pull-control ${revealed ? "is-revealed" : ""} ${isPulling ? "is-pulling" : ""}`}>
         <button
           className="ivy-review-pull"
           type="button"
@@ -95,7 +98,7 @@ export default function ClientTestimonials() {
           {reviews.map((review, index) => (
             <article className="ivy-testimonial-card" key={review.name} style={{ animationDelay: `${index * 160}ms` }}>
               <span className="ivy-testimonial-quote" aria-hidden="true">“</span>
-              <div className="ivy-testimonial-stars" aria-label="5 out of 5 stars">★★★★★</div>
+              <div className="ivy-testimonial-stars" aria-label="5 out of 5 stars">{[0, 1, 2, 3, 4].map((star) => <span key={star} style={{ animationDelay: `${index * 160 + star * 90}ms` }}>★</span>)}</div>
               <blockquote>“{review.quote}”</blockquote>
               <div className="ivy-testimonial-author">
                 <span>0{index + 1} / CLIENT REVIEW</span>
