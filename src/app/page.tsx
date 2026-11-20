@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import ReceptionistChat from "@/components/receptionist-chat";
+import ClientTestimonials from "@/components/client-testimonials";
 
 export const metadata: Metadata = {
   title: "Philippines-Based Virtual Assistant | Roofing & Business Support | Ivy Embone",
@@ -370,41 +371,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="ivy-section ivy-testimonials" id="testimonials">
-        <div className="ivy-testimonial-decoration ivy-testimonial-decoration-one" aria-hidden="true">✳</div>
-        <div className="ivy-testimonial-decoration ivy-testimonial-decoration-two" aria-hidden="true">“</div>
-        <div className="ivy-section-heading ivy-testimonial-heading">
-          <div><div className="ivy-section-kicker">05 — KIND WORDS FROM CLIENTS</div><h2>What my clients<br /><em>say about me.</em></h2></div>
-          <p>Good work is better when the people you work with feel the difference.</p>
-        </div>
-        <a className="ivy-review-pull" href="#client-reviews">
-          <span className="ivy-review-pull-line" aria-hidden="true"><i /></span>
-          <span className="ivy-review-pull-copy"><strong>PULL HERE</strong><small>TO SEE CLIENT REVIEWS</small></span>
-          <span className="ivy-review-pull-arrow" aria-hidden="true">↓</span>
-        </a>
-        <div className="ivy-testimonial-grid" id="client-reviews">
-          <article className="ivy-testimonial-card">
-            <span className="ivy-testimonial-quote" aria-hidden="true">“</span>
-            <div className="ivy-testimonial-stars" aria-label="5 out of 5 stars">★★★★★</div>
-            <blockquote>“She is really great, and a high value to our company.”</blockquote>
-            <div className="ivy-testimonial-author"><span>01 / CLIENT REVIEW</span><strong>John C.</strong></div>
-          </article>
-          <article className="ivy-testimonial-card ivy-testimonial-featured">
-            <span className="ivy-testimonial-quote" aria-hidden="true">“</span>
-            <div className="ivy-testimonial-stars" aria-label="5 out of 5 stars">★★★★★</div>
-            <blockquote>“I would certainly recommend Ivy. She has an unbelievable work ethics and strong values. Able to take feedback well and work on feedback. She was a great value to the projects we worked on.”</blockquote>
-            <div className="ivy-testimonial-author"><span>02 / CLIENT REVIEW</span><strong>Nicholas T.</strong></div>
-          </article>
-          <article className="ivy-testimonial-card">
-            <span className="ivy-testimonial-quote" aria-hidden="true">“</span>
-            <div className="ivy-testimonial-stars" aria-label="5 out of 5 stars">★★★★★</div>
-            <blockquote>“She is very consistent and she help us on backend specially on automations.”</blockquote>
-            <div className="ivy-testimonial-author"><span>03 / CLIENT REVIEW</span><strong>Edward G.</strong></div>
-          </article>
-        </div>
-        <div className="ivy-testimonial-footnote"><span>✳</span> REAL WORDS. REAL EXPERIENCES. THANK YOU FOR THE TRUST.</div>
-      </section>
-
+      <ClientTestimonials />
       <section className="ivy-contact" id="contact">
         <div className="ivy-contact-orb" />
         <div className="ivy-section-kicker">A GOOD PLACE TO START</div>
